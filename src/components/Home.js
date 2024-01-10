@@ -1,11 +1,13 @@
 import React from 'react'
 import { Typography,  Grid, Box, Card, CardContent, Image, CardMedia } from '@mui/material'
-import ResponsiveAppBar from './components/ResponsiveAppBar'
+import ResponsiveAppBar from './ResponsiveAppBar'
 import { ThemeProvider, createTheme  } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import ResponsiveFooter from './components/ResponsiveFooter';
+import ResponsiveFooter from './ResponsiveFooter';
+import { Route, Routes } from 'react-router';
+import FAQs from './faqs';
 
-const App = () => {
+const Home = () => {
 
   const theme = createTheme({
     palette: {
@@ -19,8 +21,8 @@ const App = () => {
     <>
        <ThemeProvider theme={theme}>
      <CssBaseline />
-     <ResponsiveAppBar position="static" color="transparent">
-   </ResponsiveAppBar>
+     <ResponsiveAppBar position="static" color="transparent"/>
+    
    <Box sx={{ p: 3 }}>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={20}>
@@ -76,13 +78,63 @@ const App = () => {
               </CardContent>
             </Card>
           </Grid>
+          {/* <Card sx={{ backgroundColor: '#f4f4f4', boxShadow: 'none', outline: 'none', height: '20vh', display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center', }}>
+            <CardContent SX={{display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',}}>
+          <Typography 
+      variant="h3" 
+      gutterBottom 
+      sx={{ 
+        fontSize: '1.2rem', 
+        fontWeight: 'bold', 
+        display: 'flex',
+        justifyContent: 'center',
+        textAlign: 'center',  // Adjust as needed
+      }}
+  >
+ UNLEASH YOUR BRAND WITH CONFIDENCE.
+</Typography>
+</CardContent>
+</Card> */}
           </Grid>
+          <Typography 
+      variant="h3" 
+      gutterBottom 
+      sx={{ 
+        fontSize: '1.2rem', 
+        fontWeight: 'bold', 
+        textAlign: 'center',
+        textTransform: 'uppercase',
+        fontStyle: 'italic' // Adjust as needed
+      }}
+  >
+ unleash your brand with confidence.
+</Typography>
+<Typography 
+ variant="body1" 
+ gutterBottom
+  
+ sx={{ 
+  paddingTop: '20px',
+  paddingBottom: '20px',
+  fontSize: '0.8rem', // Adjust as needed, // Adjust as needed
+  // paddingLeft: '350px',
+  // paddingRight: '350px',
+  textAlign: "center", // Adjust as needed
+ }}
+ align="center"
+>
+Your brand will undoubtedly dominate the market <br></br>with a high-end and superior supply of garments.  </Typography>
       </Box>
-   <ResponsiveFooter position="bottom">
-   </ResponsiveFooter>
+
+   <ResponsiveFooter position="bottom"/>
+
    </ThemeProvider>
 </>
   )
 }
 
-export default App
+export default Home

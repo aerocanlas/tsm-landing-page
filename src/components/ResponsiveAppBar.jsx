@@ -16,6 +16,7 @@ import React, { useState } from "react";
 import Button from '@mui/material/Button';
 import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from '@mui/material/IconButton';
+import { Link } from 'react-router-dom';
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
@@ -86,20 +87,25 @@ const Navbar = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem component={Link}
+                to={`/${page}`} key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center" >{page}</Typography>
                 </MenuItem>
                 ))}
                 {pages1.map((page1) => (
-                <MenuItem key={page1} onClick={handleCloseNavMenu}>
+                <MenuItem component={Link}
+                to={`/${page1}`} key={page1} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page1}</Typography>
                 </MenuItem>
                 ))}
             </Menu>
           </Box>
+          
         <Typography variant="h6" sx={{ display: { xs: "none", sm: "flex" }, marginLeft: '100px', marginRight: '-150px'}}>
         {pages.map((page) => (
               <Button
+                component={Link}
+                to={`/${page}`}
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'black', display: 'block', textTransform: 'none' }}
@@ -108,12 +114,15 @@ const Navbar = () => {
               </Button>
             ))}
         </Typography>
+       
         <Typography variant="h6" sx={{ display: { xs: "none", sm: "flex" }, fontFamily: 'Arimo', fontWeight: 500, color: 'black' }}>
           THE STREET MARKET <Typography variant="h6" sx={{ display: { xs: "none", sm: "flex" }, fontSize: '8px', }}>TM</Typography>
         </Typography>
         <Typography variant="h6" sx={{ display: { xs: "none", sm: "flex" }, marginLeft: '-100px', marginRight: '150px' }}>
         {pages1.map((page1) => (
               <Button
+              component={Link}
+                to={`/${page1}`}
                 key={page1}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'black', display: 'block', textTransform: 'none' }}
