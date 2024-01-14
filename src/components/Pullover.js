@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { Typography,  Grid, Box, Card, CardContent, Image, CardMedia } from '@mui/material'
 import ResponsiveAppBar from './ResponsiveAppBar'
 import { ThemeProvider, createTheme  } from "@mui/material/styles";
@@ -7,15 +7,35 @@ import ResponsiveFooter from './ResponsiveFooter';
 import { Route, Routes } from 'react-router';
 import FAQs from './faqs';
 import Button from '@mui/material/Button';
+import Fab from '@mui/material/Fab';
+import Stack from '@mui/material/Stack';
 
 const App = () => {
+  const [isClicked, setIsClicked] = useState([false, false, false, false]);
+  const [selectedImage, setSelectedImage] = useState("/images/pullover.png");
+  const [marginLeft, setMarginLeft] = useState('350px');
+
+  const handleClick = (index, imageSrc, margin) => {
+    setIsClicked((prevState) => {
+    const newState = prevState.map((_, i) => i === index);
+    setSelectedImage(imageSrc);
+    setMarginLeft(margin);
+    return newState;
+    });
+   };
+   
+   
 
   const theme = createTheme({
     palette: {
       background: {
         default: "white"
       }
-    }
+    },
+    Typography: [
+      'Arimo',
+      'sans-serif',
+    ].join(',')
    });
 
   return (
@@ -24,7 +44,43 @@ const App = () => {
      <CssBaseline />
      <ResponsiveAppBar position="static" color="transparent"/>
 
-    
+     <Box 
+          sx={{ 
+          width: '5%',
+          marginTop: '10%',
+          marginLeft: '15%'
+          }}>
+          <Stack spacing={2}>
+              <img 
+                src="/images/pullover.png" 
+                alt="Image 1" 
+                onClick={() => handleClick(0, "/images/pullover.png", '350px')} 
+                style={{ border: isClicked[0] ? '1px solid black' : '', cursor: 'pointer', transition: 'border 0.5s ease-in-out' }}
+              />
+              <img 
+                src="/images/pullover-2.jpg" 
+                alt="Image 2" 
+                onClick={() => handleClick(1, "/images/pullover-2.jpg", '400px')} 
+                style={{ border: isClicked[1] ? '1px solid black' : '', cursor: 'pointer', transition: 'border 0.5s ease-in-out' }}
+              />
+              <img 
+                src="/images/pullover-3.jpg" 
+                alt="Image 3" 
+                onClick={() => handleClick(2, "/images/pullover-3.jpg", '400px')} 
+                style={{ border: isClicked[2] ? '1px solid black' : '', cursor: 'pointer', transition: 'border 0.5s ease-in-out' }}
+              />
+              <img 
+                src="/images/pullover-4.jpg" 
+                alt="Image 4" 
+                onClick={() => handleClick(3, "/images/pullover-4.jpg", '400px')}  
+                style={{ border: isClicked[3] ? '1px solid black' : '', cursor: 'pointer', transition: 'border 0.5s ease-in-out' }}
+              />
+           </Stack>
+        </Box>
+
+
+
+
  <Box
       component="img"
       sx={{
@@ -33,116 +89,114 @@ const App = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: '60px',
-        marginLeft: '300px',
+        marginTop: '-30%',
+        marginLeft: marginLeft,
         marginBottom: '50px',
         minHeight: { xs: 233, md: 167, lg: 100 },
         minWidth: { xs: 350, md: 250, lg: 100 },
       }}
       alt="Pullover"
-      src="/images/pullover.png"
+      src={selectedImage}
       
     /> 
 
-<Button 
- sx={{
- height: '60px', // Adjust as needed
- width: '60px', // Adjust as needed
- background: '#000000',
- marginLeft: '25%',
- borderRadius: '50%', // To make the button circular
- boxShadow: 'none', // Remove shadow
- '&:hover': {
-  backgroundColor: 'rgba(0, 0, 0, 0.8)', 
-  transition: '0.5s ease'
- },
- '&:active': {
-  transform: 'scale(0.8)', // Shrink the button when clicked
- },
- }}
->
-</Button>
-<Button 
- sx={{
- height: '60px', // Adjust as needed
- width: '60px', // Adjust as needed
- background: '#54230e',
- marginLeft: '2%',
- borderRadius: '50%', // To make the button circular
- boxShadow: 'none', // Remove shadow
- '&:hover': {
-  backgroundColor: 'rgba(84, 35, 14, 0.8)',
-  transition: '0.5s ease'
- },
- '&:active': {
-  transform: 'scale(0.8)', // Shrink the button when clicked
- },
- }}
->
-</Button>
-<Button 
- sx={{
- height: '60px', // Adjust as needed
- width: '60px', // Adjust as needed
- background: '#090050',
- marginLeft: '2%',
- borderRadius: '50%', // To make the button circular
- boxShadow: 'none', // Remove shadow
- '&:hover': {
-  backgroundColor: 'rgba(9, 0, 80, 0.8)',
-  transition: '0.5s ease'
- },
- '&:active': {
-  transform: 'scale(0.8)', // Shrink the button when clicked
- },
- }}
->
-</Button>
-<Button 
- sx={{
- height: '60px', // Adjust as needed
- width: '60px', // Adjust as needed
- background: '#002b14',
- marginLeft: '2%',
- borderRadius: '50%', // To make the button circular
- boxShadow: 'none', // Remove shadow
- '&:hover': {
-  backgroundColor: 'rgba(0, 43, 20, 0.8);', 
-  transition: '0.5s ease'
- },
- '&:active': {
-  transform: 'scale(0.8)', // Shrink the button when clicked
- },
- }}
->
-</Button>
-<Button 
- sx={{
- height: '60px', // Adjust as needed
- width: '60px', // Adjust as needed
- background: '#d8d8d8',
- marginLeft: '2%',
- borderRadius: '50%', // To make the button circular
- boxShadow: 'none', // Remove shadow
- '&:hover': {
-  backgroundColor: 'rgba(216, 216, 216, 0.5)', 
-  transition: '0.5s ease'
- },
- '&:active': {
-  transform: 'scale(0.8)', // Shrink the button when clicked
- },
- }}
->
-</Button>
+<Box sx={{  display: 'flex',
+         '& > :not(style)': { m: 0.3 },
+         marginLeft: '32%', }}>
+<Fab size="small" 
+sx={{
+  background: '#000000',
+  borderRadius: '50%', // To make the button circular
+  boxShadow: 'none', // Remove shadow
+  transform: 'scale(0.6)',
+  '&:hover': {
+   backgroundColor: 'rgba(0, 0, 0, 0.8)', 
+   transition: '0.5s ease'
+  },
+  '&:active': {
+   transform: 'scale(0.8)', // Shrink the button when clicked
+  },
+}}>
+</Fab>
+
+<Fab size="small" 
+sx={{
+  background: '#54230e',
+  marginLeft: '2%',
+  borderRadius: '50%', // To make the button circular
+  boxShadow: 'none', // Remove shadow
+  transform: 'scale(0.6)',
+  '&:hover': {
+   backgroundColor: 'rgba(84, 35, 14, 0.8)',
+   transition: '0.5s ease'
+  },
+  '&:active': {
+   transform: 'scale(0.8)', // Shrink the button when clicked
+  },
+}}>
+</Fab>
+
+<Fab size="small" 
+sx={{
+  background: '#090050',
+  marginLeft: '2%',
+  borderRadius: '50%', // To make the button circular
+  boxShadow: 'none', // Remove shadow
+  transform: 'scale(0.6)',
+  '&:hover': {
+   backgroundColor: 'rgba(9, 0, 80, 0.8)',
+   transition: '0.5s ease'
+  },
+  '&:active': {
+   transform: 'scale(0.8)', // Shrink the button when clicked
+  },
+}}>
+</Fab>
+
+<Fab size="small" 
+sx={{
+  background: '#002b14',
+  marginLeft: '2%',
+  borderRadius: '50%', // To make the button circular
+  boxShadow: 'none', // Remove shadow
+  transform: 'scale(0.6)',
+  '&:hover': {
+   backgroundColor: 'rgba(0, 43, 20, 0.8)',
+   transition: '0.5s ease'
+  },
+  '&:active': {
+   transform: 'scale(0.8)', // Shrink the button when clicked
+  },
+}}>
+</Fab>
+
+<Fab size="small" 
+sx={{
+  background: '#d8d8d8',
+  marginLeft: '2%',
+  borderRadius: '50%', // To make the button circular
+  boxShadow: 'none', // Remove shadow
+  transform: 'scale(0.6)',
+  '&:hover': {
+   backgroundColor: 'rgba(216, 216, 216, 0.8)',
+   transition: '0.5s ease'
+  },
+  '&:active': {
+   transform: 'scale(0.8)', // Shrink the button when clicked
+  },
+}}>
+</Fab>
+</Box>
 
 <Typography 
       variant="h3" 
       gutterBottom 
       sx={{ 
+        fontFamily: 'Arimo',
         fontSize: '1em', 
         fontWeight: 'bold', 
         textAlign: 'right',
-        marginRight: '40%',
+        marginRight: '38.6%',
         marginTop: '-25%',
         marginBottom: '40%'
       }}
@@ -156,7 +210,7 @@ const App = () => {
       sx={{ 
         fontSize: '0.8em',  
         textAlign: 'left',
-        marginLeft: '55.3%',
+        marginLeft: '57%',
         marginTop: '-39%',
         marginBottom: '40%',
         paddingRight: '16%',
@@ -170,10 +224,11 @@ const App = () => {
       variant="h3" 
       gutterBottom 
       sx={{ 
+        fontFamily: 'Arimo',
         fontSize: '1em', 
         fontWeight: 'bold', 
         textAlign: 'right',
-        marginRight: '39%',
+        marginRight: '37.2%',
         marginTop: '-35%',
         marginBottom: '40%',
         textDecoration: 'underline'
@@ -186,10 +241,11 @@ const App = () => {
       variant="h3" 
       gutterBottom 
       sx={{ 
+        fontFamily: 'Arimo',
         fontSize: '1em', 
         fontWeight: 'bold', 
         textAlign: 'right',
-        marginRight: '459px',
+        marginRight: '32.8%',
         marginTop: '-38%',
         marginBottom: '40%'
       }}
@@ -201,10 +257,11 @@ const App = () => {
       variant="h3" 
       gutterBottom 
       sx={{ 
+        fontFamily: 'Arimo',
         fontSize: '1em', 
         fontWeight: 'bold', 
         textAlign: 'right',
-        marginRight: '38.3%',
+        marginRight: '36.7%',
         marginTop: '-38%',
         marginBottom: '40%'
       }}
