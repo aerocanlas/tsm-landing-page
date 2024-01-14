@@ -55,25 +55,25 @@ const App = () => {
               <img 
                 src="/images/pullover.png" 
                 alt="Image 1" 
-                onClick={() => handleClick(0, "/images/pullover.png", '350px')} 
+                onClick={() => handleClick(0, "/images/pullover.png", '400px')} 
                 style={{ border: isClicked[0] ? '1px solid black' : '', cursor: 'pointer', transition: 'border 0.5s ease-in-out' }}
               />
               <img 
                 src="/images/pullover-2.jpg" 
                 alt="Image 2" 
-                onClick={() => handleClick(1, "/images/pullover-2.jpg", '350px')} 
+                onClick={() => handleClick(1, "/images/pullover-2.jpg", '400px')} 
                 style={{ border: isClicked[1] ? '1px solid black' : '', cursor: 'pointer', transition: 'border 0.5s ease-in-out' }}
               />
               <img 
                 src="/images/pullover-3.jpg" 
                 alt="Image 3" 
-                onClick={() => handleClick(2, "/images/pullover-3.jpg", '350px')} 
+                onClick={() => handleClick(2, "/images/pullover-3.jpg", '400px')} 
                 style={{ border: isClicked[2] ? '1px solid black' : '', cursor: 'pointer', transition: 'border 0.5s ease-in-out' }}
               />
               <img 
                 src="/images/pullover-4.jpg" 
                 alt="Image 4" 
-                onClick={() => handleClick(3, "/images/pullover-4.jpg", '350px')}  
+                onClick={() => handleClick(3, "/images/pullover-4.jpg", '400px')}  
                 style={{ border: isClicked[3] ? '1px solid black' : '', cursor: 'pointer', transition: 'border 0.5s ease-in-out' }}
               />
            </Stack>
@@ -81,12 +81,12 @@ const App = () => {
 
 
 <Box sx={{
-        maxHeight: 350, // Add this line
-        maxWidth: 350, // Add this line
+        maxHeight: 300, // Add this line
+        maxWidth: 300, // Add this line
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: '-30%',
+        marginTop: '-25%',
         marginLeft: marginLeft,
         marginBottom: '50px',
         minHeight: { xs: 233, md: 167, lg: 100 },
