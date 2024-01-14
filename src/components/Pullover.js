@@ -26,6 +26,7 @@ const App = () => {
    };
    
    
+   
 
   const theme = createTheme({
     palette: {
@@ -79,7 +80,18 @@ const App = () => {
         </Box>
 
 
-
+<Box sx={{
+        maxHeight: 350, // Add this line
+        maxWidth: 350, // Add this line
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: '-30%',
+        marginLeft: marginLeft,
+        marginBottom: '50px',
+        minHeight: { xs: 233, md: 167, lg: 100 },
+        minWidth: { xs: 350, md: 250, lg: 100 },
+      }}>
         <ReactImageMagnify
  {...{
    smallImage: {
@@ -93,20 +105,8 @@ const App = () => {
      height: 1200
    }
  }}
- style={{
-   maxHeight: 350,
-   maxWidth: 350,
-   display: 'flex',
-   justifyContent: 'center',
-   alignItems: 'center',
-   marginTop: '-30%',
-   marginLeft: marginLeft,
-   marginBottom: '50px',
-   minHeight: { xs: 233, md: 167, lg: 100 },
-   minWidth: { xs: 350, md: 250, lg: 100 },
- }}
 />
-
+</Box>
  {/* <Box
       component="img"
       sx={{
