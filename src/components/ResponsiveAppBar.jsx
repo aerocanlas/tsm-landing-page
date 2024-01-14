@@ -118,8 +118,8 @@ const Navbar = () => {
         <Box
       component="img"
       sx={{
-        minHeight: { xs: 350, md: 250, lg: 200, xl: 45 }, // Add this line
-        maxWidth: { xs: 350, md: 250, lg: 200, xl: 480 },// Add this line
+        minHeight: { xs: 350, md: 250, lg: 45, xl: 45 }, // Add this line
+        maxWidth: { xs: 350, md: 250, lg: 480, xl: 480 },// Add this line
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
