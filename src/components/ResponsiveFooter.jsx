@@ -49,7 +49,7 @@ const ResponsiveFooter= () => {
             <Typography variant="subtitle1" color="text.primary" gutterBottom>
               Company
             </Typography>
-            <Link to="#" color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}> <Typography sx={{display: 'block', fontSize:'14px'}}>About</Typography></Link>
+            <Link to="/Pullover" color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}> <Typography sx={{display: 'block', fontSize:'14px'}}>About</Typography></Link>
             <Link to="/Teams" color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}><Typography sx={{display: 'block', fontSize:'14px'}}>Teams</Typography></Link>
             <Link to="#" color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}><Typography sx={{display: 'block', fontSize:'14px'}}>Career</Typography></Link>
           </Grid>
