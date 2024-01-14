@@ -9,6 +9,7 @@ import FAQs from './faqs';
 import Button from '@mui/material/Button';
 import Fab from '@mui/material/Fab';
 import Stack from '@mui/material/Stack';
+import ReactImageMagnify from 'react-image-magnify';
 
 const App = () => {
   const [isClicked, setIsClicked] = useState([false, false, false, false]);
@@ -43,7 +44,6 @@ const App = () => {
        <ThemeProvider theme={theme}>
      <CssBaseline />
      <ResponsiveAppBar position="static" color="transparent"/>
-
      <Box 
           sx={{ 
           width: '5%',
@@ -60,19 +60,19 @@ const App = () => {
               <img 
                 src="/images/pullover-2.jpg" 
                 alt="Image 2" 
-                onClick={() => handleClick(1, "/images/pullover-2.jpg", '400px')} 
+                onClick={() => handleClick(1, "/images/pullover-2.jpg", '350px')} 
                 style={{ border: isClicked[1] ? '1px solid black' : '', cursor: 'pointer', transition: 'border 0.5s ease-in-out' }}
               />
               <img 
                 src="/images/pullover-3.jpg" 
                 alt="Image 3" 
-                onClick={() => handleClick(2, "/images/pullover-3.jpg", '400px')} 
+                onClick={() => handleClick(2, "/images/pullover-3.jpg", '350px')} 
                 style={{ border: isClicked[2] ? '1px solid black' : '', cursor: 'pointer', transition: 'border 0.5s ease-in-out' }}
               />
               <img 
                 src="/images/pullover-4.jpg" 
                 alt="Image 4" 
-                onClick={() => handleClick(3, "/images/pullover-4.jpg", '400px')}  
+                onClick={() => handleClick(3, "/images/pullover-4.jpg", '350px')}  
                 style={{ border: isClicked[3] ? '1px solid black' : '', cursor: 'pointer', transition: 'border 0.5s ease-in-out' }}
               />
            </Stack>
@@ -80,8 +80,34 @@ const App = () => {
 
 
 
+        <ReactImageMagnify
+ {...{
+   smallImage: {
+     alt: "Pullover",
+     isFluidWidth: true,
+     src: selectedImage
+   },
+   largeImage: {
+     src: selectedImage,
+     width: 1000,
+     height: 1200
+   }
+ }}
+ style={{
+   maxHeight: 350,
+   maxWidth: 350,
+   display: 'flex',
+   justifyContent: 'center',
+   alignItems: 'center',
+   marginTop: '-30%',
+   marginLeft: marginLeft,
+   marginBottom: '50px',
+   minHeight: { xs: 233, md: 167, lg: 100 },
+   minWidth: { xs: 350, md: 250, lg: 100 },
+ }}
+/>
 
- <Box
+ {/* <Box
       component="img"
       sx={{
         maxHeight: 350, // Add this line
@@ -98,7 +124,7 @@ const App = () => {
       alt="Pullover"
       src={selectedImage}
       
-    /> 
+    />  */}
 
 <Box sx={{  display: 'flex',
          '& > :not(style)': { m: 0.3 },
