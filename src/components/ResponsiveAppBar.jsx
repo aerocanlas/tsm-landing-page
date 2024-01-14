@@ -55,7 +55,7 @@ const Navbar = () => {
   })
 
   return (
-    <AppBar position="sticky" color="transparent" sx={{boxShadow: 'none', marginTop: '60px'}}>
+    <AppBar position="sticky" color="transparent" sx={{boxShadow: 'none', marginTop: '70px'}}>
       <StyledToolbar >
       <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -114,10 +114,23 @@ const Navbar = () => {
               </Button>
             ))}
         </Typography>
-       
-        <Typography variant="h6" sx={{ display: { xs: "none", sm: "flex" }, fontFamily: 'Arimo', fontWeight: 500, color: 'black' }}>
+        <Link to="/Home">
+        <Box
+      component="img"
+      sx={{
+        minHeight: { xs: 350, md: 250, lg: 200, xl: 45 }, // Add this line
+        maxWidth: { xs: 350, md: 250, lg: 200, xl: 480 },// Add this line
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+      alt=""
+      src="/images/TSM Logo.png"
+    />  
+    </Link>
+        {/* <Typography variant="h6" sx={{ display: { xs: "none", sm: "flex" }, fontFamily: 'Arimo', fontWeight: 500, color: 'black' }}>
           THE STREET MARKET <Typography variant="h6" sx={{ display: { xs: "none", sm: "flex" }, fontSize: '8px', }}>TM</Typography>
-        </Typography>
+        </Typography> */}
         <Typography variant="h6" sx={{ display: { xs: "none", sm: "flex" }, marginLeft: '-100px', marginRight: '150px' }}>
         {pages1.map((page1) => (
               <Button

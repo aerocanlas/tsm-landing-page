@@ -10,6 +10,7 @@ import Home from './components/Home';
 import Contact from './components/Contact';
 import Teams from './components/Teams';
 import Pullover from './components/Pullover';
+import Community from './components/Community';
 
 const App = () => {
 
@@ -32,6 +33,7 @@ const App = () => {
     <Route path='Contact' element={<Contact />}/>
     <Route path='faqs' element={<FAQs />}/>
     <Route path='Teams' element={<Teams />}/>
+    <Route path='Community' element={<Community />}/>
     <Route path='Pullover' element={<Pullover />}/>
    </Routes>
 </>

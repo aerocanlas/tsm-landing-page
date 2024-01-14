@@ -23,7 +23,7 @@ const ResponsiveFooter= () => {
   return (
     <Box
       sx={{
-        bgcolor: 'background.paper',
+        bgcolor: '#f4f4f4',
         color: 'text.secondary',
         py: 3,
         borderTop: '1px solid',
@@ -31,36 +31,36 @@ const ResponsiveFooter= () => {
       }}
     >
       <Container maxWidth={false}>
-        <Grid container spacing={2} justifyContent="space-between">
+        <Grid container spacing={0.2} justifyContent="space-between">
           <Grid item xs={12} sm={6} md={3}>
             {/* Add your logo component or image here */}
           </Grid>
           <Grid item xs={6} sm={3} md={2}>
-            <Typography variant="subtitle1" color="text.primary" gutterBottom>
+            <Typography marginTop='70px' variant="subtitle1" color="text.primary" gutterBottom fontWeight='bold'>
               Support
             </Typography>
-            <Link to="/FAQs" color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}> <Typography sx={{display: 'block', fontSize:'14px'}}>FAQs</Typography></Link>
+            <Link to="/FAQs" color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}> <Typography sx={{display: 'block', fontSize:'14px'}}>FAQ's</Typography></Link>
             <Link to="#" color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}><Typography sx={{display: 'block', fontSize:'14px'}}>Shipping</Typography></Link>
-            <Link to="#" color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}><Typography sx={{display: 'block', fontSize:'14px'}}>Size Guide</Typography></Link>
+            <Link to="#" color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}><Typography sx={{display: 'block', fontSize:'14px', marginBottom: '50px'}}>Size Guide</Typography></Link>
             {/* <Link href="#" color="inherit" display="block" sx={{textDecoration: 'none'}}>Shipping</Link>
             <Link href="#" color="inherit" display="block" sx={{textDecoration: 'none'}}>Size Guide</Link> */}
           </Grid>
           <Grid item xs={6} sm={3} md={2}>
-            <Typography variant="subtitle1" color="text.primary" gutterBottom>
+            <Typography marginTop='70px' variant="subtitle1" color="text.primary" gutterBottom fontWeight='bold'>
               Company
             </Typography>
             <Link to="/Pullover" color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}> <Typography sx={{display: 'block', fontSize:'14px'}}>About</Typography></Link>
             <Link to="/Teams" color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}><Typography sx={{display: 'block', fontSize:'14px'}}>Teams</Typography></Link>
-            <Link to="#" color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}><Typography sx={{display: 'block', fontSize:'14px'}}>Career</Typography></Link>
+            <Link to="#" color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}><Typography sx={{display: 'block', fontSize:'14px', marginBottom: '50px'}}>Career</Typography></Link>
           </Grid>
           <Grid item xs={6} sm={3} md={2}>
-            <Typography variant="subtitle1" color="text.primary" gutterBottom>
+            <Typography marginTop='70px' variant="subtitle1" color="text.primary" gutterBottom fontWeight='bold'>
               Social
             </Typography>
             <Link to={socialMediaLinks.facebook} color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}> <Typography sx={{display: 'block', fontSize:'14px'}}>Facebook</Typography></Link>
             <Link to={socialMediaLinks.instagram} color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}><Typography sx={{display: 'block', fontSize:'14px'}}>Instagram</Typography></Link>
             <Link to={socialMediaLinks.shopee} color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}><Typography sx={{display: 'block', fontSize:'14px'}}>Shopee</Typography></Link>
-            <Link to={socialMediaLinks.lazada} color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}><Typography sx={{display: 'block', fontSize:'14px'}}>Lazada</Typography></Link>
+            <Link to={socialMediaLinks.lazada} color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}><Typography sx={{display: 'block', fontSize:'14px', marginBottom: '50px'}}>Lazada</Typography></Link>
           </Grid>
           <Grid item xs={6} sm={3} md={2}>
           </Grid>
