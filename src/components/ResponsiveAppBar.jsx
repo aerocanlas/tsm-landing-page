@@ -123,6 +123,7 @@ const Navbar = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        ml: { lg:'40px'}
       }}
       alt=""
       src="/images/TSM Logo.png"
@@ -138,7 +139,8 @@ const Navbar = () => {
                 to={`/${page1}`}
                 key={page1}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'black', display: 'block', textTransform: 'none' }}
+                sx={{ my: 2, color: 'black', display: 'block', textTransform: 'none',
+               }}
               >
                 {page1}
               </Button>

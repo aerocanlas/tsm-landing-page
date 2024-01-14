@@ -96,13 +96,14 @@ const Home = () => {
  <Box
       component="img"
       sx={{
-        minHeight: { xs: 350, md: 250, lg: 800, xl: 1000 }, // Add this line
-        maxWidth: { xs: 350, md: 250, lg: 1360, xl: 1800 },// Add this line
+        minHeight: { xs: 350, md: 250, lg: 750, xl: 1000 }, // Add this line
+        maxWidth: { xs: 350, md: 250, lg: 1300, xl: 1800 },// Add this line
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: '-300px',
-        marginBottom: '-300px'
+        marginTop: {lg: '-350px', xl: '-300px'},
+        marginBottom: {lg: '-350px', xl:'-300px'},
+        ml: '-10px'
       }}
       alt=""
       src="/images/rotating.gif"
@@ -199,8 +200,8 @@ Your brand will undoubtedly dominate the market <br></br>with a high-end and sup
       component="img"
       sx={{
         backgroundColor: '#ffffff', boxShadow: 'none', outline: 'none',
-        minHeight: { xs: 350, md: 250, lg: 500, xl: 300 }, // Add this line
-        maxWidth: { xs: 350, md: 250, lg: 500, xl: 300 },// Add this line
+        minHeight: { xs: 350, md: 250, lg: 200, xl: 300 }, // Add this line
+        maxWidth: { xs: 350, md: 250, lg: 200, xl: 300 },// Add this line
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -214,8 +215,8 @@ Your brand will undoubtedly dominate the market <br></br>with a high-end and sup
         <Box
       component="img"
       sx={{
-        minHeight: { xs: 350, md: 250, lg: 500, xl: 300 }, // Add this line
-        maxWidth: { xs: 350, md: 250, lg: 500, xl: 300 },// Add this line
+        minHeight: { xs: 350, md: 250, lg: 200, xl: 300 }, // Add this line
+        maxWidth: { xs: 350, md: 250, lg: 200, xl: 300 },// Add this line
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -229,8 +230,8 @@ Your brand will undoubtedly dominate the market <br></br>with a high-end and sup
         <Box
       component="img"
       sx={{
-        minHeight: { xs: 350, md: 250, lg: 500, xl: 300 }, // Add this line
-        maxWidth: { xs: 350, md: 250, lg: 500, xl: 300 },// Add this line
+        minHeight: { xs: 350, md: 250, lg: 200, xl: 300 }, // Add this line
+        maxWidth: { xs: 350, md: 250, lg: 200, xl: 300 },// Add this line
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -244,8 +245,8 @@ Your brand will undoubtedly dominate the market <br></br>with a high-end and sup
         <Box
       component="img"
       sx={{
-        minHeight: { xs: 350, md: 250, lg: 500, xl: 300 }, // Add this line
-        maxWidth: { xs: 350, md: 250, lg: 500, xl: 300 },// Add this line
+        minHeight: { xs: 350, md: 250, lg: 200, xl: 300 }, // Add this line
+        maxWidth: { xs: 350, md: 250, lg: 200, xl: 300 },// Add this line
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -259,8 +260,8 @@ Your brand will undoubtedly dominate the market <br></br>with a high-end and sup
         <Box
       component="img"
       sx={{
-        minHeight: { xs: 350, md: 250, lg: 500, xl: 300 }, // Add this line
-        maxWidth: { xs: 350, md: 250, lg: 500, xl: 300 },// Add this line
+        minHeight: { xs: 350, md: 250, lg: 200, xl: 300 }, // Add this line
+        maxWidth: { xs: 350, md: 250, lg: 200, xl: 300 },// Add this line
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -337,7 +338,7 @@ Your brand will undoubtedly dominate the market <br></br>with a high-end and sup
       <Card sx={{ backgroundColor: '#ffffff', boxShadow: 'none', outline: 'none', height: '1000px', display: 'flex',
         justifyContent: 'center', }}>
             <CardContent>
-            <Card sx={{ backgroundColor: '#f4f4f4', boxShadow: 'none', outline: 'none', width: '1600px', height: '750px', display: 'flex',
+            <Card sx={{ backgroundColor: '#f4f4f4', boxShadow: 'none', outline: 'none', width: {lg: '1200px', xl: '1600px'}, height: '750px', display: 'flex',
             marginTop: '100px',
         justifyContent: 'center',
         marginBottom: '100px', }}>
