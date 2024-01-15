@@ -37,10 +37,10 @@ const App = () => {
       variant="h3" 
       gutterBottom 
       sx={{ 
-        fontSize: { xs: '0.9em', sm: '1rem', md: '1.5rem' },
+        fontSize: { xs: '0.9em', sm: '1rem', md: '1rem', lg: '1.2rem', xl: '1.2rem' },
         fontWeight: 'bold', 
         textAlign: 'center', 
-        marginTop: { xs: '-200px', sm: '100px', md: '-70px', lg: '30px' }, // Adjust as needed
+        marginTop: { xs: '-320px', sm: '100px', md: '-70px', lg: '-50px', xl: '-50px' }, // Adjust as needed
         marginBottom: { xs: '50px', sm: '', md: '30px', lg: '90px' }
       }}
   >
@@ -50,10 +50,10 @@ const App = () => {
  variant="body1" 
  gutterBottom 
  sx={{ 
-    fontSize: { xs: '0.7rem', sm: '0.8rem', md: '1rem' }, // Adjust as needed
-    marginTop: { xs: '-250px', sm: '-200px', md: '-250px', lg: '-250px' }, // Adjust as needed
-    paddingLeft: { xs: '10px', sm: '350px', md: '300px' },
-    paddingRight: { xs: '10px', sm: '350px', md: '300px' },
+    fontSize: { xs: '0.6rem', sm: '0.8rem', md: '1rem', lg: '0.8rem' }, // Adjust as needed
+    marginTop: { xs: '-350px', sm: '-200px', md: '-250px', lg: '-280px', xl: '-200px' }, // Adjust as needed
+    paddingLeft: { xs: '20px', sm: '350px', md: '300px' },
+    paddingRight: { xs: '20px', sm: '350px', md: '300px' },
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
