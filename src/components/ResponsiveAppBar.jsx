@@ -17,6 +17,7 @@ import Button from '@mui/material/Button';
 import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from '@mui/material/IconButton';
 import { Link } from 'react-router-dom';
+import Stack from '@mui/material/Stack';
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
@@ -57,7 +58,8 @@ const Navbar = () => {
   return (
     <AppBar position="sticky" color="transparent" sx={{boxShadow: 'none', marginTop: '70px'}}>
       <StyledToolbar >
-      <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+      <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' },
+           }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -101,7 +103,7 @@ const Navbar = () => {
             </Menu>
           </Box>
           
-        <Typography variant="h6" sx={{ display: { xs: "none", sm: "flex" }, marginLeft: '100px', marginRight: '-150px'}}>
+        <Typography variant="h6" sx={{ display: { xs: "none", sm: "flex" }, marginLeft: {lg: '80px', xl:'130px'}, marginRight: '-190px'}}>
         {pages.map((page) => (
               <Button
                 component={Link}
@@ -114,12 +116,59 @@ const Navbar = () => {
               </Button>
             ))}
         </Typography>
-        <Link to="/Home">
+        <Stack direction="column" spacing={0.2} 
+        sx={{
+        display: {xs: 'none', sm: 'none', lg: 'flex', xl: 'flex'}, 
+        justifyContent: 'center', 
+        alignItems: 'center',
+        ml: {lg: '410px', xl: '650px'},
+        mr: {lg: '300px', xl: '500px'}
+        }}>
+<Typography
+            variant="h5"
+            noWrap
+            component="a"
+            href="#app-bar-with-responsive-menu"
+            sx={{
+              mr: 2,
+              display: { xs: 'flex', md: 'flex' },
+              flexGrow: 1,
+              fontFamily: 'Arimo',
+              fontWeight: 'bold',
+              letterSpacing: '0px',
+              color: 'black',
+              fontSize: {xs: '18px', lg: '24px', xl: '28px'},
+              textDecoration: 'none',
+            }}
+          >
+            THE STREET MARKET <Typography variant="h6" sx={{ display: { xs: "flex", sm: "flex" }, fontSize: '8px', }}>TM</Typography>
+          </Typography>
+          <Typography
+            variant="h5"
+            noWrap
+            component="a"
+            href="#app-bar-with-responsive-menu"
+            sx={{
+              mr: 2,
+              display: { xs: 'flex', md: 'flex' },
+              flexGrow: 1,
+              fontFamily: 'Arimo',
+              fontWeight: 400,
+              letterSpacing: '0px',
+              color: 'black',
+              fontSize: '12px',
+              textDecoration: 'none',
+            }}
+          >
+GARMENT MANUFACTURER          
+</Typography>
+</Stack>
+        {/* <Link to="/Home">
         <Box
       component="img"
       sx={{
-        minHeight: { xs: 350, md: 250, lg: 45, xl: 45 }, // Add this line
-        maxWidth: { xs: 350, md: 250, lg: 480, xl: 480 },// Add this line
+        minHeight: { xs: 'none', md: 'none', lg: 45, xl: 45 }, // Add this line
+        maxWidth: { xs: 'none', md: 'none', lg: 480, xl: 480 },// Add this line
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -127,12 +176,12 @@ const Navbar = () => {
       }}
       alt=""
       src="/images/TSM Logo.png"
-    />  
-    </Link>
+    />   
+    </Link>*/}
         {/* <Typography variant="h6" sx={{ display: { xs: "none", sm: "flex" }, fontFamily: 'Arimo', fontWeight: 500, color: 'black' }}>
           THE STREET MARKET <Typography variant="h6" sx={{ display: { xs: "none", sm: "flex" }, fontSize: '8px', }}>TM</Typography>
         </Typography> */}
-        <Typography variant="h6" sx={{ display: { xs: "none", sm: "flex" }, marginLeft: '-100px', marginRight: '150px' }}>
+        <Typography variant="h6" sx={{ display: { xs: "none", sm: "flex" }, marginLeft: {lg: '10px', xl:'30px'}, marginRight: {lg: '150px', xl: '70px'} }}>
         {pages1.map((page1) => (
               <Button
               component={Link}
@@ -145,8 +194,35 @@ const Navbar = () => {
                 {page1}
               </Button>
             ))}
-        </Typography>
-        <Typography
+            </Typography>
+            <Stack direction="column" spacing={0.2} 
+            sx={{
+            display: {xs: 'flex', sm: 'flex'},
+            justifyContent: 'center',
+            alignItems: 'center',
+            position: "absolute",
+            left: {xs:'110px', sm: '150px'}
+            }}>
+<Typography
+            variant="h5"
+            noWrap
+            component="a"
+            href="#app-bar-with-responsive-menu"
+            sx={{
+              mr: 4,
+              display: { xs: 'flex', md: 'none' },
+              flexGrow: 1,
+              fontFamily: 'Arimo',
+              fontWeight: 'bold',
+              letterSpacing: '0px',
+              color: 'black',
+              fontSize: '18px',
+              textDecoration: 'none',
+            }}
+          >
+            THE STREET MARKET <Typography variant="h6" sx={{ display: { xs: "flex", sm: "flex" }, fontSize: '8px', }}>TM</Typography>
+          </Typography>
+          <Typography
             variant="h5"
             noWrap
             component="a"
@@ -156,15 +232,16 @@ const Navbar = () => {
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
               fontFamily: 'Arimo',
-              fontWeight: 500,
+              fontWeight: 400,
               letterSpacing: '0px',
               color: 'black',
-              fontSize: '18px',
+              fontSize: '12px',
               textDecoration: 'none',
             }}
           >
-            THE STREET MARKET <Typography variant="h6" sx={{ display: { xs: "flex", sm: "flex" }, fontSize: '8px', }}>TM</Typography>
-          </Typography>
+GARMENT MANUFACTURER          
+</Typography>
+</Stack>
       </StyledToolbar>
       
     </AppBar>

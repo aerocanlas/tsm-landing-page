@@ -99,13 +99,14 @@ const Home = () => {
       component="img"
       sx={{
         minHeight: { xs: 350, md: 250, lg: 750, xl: 1000 }, // Add this line
-        maxWidth: { xs: 350, md: 250, lg: 1300, xl: 1800 },// Add this line
+        maxWidth: { xs: 600, md: 250, lg: 1300, xl: 1800 },// Add this line
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: {lg: '-350px', xl: '-300px'},
-        marginBottom: {lg: '-350px', xl:'-300px'},
-        ml: '-10px'
+        marginTop: {xs: '-350px', lg: '-350px', xl: '-300px'},
+        marginBottom: {xs: '-350px', lg: '-350px', xl:'-300px'},
+        ml: '-10px',
+        transform: {xs: 'scale(1.5)'},
       }}
       alt=""
       src="/images/rotating.gif"
@@ -155,7 +156,8 @@ const Home = () => {
         fontWeight: 'bold', 
         textAlign: 'center',
         textTransform: 'uppercase',
-        fontStyle: 'italic' // Adjust as needed
+        fontStyle: 'italic', // Adjust as needed
+        marginTop: {xs: '-340px', lg: '100px', xl: '100px'},
       }}
   >
  unleash your brand with confidence.
@@ -166,10 +168,10 @@ const Home = () => {
   
  sx={{ 
   paddingTop: '20px',
-  paddingBottom: '20px',
   fontSize: '0.8rem', // Adjust as needed, // Adjust as needed
   // paddingLeft: '350px',
   // paddingRight: '350px',
+  marginBottom: {xs: '100px', lg: '100px', xl: '100px'},
   textAlign: "center", // Adjust as needed
  }}
  align="center"
@@ -177,26 +179,32 @@ const Home = () => {
 Your brand will undoubtedly dominate the market <br></br>with a high-end and superior supply of garments.  </Typography>
       </Box>
 
-      <Card sx={{ backgroundColor: '#ffffff', boxShadow: 'none', outline: 'none', height: '800px', display: 'flex',
+<Box sx={{ backgroundColor: '#ffffff', boxShadow: 'none', outline: 'none', height: '800px', display: 'flex',
         justifyContent: 'center',
-        marginTop: '10px',
+        marginTop: {xs: '50px', xl: '10px'},
         marginBottom: '5px', }}>
+      <Card sx={{boxShadow: 'none', outline: 'none',}}>
+
             <CardContent>
-<Typography variant="h1" 
+
+            <Typography variant="h1" 
       gutterBottom 
       sx={{ 
-        marginTop: '50px', 
         fontSize: '1rem', 
         textAlign: 'center',
         textTransform: 'normal',
         fontFamily: 'Arimo',
+        marginTop: {xs: '100px', lg: '100px', xl: '100px'},
+        marginBottom: {xs: '50px', lg: '100px', xl: '100px'},
          // Adjust as needed
       }}> Our Products</Typography>
 
 <Stack direction="row" spacing={2} sx={{
-  marginTop: '120px',
+  marginTop: {xs: '0px', xl: '120px'},
+  marginLeft: {xs: '20px'}
   
 }}>
+  
         <Item>
         <Box
       component="img"
@@ -340,11 +348,12 @@ Your brand will undoubtedly dominate the market <br></br>with a high-end and sup
     </Box>
             </CardContent>
       </Card>
+      </Box>
 
-      <Card sx={{ backgroundColor: '#ffffff', boxShadow: 'none', outline: 'none', height: '1000px', display: 'flex',
+      <Card sx={{ backgroundColor: '#ffffff', boxShadow: 'none', outline: 'none', height: {xs: '1600px', lg:'1000px'}, display: 'flex',
         justifyContent: 'center', }}>
             <CardContent>
-            <Card sx={{ backgroundColor: '#f4f4f4', boxShadow: 'none', outline: 'none', width: {lg: '1200px', xl: '1600px'}, height: '750px', display: 'flex',
+            <Card sx={{ backgroundColor: '#f4f4f4', boxShadow: 'none', outline: 'none', width: {xs: '300px', lg: '1200px', xl: '1600px'}, height: {xs: '1350px', lg:'750px'}, display: 'flex',
             marginTop: '100px',
         justifyContent: 'center',
         marginBottom: '100px', }}>
@@ -363,59 +372,80 @@ Your brand will undoubtedly dominate the market <br></br>with a high-end and sup
          // Adjust as needed
       }}> HOW TO ORDER</Typography>
 
-<Grid container>
+<Grid container sx={{overflowX: {xs: 'auto'}}}>
  <Grid item xs={5}>
    <Grid container direction="column" alignItems="flex-start">
 <Box sx={{display: 'inline-flex'}}>
-<Typography variant="body1" gutterBottom sx={{ fontFamily: 'Arimo', fontSize: '1.2rem', ml: 20, mt: 10, display: 'flex', textTransform: 'uppercase', fontWeight: 'bold' }}>
+<Typography variant="body1" gutterBottom sx={{ fontFamily: 'Arimo', fontSize: '1.2rem', ml: {xs: 40, lg: 20, xl: 20}, mt: 10, display: 'flex', textTransform: 'uppercase', fontWeight: 'bold' }}>
    01
  </Typography>
- <Typography variant="body1" gutterBottom sx={{ fontFamily: 'Arimo', fontSize: '1.2rem', ml: 5, mt: 10, display: 'flex', textTransform: 'uppercase', fontWeight: 'bold' }}>
+ <Typography variant="body1" gutterBottom sx={{ fontFamily: 'Arimo', fontSize: '1.2rem', ml: {xs: 5, lg: 5, xl: 5}, mt: 10, display: 'flex', textTransform: 'uppercase', fontWeight: 'bold', width: '500px' }}>
    Tech Pack
  </Typography>
 </Box>
- <Typography variant="body2" gutterBottom sx={{ fontSize: '0.8rem', ml: 28.2, mt: 1, maxWidth: '350px', letterSpacing: '0.7px' }} align="justify">
+ <Typography variant="body2" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 48.2, lg: 28.2, xl: 28.2}, mt: 1, width: {xs:'180px', lg:'350px'}, letterSpacing: '0.7px' }} align="justify">
  Mock-ups with or without print designs, fabric colors, quantity per size, label design, measurements, attachments, or samples of similar garments with the fit you prefer are required.  
  </Typography>
 
  <Box sx={{display: 'inline-flex'}}>
-<Typography variant="body1" gutterBottom sx={{ fontFamily: 'Arimo', fontSize: '1.2rem', ml: 20, mt: 10, display: 'flex', textTransform: 'uppercase', fontWeight: 'bold' }}>
+ <Typography variant="body1" gutterBottom sx={{ fontFamily: 'Arimo', fontSize: '1.2rem', ml: {xs: 40, lg: 20, xl: 20}, mt: 10, display: 'flex', textTransform: 'uppercase', fontWeight: 'bold' }}>
    02
  </Typography>
- <Typography variant="body1" gutterBottom sx={{ fontFamily: 'Arimo', fontSize: '1.2rem', ml: 5, mt: 10, display: 'flex', textTransform: 'uppercase', fontWeight: 'bold' }}>
+ <Typography variant="body1" gutterBottom sx={{ fontFamily: 'Arimo', fontSize: '1.2rem', ml: {xs: 5, lg: 5, xl: 5}, mt: 10, display: 'flex', textTransform: 'uppercase', fontWeight: 'bold', width: '500px' }}>
  Get a Quote
  </Typography>
 </Box>
- <Typography variant="body2" gutterBottom sx={{ fontSize: '0.8rem', ml: 28.2, mt: 1, maxWidth: '350px', letterSpacing: '0.7px' }} align="justify">
+<Typography variant="body2" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 48.2, lg: 28.2, xl: 28.2}, mt: 1, width: {xs:'180px', lg:'350px'}, letterSpacing: '0.7px' }} align="justify">
  Please refer to our Request a Quote by filling out the Application Form and provide the required details to receive a fair cost estimate.
   </Typography>
-
+  <Box sx={{display: {xs:'inline-flex', lg: 'none'}}}>
+  <Typography variant="body1" gutterBottom sx={{ fontFamily: 'Arimo', fontSize: '1.2rem', ml: {xs: 40, lg: 20, xl: 20}, mt: 10, display: 'flex', textTransform: 'uppercase', fontWeight: 'bold' }}>
+   03
+ </Typography>
+ <Typography variant="body1" gutterBottom sx={{ fontFamily: 'Arimo', fontSize: '1.2rem', ml: {xs: 5, lg: 5, xl: 5}, mt: 10, display: 'flex', textTransform: 'uppercase', fontWeight: 'bold', width: '500px' }}>
+ Sampling
+ </Typography>
+</Box>
+<Typography variant="body2" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 48.2, lg: 28.2, xl: 28.2}, mt: 1, width: {xs:'180px', lg:'350px'}, letterSpacing: '0.7px', display: {lg: 'none'} }} align="justify">
+ If you would like a sample before putting in a production order, we can accommodate that request. The cost of a sample can be prohibitively expensive in small orders.  
+ </Typography>
+ <Box sx={{display: {xs:'inline-flex', lg: 'none'}}}>
+  <Typography variant="body1" gutterBottom sx={{ fontFamily: 'Arimo', fontSize: '1.2rem', ml: {xs: 40, lg: 20, xl: 20}, mt: 10, display: 'flex', textTransform: 'uppercase', fontWeight: 'bold' }}>
+   04
+ </Typography>
+ <Typography variant="body1" gutterBottom sx={{ fontFamily: 'Arimo', fontSize: '1.2rem', ml: {xs: 5, lg: 5, xl: 5}, mt: 10, display: 'flex', textTransform: 'uppercase', fontWeight: 'bold', width: {xs: '200px', lg:'500px'} }}>
+ Mass Production Slot
+ </Typography>
+</Box>
+<Typography variant="body2" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 48.2, lg: 28.2, xl: 28.2}, mt: 1, width: {xs:'180px', lg:'350px'}, letterSpacing: '0.7px', display: {lg: 'none'} }} align="justify">
+Given that there will be more options, supplies, opportunities, and a more secure date of release. We will only accept a maximum of thirty (30) slots every month.
+ </Typography>
    </Grid>
  </Grid>
 
  <Grid item xs={5}>
    <Grid container direction="column" alignItems="flex-start">
 <Box sx={{display: 'inline-flex'}}>
-<Typography variant="body1" gutterBottom sx={{ fontFamily: 'Arimo', fontSize: '1.2rem', ml: 20, mt: 10, display: 'flex', textTransform: 'uppercase', fontWeight: 'bold' }}>
+<Typography variant="body1" gutterBottom sx={{ fontFamily: 'Arimo', fontSize: '1.2rem', ml: 20, mt: 10, display: {xs: 'none', lg: 'flex', xl:'flex'}, textTransform: 'uppercase', fontWeight: 'bold' }}>
    03
  </Typography>
- <Typography variant="body1" gutterBottom sx={{ fontFamily: 'Arimo', fontSize: '1.2rem', ml: 5, mt: 10, display: 'flex', textTransform: 'uppercase', fontWeight: 'bold' }}>
+ <Typography variant="body1" gutterBottom sx={{ fontFamily: 'Arimo', fontSize: '1.2rem', ml: 5, mt: 10, display: {xs: 'none', lg: 'flex', xl:'flex'}, textTransform: 'uppercase', fontWeight: 'bold' }}>
  Sampling
  </Typography>
 </Box>
- <Typography variant="body2" gutterBottom sx={{ fontSize: '0.8rem', ml: 28.2, mt: 1, maxWidth: '350px', letterSpacing: '0.7px' }} align="justify">
+ <Typography variant="body2" gutterBottom sx={{ fontSize: '0.8rem', ml: 28.2, mt: 1, maxWidth: '350px', letterSpacing: '0.7px', display: {xs: 'none', lg: 'flex', xl:'flex'}, }} align="justify">
  If you would like a sample before putting in a production order, we can accommodate that request. The cost of a sample can be prohibitively expensive in small orders.  
  </Typography>
 
  <Box sx={{display: 'inline-flex',}}>
-<Typography variant="body1" gutterBottom sx={{ fontFamily: 'Arimo', fontSize: '1.2rem', ml: 20, mt: 10, display: 'flex', textTransform: 'uppercase', fontWeight: 'bold' }}>
+<Typography variant="body1" gutterBottom sx={{ fontFamily: 'Arimo', fontSize: '1.2rem', ml: 20, mt: 10, display: {xs: 'none', lg: 'flex', xl:'flex'}, textTransform: 'uppercase', fontWeight: 'bold' }}>
    04
  </Typography>
- <Typography variant="body1" gutterBottom sx={{ fontFamily: 'Arimo', width: '300px', fontSize: '1.2rem', ml: 5, mt: 10, display: 'flex', textTransform: 'uppercase', fontWeight: 'bold' }}>
+ <Typography variant="body1" gutterBottom sx={{ fontFamily: 'Arimo', width: '300px', fontSize: '1.2rem', ml: 5, mt: 10, display: {xs: 'none', lg: 'flex', xl:'flex'}, textTransform: 'uppercase', fontWeight: 'bold' }}>
  Mass Production Slot
  </Typography>
 </Box>
- <Typography variant="body2" gutterBottom sx={{ fontSize: '0.8rem', ml: 28.2, mt: 1, maxWidth: '350px', letterSpacing: '0.7px' }} align="justify">
+ <Typography variant="body2" gutterBottom sx={{ fontSize: '0.8rem', ml: 28.2, mt: 1, maxWidth: '350px', letterSpacing: '0.7px', display: {xs: 'none', lg: 'flex', xl:'flex'}, }} align="justify">
  Given that there will be more options, supplies, opportunities, and a more secure date of release. We will only accept a maximum of thirty (30) slots every month.
    </Typography>
 
