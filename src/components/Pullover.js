@@ -10,6 +10,7 @@ import Button from '@mui/material/Button';
 import Fab from '@mui/material/Fab';
 import Stack from '@mui/material/Stack';
 import ReactImageMagnify from 'react-image-magnify';
+import { Link } from 'react-router-dom'
 
 const App = () => {
   const [isClicked, setIsClicked] = useState([false, false, false, false]);
@@ -81,13 +82,13 @@ const App = () => {
 
 
 <Box sx={{
-        maxHeight: 300, // Add this line
-        maxWidth: 300, // Add this line
+        maxHeight: {lg: 320, xl: 500}, // Add this line
+        maxWidth: {lg: 320, xl: 500}, // Add this line
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         marginTop: '-25%',
-        marginLeft: marginLeft,
+        marginLeft: {lg: '390px', xl:'550px'},
         marginBottom: '50px',
         minHeight: { xs: 233, md: 167, lg: 100 },
         minWidth: { xs: 350, md: 250, lg: 100 },
@@ -127,8 +128,9 @@ const App = () => {
     />  */}
 
 <Box sx={{  display: 'flex',
+
          '& > :not(style)': { m: 0.3 },
-         marginLeft: '32%', }}>
+         marginLeft: {lg:'32%', xl: '33%'}, }}>
 <Fab size="small" 
 sx={{
   background: '#000000',
@@ -219,11 +221,32 @@ sx={{
       gutterBottom 
       sx={{ 
         fontFamily: 'Arimo',
-        fontSize: '1em', 
+        fontSize: {lg: '0.8em', xl: '1.1em'},  
+        textAlign: 'left',
+        marginLeft: {lg: '57%', xl: '57.2%'},
+        marginTop: {lg: '-32%}', xl: '-25%'},
+        marginBottom: {lg: '3%'},
+        paddingRight: '16%',
+      }}
+      align="justify"
+  >
+Our Products {'> '} <Link to={'/Pullover'} style={{color: 'black', textDecoration: 'none'}}>
+<b>{`Pullovers`}</b>
+  </Link>
+
+</Typography>
+
+
+<Typography 
+      variant="h3" 
+      gutterBottom 
+      sx={{ 
+        fontFamily: 'Arimo',
+        fontSize: {lg: '1em', xl: '1.5em'}, 
         fontWeight: 'bold', 
         textAlign: 'right',
         marginRight: '38.6%',
-        marginTop: '-25%',
+        // marginTop: '-25%',
         marginBottom: '40%'
       }}
   >
@@ -234,9 +257,9 @@ sx={{
       variant="h3" 
       gutterBottom 
       sx={{ 
-        fontSize: '0.8em',  
+        fontSize: {lg: '0.8em', xl: '1.1em'},  
         textAlign: 'left',
-        marginLeft: '57%',
+        marginLeft: {lg: '57%', xl: '57.2%'},
         marginTop: '-39%',
         marginBottom: '40%',
         paddingRight: '16%',
@@ -251,10 +274,10 @@ sx={{
       gutterBottom 
       sx={{ 
         fontFamily: 'Arimo',
-        fontSize: '1em', 
+        fontSize: {lg: '1em', xl: '1.2em'}, 
         fontWeight: 'bold', 
         textAlign: 'right',
-        marginRight: '37.2%',
+        marginRight: {lg: '37.2%', xl: '38.2%'},
         marginTop: '-35%',
         marginBottom: '40%',
         textDecoration: 'underline'
@@ -268,10 +291,10 @@ sx={{
       gutterBottom 
       sx={{ 
         fontFamily: 'Arimo',
-        fontSize: '1em', 
+        fontSize: {lg: '1em', xl: '1.2em'}, 
         fontWeight: 'bold', 
         textAlign: 'right',
-        marginRight: '32.8%',
+        marginRight: {lg: '32.8%', xl: '34.8%'},
         marginTop: '-38%',
         marginBottom: '40%'
       }}
@@ -284,12 +307,12 @@ sx={{
       gutterBottom 
       sx={{ 
         fontFamily: 'Arimo',
-        fontSize: '1em', 
+        fontSize: {lg: '1em', xl: '1.2em'},  
         fontWeight: 'bold', 
         textAlign: 'right',
-        marginRight: '36.7%',
+        marginRight: {lg: '36.6%', xl: '37.7%'},
         marginTop: '-38%',
-        marginBottom: '40%'
+        marginBottom: '20%'
       }}
   >
     Embroidery

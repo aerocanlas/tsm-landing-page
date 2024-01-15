@@ -24,12 +24,12 @@ const Contact = () => {
        <ThemeProvider theme={theme}>
      <CssBaseline />
      <ResponsiveAppBar position="static" color="transparent"/>
-    <Box sx={{ml: '-500px', display: 'flex',  justifyContent: 'center', alignItems: 'center', marginTop: '100px', marginBottom: '100px'}}>
+    <Box sx={{ml: {lg: '-330px', xl: '-500px'}, display: 'flex',  justifyContent: 'center', alignItems: 'center', marginTop: '100px', marginBottom: '100px'}}>
     <Box
       component="img"
       sx={{
-        minHeight: { xs: 350, md: 250, lg: 800, xl: 500 }, // Add this line
-        maxWidth: { xs: 350, md: 250, lg: 1360, xl: 700 },// Add this line
+        minHeight: { xs: 350, md: 250, lg: 450, xl: 500 }, // Add this line
+        maxWidth: { xs: 350, md: 250, lg: 580, xl: 700 },// Add this line
         marginTop: '-300px',
         marginBottom: '-300px',
         position: 'relative',
@@ -86,8 +86,8 @@ const Contact = () => {
               <Box
       component="img"
       sx={{
-        minHeight: { xs: 350, md: 250, lg: 800, xl: 180 }, // Add this line
-        maxWidth: { xs: 350, md: 250, lg: 1360, xl: 280 },// Add this line
+        minHeight: { xs: 350, md: 250, lg: 150, xl: 180 }, // Add this line
+        maxWidth: { xs: 350, md: 250, lg: 250, xl: 280 },// Add this line
         marginTop: '-300px',
         marginBottom: '-300px',
         position: 'relative',
