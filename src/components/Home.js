@@ -64,7 +64,9 @@ const Home = () => {
    });
 
   return (
+    
     <>
+    <title>The Street Market | Home</title>
        <ThemeProvider theme={theme}>
      <CssBaseline />
      <ResponsiveAppBar position="static" color="transparent"/>

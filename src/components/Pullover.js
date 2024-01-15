@@ -43,6 +43,7 @@ const App = () => {
 
   return (
     <>
+    <title>Product | Pullover</title>
        <ThemeProvider theme={theme}>
      <CssBaseline />
      <ResponsiveAppBar position="static" color="transparent"/>
@@ -231,7 +232,7 @@ sx={{
       align="justify"
   >
 Our Products {'> '} <Link to={'/Pullover'} style={{color: 'black', textDecoration: 'none'}}>
-<b>{`Pullovers`}</b>
+<b>{`Pullover`}</b>
   </Link>
 
 </Typography>

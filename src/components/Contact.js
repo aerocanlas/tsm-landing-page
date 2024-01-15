@@ -21,6 +21,7 @@ const Contact = () => {
 
   return (
     <>
+    <title>The Street Market | Contact </title>
        <ThemeProvider theme={theme}>
      <CssBaseline />
      <ResponsiveAppBar position="static" color="transparent"/>

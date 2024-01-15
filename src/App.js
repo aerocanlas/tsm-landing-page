@@ -29,7 +29,8 @@ const App = () => {
    </ThemeProvider>
 
    <Routes>
-    <Route path='Home' element={<Home/>}/>
+    <Route path='/' element={<Home/>}/>
+    <Route path='/Home' element={<Home/>}/>
     <Route path='Contact' element={<Contact />}/>
     <Route path='faqs' element={<FAQs />}/>
     <Route path='Teams' element={<Teams />}/>

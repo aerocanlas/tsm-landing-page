@@ -19,6 +19,7 @@ const FAQs = () => {
 
   return (
     <>
+    <title>The Street Market | FAQ's</title>
        <ThemeProvider theme={theme}>
      <CssBaseline />
      <ResponsiveAppBar position="static" color="transparent">

@@ -23,6 +23,7 @@ const App = () => {
 
   return (
     <>
+    <title>The Street Market | Teams </title>
        <ThemeProvider theme={theme}>
      <CssBaseline />
      <ResponsiveAppBar position="static" color="transparent">

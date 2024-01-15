@@ -21,6 +21,7 @@ const Community = () => {
 
   return (
     <>
+    <title>The Street Market | Community</title>
        <ThemeProvider theme={theme}>
      <CssBaseline />
      <ResponsiveAppBar position="static" color="transparent"/>
