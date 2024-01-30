@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography } from '@mui/material'
+import { Typography, Image } from '@mui/material'
 import ResponsiveAppBar from './ResponsiveAppBar'
 import { ThemeProvider, createTheme, responsiveFontSizes } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -7,6 +7,7 @@ import Toolbar from '@mui/material/Toolbar';
 import ResponsiveFooter from './ResponsiveFooter';
 import { Route, Routes } from 'react-router';
 import FAQs from './faqs';
+import Draggable from 'react-draggable';
 
 const App = () => {
 
@@ -28,8 +29,43 @@ const App = () => {
      <CssBaseline />
      <ResponsiveAppBar position="static" color="transparent">
    </ResponsiveAppBar>
-   <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', marginTop: '-80px'}}>
- <img src="/images/team-polaroid.png" alt="My Image" style={{maxWidth: '90%', height: 'auto', objectFit: 'contain'}}/>
+   <div style={{display: 'flex', height: '100vh', marginTop: '-80px'}}>
+   <Draggable>
+   <img src="/images/1.png" alt="My Image" style={{maxWidth: '18%', height: 'auto', objectFit: 'contain'}}/>
+    </Draggable>
+    <Draggable>
+   <img src="/images/2.png" alt="My Image" style={{maxWidth: '18%', height: 'auto', objectFit: 'contain'}}/>
+    </Draggable>
+    <Draggable>
+   <img src="/images/3.png" alt="My Image" style={{maxWidth: '18%', height: 'auto', objectFit: 'contain'}}/>
+    </Draggable>
+    <Draggable>
+   <img src="/images/4.png" alt="My Image" style={{maxWidth: '18%', height: 'auto', objectFit: 'contain'}}/>
+    </Draggable>
+    <Draggable>
+   <img src="/images/5.png" alt="My Image" style={{maxWidth: '18%', height: 'auto', objectFit: 'contain'}}/>
+    </Draggable>
+    <Draggable>
+   <img src="/images/6.png" alt="My Image" style={{maxWidth: '18%', height: 'auto', objectFit: 'contain'}}/>
+    </Draggable>
+    <Draggable>
+   <img src="/images/7.png" alt="My Image" style={{maxWidth: '18%', height: 'auto', objectFit: 'contain'}}/>
+    </Draggable>
+    <Draggable>
+   <img src="/images/8.png" alt="My Image" style={{maxWidth: '18%', height: 'auto', objectFit: 'contain'}}/>
+    </Draggable>
+    <Draggable>
+   <img src="/images/9.png" alt="My Image" style={{maxWidth: '18%', height: 'auto', objectFit: 'contain'}}/>
+    </Draggable>
+    <Draggable>
+   <img src="/images/10.png" alt="My Image" style={{maxWidth: '18%', height: 'auto', objectFit: 'contain'}}/>
+    </Draggable>
+    <Draggable>
+   <img src="/images/11.png" alt="My Image" style={{maxWidth: '18%', height: 'auto', objectFit: 'contain'}}/>
+    </Draggable>
+    <Draggable>
+   <img src="/images/12.png" alt="My Image" style={{maxWidth: '18%', height: 'auto', objectFit: 'contain'}}/>
+    </Draggable>
 </div>
 
 

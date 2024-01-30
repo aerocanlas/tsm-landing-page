@@ -11,6 +11,8 @@ import Contact from './components/Contact';
 import Teams from './components/Teams';
 import Pullover from './components/Pullover';
 import Community from './components/Community';
+import StandardRate from './components/StandardRate';
+import SizeGuide from './components/SizeGuide';
 
 const App = () => {
 
@@ -36,6 +38,8 @@ const App = () => {
     <Route path='Teams' element={<Teams />}/>
     <Route path='Community' element={<Community />}/>
     <Route path='Pullover' element={<Pullover />}/>
+    <Route path='StandardRate' element={<StandardRate />}/>
+    <Route path='SizeGuide' element={<SizeGuide />}/>
    </Routes>
 </>
   )
