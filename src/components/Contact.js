@@ -8,7 +8,8 @@ import { Route, Routes } from 'react-router';
 import FAQs from './faqs';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-
+import Navbar
+ from './Navbar';
 const Contact = () => {
 
   const theme = createTheme({
@@ -24,7 +25,7 @@ const Contact = () => {
     <title>The Street Market | Contact </title>
        <ThemeProvider theme={theme}>
      <CssBaseline />
-     <ResponsiveAppBar position="static" color="transparent"/>
+     <Navbar position="static" color="transparent"/>
     <Box sx={{ml: {lg: '-330px', xl: '-500px'}, display: 'flex',  justifyContent: 'center', alignItems: 'center', marginTop: '100px', marginBottom: '100px'}}>
     <Box
       component="img"

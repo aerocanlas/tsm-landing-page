@@ -8,6 +8,7 @@ import { Route, Routes } from 'react-router';
 import FAQs from './faqs';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import Navbar from "./Navbar";
 
 const Community = () => {
 
@@ -24,9 +25,9 @@ const Community = () => {
    <title>The Street Market | Community</title>
       <ThemeProvider theme={theme}>
     <CssBaseline />
-    <ResponsiveAppBar position="static" color="transparent"/>
-    <Box sx={{marginTop: '50px', marginBottom: '64px', maxWidth: ['100%', '100%', '100%', '100%', '100%']}}>
- <img src="/images/Community-Page-Placeholder-Image.png" alt="My Image" style={{maxWidth: '100%', height: 'auto', objectFit: 'contain'}}/>
+    <Navbar position="static" color="transparent"/>
+    <Box sx={{marginTop: '50px', marginBottom: '64px', width: ['100%', '100%', '100%', '100%', '100%']}}>
+ <img src="/images/Community-Page-Placeholder-Image.png" alt="My Image" style={{width: '100%', height: 'auto', objectFit: 'contain'}}/>
 </Box>
 
     <ResponsiveFooter position="bottom"/>

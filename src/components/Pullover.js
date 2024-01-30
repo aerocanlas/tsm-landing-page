@@ -11,6 +11,7 @@ import Fab from '@mui/material/Fab';
 import Stack from '@mui/material/Stack';
 import ReactImageMagnify from 'react-image-magnify';
 import { Link } from 'react-router-dom'
+import Navbar from './Navbar';
 
 const App = () => {
   const [isClicked, setIsClicked] = useState([false, false, false, false]);
@@ -46,7 +47,7 @@ const App = () => {
     <title>Product | Pullover</title>
        <ThemeProvider theme={theme}>
      <CssBaseline />
-     <ResponsiveAppBar position="static" color="transparent"/>
+     <Navbar position="static" color="transparent"/>
      <Box 
           sx={{ 
           width: '5%',

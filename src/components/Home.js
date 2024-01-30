@@ -14,6 +14,7 @@ import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
+import Navbar from './Navbar';
 
 const Home = () => {
 
@@ -69,7 +70,7 @@ const Home = () => {
     <title>The Street Market | Home</title>
        <ThemeProvider theme={theme}>
      <CssBaseline />
-     <ResponsiveAppBar position="static" color="transparent"/>
+     <Navbar position="static" color="transparent"/>
     
    <Box sx={{ p: 3 }}>
         <Grid container spacing={3}>

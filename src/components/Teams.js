@@ -8,6 +8,7 @@ import ResponsiveFooter from './ResponsiveFooter';
 import { Route, Routes } from 'react-router';
 import FAQs from './faqs';
 import Draggable from 'react-draggable';
+import Navbar from './Navbar';
 
 const App = () => {
 
@@ -27,8 +28,8 @@ const App = () => {
     <title>The Street Market | Teams </title>
        <ThemeProvider theme={theme}>
      <CssBaseline />
-     <ResponsiveAppBar position="static" color="transparent">
-   </ResponsiveAppBar>
+     <Navbar position="static" color="transparent"/>
+
    <div style={{display: 'flex', height: '100vh', marginTop: '-80px'}}>
    <Draggable>
    <img src="/images/1.png" alt="My Image" style={{maxWidth: '18%', height: 'auto', objectFit: 'contain'}}/>
