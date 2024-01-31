@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import "../Styles/main.css";
+// import "../../Styles/retail/mainRetail.css";
 import { Typography } from "@mui/material";
 import {Stack} from "@mui/material";
 import { Link } from 'react-router-dom';
@@ -76,7 +76,7 @@ function Navbar() {
             left: {lg: -530, xl: 1300 }
           }}>
               <a className={activeTab === '/Teams' || activeTab === '/Pullover' || activeTab === '/Home' || activeTab === '/Contact' || activeTab === '/Community' ? 'activeMode' : ''} href="/Home" onClick={showNavbar}>Wholesale</a>
-            <a className={activeTab === '/Teams' || activeTab === '/Pullover' || activeTab === '/Home' || activeTab === '/Contact' || activeTab === '/Community' ? 'inactiveMode' : ''} href="/Home" onClick={showNavbar}>Retail</a>
+            <a className={activeTab === '/retail/homeretail'  ? 'activeMode' : ''} href="/Retail/HomeRetail" onClick={showNavbar}>Retail</a>
             </Box>
             
          {/* <a className={activeTab === '/Contact' ? 'active' : ''} href="/Contact">Contact</a>
@@ -113,6 +113,7 @@ function Navbar() {
               color: 'black',
               fontSize: {xs: '18px', lg: '24px', xl: '28px'},
               textDecoration: 'none',
+              color: "white",
             }}
           >
             THE STREET MARKET <Typography variant="h6" sx={{ display: { xs: "flex", sm: "flex" }, fontSize: '8px', }}>TM</Typography>
@@ -132,6 +133,7 @@ function Navbar() {
               color: 'black',
               fontSize: '12px',
               textDecoration: 'none',
+              color: "white",
             }}
           >
 GARMENT MANUFACTURER          
