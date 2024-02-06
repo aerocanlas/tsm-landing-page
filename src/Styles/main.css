@@ -55,6 +55,21 @@ nav a {
     z-index: 1000;
 }
 
+.activeModeRetail{
+    font-weight: bold;
+    margin-right: 35px;
+    color: green;
+    text-decoration: none;
+    border: 3px solid black;
+    padding: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 20px;
+    position: relative;
+    left: 80px;
+    z-index: 1000;
+}
+
 .inactiveMode{
     margin: 0 1rem;
     color: black;

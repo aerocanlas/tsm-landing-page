@@ -2,7 +2,7 @@ import React from 'react'
 import { Button, Typography,  Grid, Box, Card, CardContent, Image, CardMedia, } from '@mui/material'
 import { ThemeProvider, createTheme  } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import ResponsiveFooter from '../ResponsiveFooter';
+import ResponsiveFooter from './ResponsiveFooter';
 import { Route, Routes } from 'react-router';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
@@ -13,8 +13,8 @@ import Stack from '@mui/material/Stack';
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
 import { FaLongArrowAltRight } from "react-icons/fa";
-import Navbar from '../Navbar';
-import NavbarRetail from '../Retail/NavbarRetail'
+import Navbar from './Navbar';
+import NavbarRetail from './Retail/NavbarRetail'
 
 const Home = () => {
 
@@ -70,7 +70,7 @@ const Home = () => {
     <title>The Street Market | Home</title>
        <ThemeProvider theme={theme}>
      <CssBaseline />
-     <NavbarRetail position="static" color="transparent"/>
+     <Navbar position="static" color="transparent"/>
      
    <Box sx={{ p: 3 }}>
         <Grid container spacing={3}>

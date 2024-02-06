@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-// import "../../Styles/retail/mainRetail.css";
+import "../../Styles/main.css";
 import { Typography } from "@mui/material";
 import {Stack} from "@mui/material";
 import { Link } from 'react-router-dom';
@@ -76,7 +76,7 @@ function Navbar() {
             left: {lg: -530, xl: 1300 }
           }}>
               <a className={activeTab === '/Teams' || activeTab === '/Pullover' || activeTab === '/Home' || activeTab === '/Contact' || activeTab === '/Community' ? 'activeMode' : ''} href="/Home" onClick={showNavbar}>Wholesale</a>
-            <a className={activeTab === '/retail/homeretail'  ? 'activeMode' : ''} href="/Retail/HomeRetail" onClick={showNavbar}>Retail</a>
+            <a className={activeTab === '/HomeRetail' || activeTab === '/Retail/ProductRetail'  ? 'activeModeRetail' : ''} href="/HomeRetail" onClick={showNavbar}>Retail</a>
             </Box>
             
          {/* <a className={activeTab === '/Contact' ? 'active' : ''} href="/Contact">Contact</a>

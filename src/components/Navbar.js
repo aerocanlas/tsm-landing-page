@@ -76,7 +76,7 @@ function Navbar() {
             left: {lg: -530, xl: 1300 }
           }}>
               <a className={activeTab === '/Teams' || activeTab === '/Pullover' || activeTab === '/Home' || activeTab === '/Contact' || activeTab === '/Community' ? 'activeMode' : ''} href="/Home" onClick={showNavbar}>Wholesale</a>
-            <a className={activeTab === '/Teams' || activeTab === '/Pullover' || activeTab === '/Home' || activeTab === '/Contact' || activeTab === '/Community' ? 'inactiveMode' : ''} href="/Home" onClick={showNavbar}>Retail</a>
+            <a className={activeTab === '/HomeRetail' || activeTab === '/Pullover' || activeTab === '/Home' || activeTab === '/Contact' || activeTab === '/Community' ? 'activeModeRetail' : ''} href="/HomeRetail" onClick={showNavbar}>Retail</a>
             </Box>
             
          {/* <a className={activeTab === '/Contact' ? 'active' : ''} href="/Contact">Contact</a>
