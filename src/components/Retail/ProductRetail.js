@@ -27,7 +27,8 @@ const ProductRetail = () => {
     <>
     <Navbar position="static" color="transparent"/>
 
-    <Box sx={{height: '1500px'}}>
+    <Box sx={{height: '1500px', 
+    marginBottom: {lg: '-300px', xl: 0}}}>
 
     <Typography variant="h1" 
       gutterBottom 
@@ -38,6 +39,7 @@ const ProductRetail = () => {
         fontFamily: 'Arimo',
         marginTop: {xs: '100px', lg: '100px', xl: '80px'},
         marginBottom: {xs: '50px', lg: '100px', xl: '150px'},
+        marginLeft: {xs: '50px', lg: '50px', xl: '30px'},
          // Adjust as needed
       }}> Our Products</Typography>
 
@@ -54,10 +56,10 @@ const ProductRetail = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: '-80px',
+        marginTop: '10px',
         maxHeight: { xs: 233, md: 167, lg: '50%' },
         maxWidth: { xs: 350, md: 250, lg: '25%'},
-        marginLeft: {xl: 0}
+        marginLeft: {lg: 5, xl: 0}
       }}
       alt="The house from the offer."
       src="/images/HoodieV2.png"
@@ -74,7 +76,7 @@ const ProductRetail = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: '-80px',
+        marginTop: '10px',
         maxHeight: { xs: 233, md: 167, lg: '50%' },
         maxWidth: { xs: 350, md: 250, lg: '25%'},
         marginLeft: {xl: 10}
@@ -91,7 +93,7 @@ const ProductRetail = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: '-80px',
+        marginTop: '10px',
         maxHeight: { xs: 233, md: 167, lg: '50%' },
         maxWidth: { xs: 350, md: 250, lg: '25%'},
         marginLeft: {xl: 10}
@@ -110,9 +112,9 @@ const ProductRetail = () => {
         textAlign: 'left',
         textTransform: 'normal',
         fontFamily: 'Arimo',
-        marginTop: {xs: '100px', lg: '100px', xl: '20px'},
-        marginBottom: {xs: '50px', lg: '100px', xl: '10px'},
-        marginLeft: {xl: '220px'}
+        marginTop: {xs: '100px', lg: '20px', xl: '20px'},
+        marginBottom: {xs: '50px', lg: '10px', xl: '10px'},
+        marginLeft: {lg: '250px', xl: '220px'}
          // Adjust as needed
       }}> TSM Hoodie V2</Typography>
             <Typography variant="h1" 
@@ -122,13 +124,13 @@ const ProductRetail = () => {
         textAlign: 'left',
         textTransform: 'normal',
         fontFamily: 'Arimo',
-        marginTop: {xs: '100px', lg: '100px', xl: '5px'},
-        marginBottom: {xs: '50px', lg: '100px', xl: '50px'},
-        marginLeft: {xl: '220px'}
+        marginTop: {xs: '100px', lg: '20px', xl: '5px'},
+        marginBottom: {xs: '50px', lg: '50px', xl: '50px'},
+        marginLeft: {lg: '250px', xl: '220px'}
          // Adjust as needed
       }}> PHP 999.00</Typography>
 
-<Box sx={{marginLeft: '210px'}}>
+<Box sx={{marginLeft: {lg: '240px', xl: '210px'}}}>
 <Box sx={{  display: 'flex',
 marginTop: '-50px', }}>
 <Fab size="small" 
@@ -241,9 +243,9 @@ transform: 'scale(0.8)', // Shrink the button when clicked
         textAlign: 'left',
         textTransform: 'normal',
         fontFamily: 'Arimo',
-        marginTop: {xs: '100px', lg: '100px', xl: '20px'},
-        marginBottom: {xs: '50px', lg: '100px', xl: '10px'},
-        marginLeft: {xl: '50px'}
+        marginTop: {xs: '100px', lg: '20px', xl: '20px'},
+        marginBottom: {xs: '50px', lg: '10px', xl: '10px'},
+        marginLeft: {lg: '-120px', xl: '50px'}
          // Adjust as needed
       }}> TSM Pullover V2</Typography>
             <Typography variant="h1" 
@@ -253,12 +255,12 @@ transform: 'scale(0.8)', // Shrink the button when clicked
         textAlign: 'left',
         textTransform: 'normal',
         fontFamily: 'Arimo',
-        marginTop: {xs: '100px', lg: '100px', xl: '5px'},
-        marginBottom: {xs: '50px', lg: '100px', xl: '50px'},
-        marginLeft: {xl: '50px'}
+        marginTop: {xs: '100px', lg: '20px', xl: '5px'},
+        marginBottom: {xs: '50px', lg: '50px', xl: '50px'},
+        marginLeft: {lg: '-120px', xl: '50px'}
          // Adjust as needed
       }}> PHP 649.00</Typography>
-<Box sx={{marginLeft: '40px'}}>
+<Box sx={{marginLeft: {lg: '-135px', xl: '40px'}}}>
 <Box sx={{  display: 'flex',
 marginTop: '-50px', }}>
 <Fab size="small" 
@@ -369,9 +371,9 @@ transform: 'scale(0.8)', // Shrink the button when clicked
         textAlign: 'left',
         textTransform: 'normal',
         fontFamily: 'Arimo',
-        marginTop: {xs: '100px', lg: '100px', xl: '20px'},
-        marginBottom: {xs: '50px', lg: '100px', xl: '10px'},
-        marginLeft: {xl: '380px'}
+        marginTop: {xs: '100px', lg: '20px', xl: '20px'},
+        marginBottom: {xs: '50px', lg: '10px', xl: '10px'},
+        marginLeft: {lg: '140px', xl: '380px'}
          // Adjust as needed
       }}> Skater Fit</Typography>
             <Typography variant="h1" 
@@ -381,13 +383,13 @@ transform: 'scale(0.8)', // Shrink the button when clicked
         textAlign: 'left',
         textTransform: 'normal',
         fontFamily: 'Arimo',
-        marginTop: {xs: '100px', lg: '100px', xl: '5px'},
-        marginBottom: {xs: '50px', lg: '100px', xl: '50px'},
-        marginLeft: {xl: '380px'}
+        marginTop: {xs: '100px', lg: '20px', xl: '5px'},
+        marginBottom: {xs: '50px', lg: '50px', xl: '50px'},
+        marginLeft: {lg: '140px', xl: '380px'}
          // Adjust as needed
       }}> PHP 499.00</Typography>
 
-<Box sx={{marginLeft: '370px'}}>
+<Box sx={{marginLeft: {lg: '125px', xl: '365px'}}}>
 <Box sx={{  display: 'flex',
 marginTop: '-50px', }}>
 <Fab size="small" 
@@ -509,7 +511,7 @@ transform: 'scale(0.8)', // Shrink the button when clicked
         marginTop: '80px',
         maxHeight: { xs: 233, md: 167, lg: '50%' },
         maxWidth: { xs: 350, md: 250, lg: '25%'},
-        marginLeft: {xl: 20}
+        marginLeft: {lg: 23, xl: 20}
       }}
       alt="The house from the offer."
       src="/images/ShortV2.png"
@@ -543,9 +545,9 @@ transform: 'scale(0.8)', // Shrink the button when clicked
         textAlign: 'left',
         textTransform: 'normal',
         fontFamily: 'Arimo',
-        marginTop: {xs: '100px', lg: '100px', xl: '20px'},
-        marginBottom: {xs: '50px', lg: '100px', xl: '10px'},
-        marginLeft: {xl: '230px'}
+        marginTop: {xs: '100px', lg: '10px', xl: '20px'},
+        marginBottom: {xs: '50px', lg: '10px', xl: '10px'},
+        marginLeft: {lg: '210px', xl: '230px'}
          // Adjust as needed
       }}> TSM Sweatshorts V2 </Typography>
             <Typography variant="h1" 
@@ -555,13 +557,13 @@ transform: 'scale(0.8)', // Shrink the button when clicked
         textAlign: 'left',
         textTransform: 'normal',
         fontFamily: 'Arimo',
-        marginTop: {xs: '100px', lg: '100px', xl: '5px'},
-        marginBottom: {xs: '50px', lg: '100px', xl: '50px'},
-        marginLeft: {xl: '230px'}
+        marginTop: {xs: '100px', lg: '20px', xl: '5px'},
+        marginBottom: {xs: '50px', lg: '50px', xl: '50px'},
+        marginLeft: {lg: '210px', xl: '230px'}
          // Adjust as needed
       }}> PHP 599.00</Typography>
 
-<Box sx={{marginLeft: '220px'}}>
+<Box sx={{marginLeft: {lg: '195px', xl: '220px'}}}>
 <Box sx={{  display: 'flex',
 marginTop: '-50px', }}>
 <Fab size="small" 
@@ -672,9 +674,9 @@ transform: 'scale(0.8)', // Shrink the button when clicked
         textAlign: 'left',
         textTransform: 'normal',
         fontFamily: 'Arimo',
-        marginTop: {xs: '100px', lg: '100px', xl: '20px'},
-        marginBottom: {xs: '50px', lg: '100px', xl: '10px'},
-        marginLeft: {xl: '340px'}
+        marginTop: {xs: '100px', lg: '10px', xl: '20px'},
+        marginBottom: {xs: '50px', lg: '10px', xl: '10px'},
+        marginLeft: {lg: '150px', xl: '340px'}
          // Adjust as needed
       }}> TSM Sweatpants V2 </Typography>
             <Typography variant="h1" 
@@ -684,13 +686,13 @@ transform: 'scale(0.8)', // Shrink the button when clicked
         textAlign: 'left',
         textTransform: 'normal',
         fontFamily: 'Arimo',
-        marginTop: {xs: '100px', lg: '100px', xl: '5px'},
-        marginBottom: {xs: '50px', lg: '100px', xl: '50px'},
-        marginLeft: {xl: '340px'}
+        marginTop: {xs: '100px', lg: '20px', xl: '5px'},
+        marginBottom: {xs: '50px', lg: '50px', xl: '50px'},
+        marginLeft: {lg: '150px', xl: '340px'}
          // Adjust as needed
       }}> PHP 749.00</Typography>
 
-<Box sx={{marginLeft: '330px'}}>
+<Box sx={{marginLeft: {lg: '135px', xl: '325px'}}}>
 <Box sx={{  display: 'flex',
 marginTop: '-50px', }}>
 <Fab size="small" 
