@@ -1,6 +1,6 @@
 import React from 'react'
 import { Typography, Image } from '@mui/material'
-import ResponsiveAppBar from './ResponsiveAppBar'
+import Navbar from './Navbar'
 import { ThemeProvider, createTheme, responsiveFontSizes } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Toolbar from '@mui/material/Toolbar';
@@ -27,8 +27,8 @@ const App = () => {
     <title>The Street Market | Teams </title>
        <ThemeProvider theme={theme}>
      <CssBaseline />
-     <ResponsiveAppBar position="static" color="transparent">
-   </ResponsiveAppBar>
+     <Navbar position="static" color="transparent">
+   </Navbar>
    <Draggable>
    <img src="/images/8.png" alt="My Image" style={{ marginLeft: '20%', marginTop: '15%',  maxWidth: '18%', height: 'auto', objectFit: 'contain'}}/>
     </Draggable>

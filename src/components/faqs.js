@@ -1,6 +1,6 @@
 import React from 'react'
 import { Typography } from '@mui/material'
-import ResponsiveAppBar from './ResponsiveAppBar'
+import Navbar from './Navbar'
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Grid from '@mui/material/Grid';
@@ -30,8 +30,8 @@ const FAQs = () => {
     <title>The Street Market | FAQ's</title>
        <ThemeProvider theme={theme}>
      <CssBaseline />
-     <ResponsiveAppBar position="static" color="transparent">
-   </ResponsiveAppBar>
+     <Navbar position="static" color="transparent">
+   </Navbar>
    <Typography variant="h3" gutterBottom sx={{ fontFamily: 'Arimo', fontSize: {lg: '1.2rem', xl: '1.1em'}, textDecoration: 'underline', ml: 24.5, mt: 5 }}>
     FREQUENTLY ASKED QUESTIONS
   </Typography>

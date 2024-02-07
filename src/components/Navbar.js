@@ -3,7 +3,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import "../Styles/main.css";
 import { Typography } from "@mui/material";
 import {Stack} from "@mui/material";
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Box  } from '@mui/material'
 
 function Navbar() {
@@ -54,9 +54,28 @@ function Navbar() {
     <header>
       {/* <h3>LOGO</h3> */}
       <nav ref={navRef}>
-            <a href="/Home" className={activeTab === '/Home' ? 'active' : ''} onClick={showNavbar}>Home</a>
+        <ul>
+          <li>
+            <NavLink to='/Home'>Home</NavLink>
+          </li>
+          <li>
+            <NavLink to='/Contact'>Contact</NavLink>
+          </li>
+          <li>
+            <NavLink to='/Community'>Community</NavLink>
+          </li>
+        </ul>
+
+        <ul>
+        <NavLink className={activeTab === '/SizeGuide' || activeTab === '/Teams' || activeTab === '/Pullover' || activeTab === '/Home' || activeTab === '/Contact' || activeTab === '/Community' ? 'activeMode' : 'inactiveModeHome'} to='/Home'>Wholesale</NavLink>
+        </ul>
+
+        <ul>
+        <NavLink className={activeTab === '/HomeRetail' || activeTab === '/retail/productretail' ? 'activeMode' : 'inactiveMode'} to='/HomeRetail'>Retail</NavLink>
+        </ul>
+            {/* <a href="/Home" className={activeTab === '/Home' ? 'active' : ''} onClick={showNavbar}>Home</a>
             <a className={activeTab === '/Contact' ? 'active' : ''} href="/Contact" onClick={showNavbar}>Contact</a>
-      <a className={activeTab === '/Community' ? 'active' : ''} href="/Community" onClick={showNavbar}>Community</a>
+      <a className={activeTab === '/Community' ? 'active' : ''} href="/Community" onClick={showNavbar}>Community</a> */}
 
             {/* { activeTab === '/Home' ? 
                         <a  className={(activeTab === '/Home')} href="/Home" onClick={showNavbar}>Wholesale</a>            

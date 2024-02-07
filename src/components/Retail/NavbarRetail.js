@@ -3,7 +3,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import "../../Styles/main.css";
 import { Typography } from "@mui/material";
 import {Stack} from "@mui/material";
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Box  } from '@mui/material'
 
 function Navbar() {
@@ -53,10 +53,33 @@ function Navbar() {
   return (
     <header>
       {/* <h3>LOGO</h3> */}
+      
       <nav ref={navRef}>
-            <a href="/Home" className={activeTab === '/Home' ? 'active' : ''} onClick={showNavbar}>Home</a>
+
+        <ul>
+          <li>
+            <NavLink className='retail' to='/Home'>Home</NavLink>
+          </li>
+          <li>
+            <NavLink className='retail' to='/Contact'>Contact</NavLink>
+          </li>
+          <li>
+            <NavLink className='retail' to='/Community'>Community</NavLink>
+          </li>
+        </ul>
+
+
+        <ul>
+        <NavLink className={activeTab === '/Teams' || activeTab === '/Pullover' || activeTab === '/Home' || activeTab === '/Contact' || activeTab === '/Community' ? 'activeMode' : 'inactiveModeRetail'} to='/Home'>Wholesale</NavLink>
+        </ul>
+
+        <ul>
+        <NavLink className={activeTab === '/HomeRetail' ? 'activeModeRetail' : 'inactiveMode'} to='/HomeRetail'>Retail</NavLink>
+        </ul>
+        
+            {/* <a href="/Home" className={activeTab === '/Home' ? 'active' : ''} onClick={showNavbar}>Home</a>
             <a className={activeTab === '/Contact' ? 'active' : ''} href="/Contact" onClick={showNavbar}>Contact</a>
-      <a className={activeTab === '/Community' ? 'active' : ''} href="/Community" onClick={showNavbar}>Community</a>
+      <a className={activeTab === '/Community' ? 'active' : ''} href="/Community" onClick={showNavbar}>Community</a> */}
 
             {/* { activeTab === '/Home' ? 
                         <a  className={(activeTab === '/Home')} href="/Home" onClick={showNavbar}>Wholesale</a>            
@@ -75,8 +98,8 @@ function Navbar() {
             <Box sx={{position: "relative",
             left: {lg: -530, xl: 1300 }
           }}>
-              <a className={activeTab === '/Teams' || activeTab === '/Pullover' || activeTab === '/Home' || activeTab === '/Contact' || activeTab === '/Community' ? 'activeMode' : ''} href="/Home" onClick={showNavbar}>Wholesale</a>
-            <a className={activeTab === '/HomeRetail' || activeTab === '/Retail/ProductRetail'  ? 'activeModeRetail' : ''} href="/HomeRetail" onClick={showNavbar}>Retail</a>
+              {/* <a className={activeTab === '/Teams' || activeTab === '/Pullover' || activeTab === '/Home' || activeTab === '/Contact' || activeTab === '/Community' ? 'activeMode' : ''} href="/Home" onClick={showNavbar}>Wholesale</a>
+            <a className={activeTab === '/HomeRetail' || activeTab === '/Pullover' || activeTab === '/Home' || activeTab === '/Contact' || activeTab === '/Community' ? 'activeModeRetail' : ''} href="/HomeRetail" onClick={showNavbar}>Retail</a> */}
             </Box>
             
          {/* <a className={activeTab === '/Contact' ? 'active' : ''} href="/Contact">Contact</a>
@@ -94,7 +117,7 @@ function Navbar() {
         display: {xs: 'none', sm: 'none', lg: 'flex', xl: 'flex'}, 
         justifyContent: 'center', 
         alignItems: 'center',
-        ml: {lg: '-350px', xl: '90px'},
+        ml: {lg: '-140px', xl: '0px'},
         mr: {lg: '100px', xl: '500px'},
         textDecoration: 'none'
         }}>
@@ -110,10 +133,9 @@ function Navbar() {
               fontFamily: 'Arimo',
               fontWeight: 'bold',
               letterSpacing: '0px',
-              color: 'black',
+              color: 'white',
               fontSize: {xs: '18px', lg: '24px', xl: '28px'},
               textDecoration: 'none',
-              color: "white",
             }}
           >
             THE STREET MARKET <Typography variant="h6" sx={{ display: { xs: "flex", sm: "flex" }, fontSize: '8px', }}>TM</Typography>
@@ -130,10 +152,9 @@ function Navbar() {
               fontFamily: 'Arimo',
               fontWeight: 400,
               letterSpacing: '0px',
-              color: 'black',
+              color: 'white',
               fontSize: '12px',
               textDecoration: 'none',
-              color: "white",
             }}
           >
 GARMENT MANUFACTURER          

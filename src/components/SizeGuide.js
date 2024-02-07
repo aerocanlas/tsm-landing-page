@@ -1,7 +1,7 @@
-import React from 'react'
+import * as React from 'react'
 import { Typography, Grid, Box, Card, CardContent, Image, CardMedia, } from '@mui/material'
-import ResponsiveAppBar from './ResponsiveAppBar'
-import { ThemeProvider, createTheme, responsiveFontSizes } from "@mui/material/styles";
+import Navbar from './Navbar'
+import { ThemeProvider, createTheme, responsiveFontSizes, useTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Toolbar from '@mui/material/Toolbar';
 import ResponsiveFooter from './ResponsiveFooter';
@@ -13,8 +13,14 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
+import MobileStepper from '@mui/material/MobileStepper';
+import Button from '@mui/material/Button';
+import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
+import SwipeableViews from 'react-swipeable-views';
+import { autoPlay } from 'react-swipeable-views-utils';
 
-const App = () => {
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: '#ffffff', 
@@ -26,29 +32,31 @@ const App = () => {
     color: theme.palette.text.secondary,
   }));
 
-  const itemData = [
+  const images   = [
     {
-      img: '/images/Hoodie-2.png',
-      title: 'Hoodie',
+      imgPath: '/images/Hoodie-2.png',
+      label: 'Hoodie',
 
     },
     {
-      img: '/images/Pullover-1.png',
-      title: 'Pullover',
+      imgPath: '/images/Pullover-1.png',
+      label: 'Pullover',
     },
     {
-      img: '/images/Skater-Fit.png',
-      title: 'Skater Fit',
+      imgPath: '/images/Skater-Fit.png',
+      label: 'Skater Fit',
     },
     {
-      img: '/images/Sweat-Pants.png',
-      title: 'Sweat Pants',
+      imgPath: '/images/Sweat-Pants.png',
+      label: 'Sweat Pants',
     },
     {
-      img: '/images/Sweat-Shorts.png',
-      title: 'Sweat Shorts',
+      imgPath: '/images/Sweat-Shorts.png',
+      label: 'Sweat Shorts',
     },
   ];
+
+
     let theme = createTheme({
         palette: {
           background: {
@@ -58,6 +66,23 @@ const App = () => {
        });
        
        theme = responsiveFontSizes(theme);
+
+  function SwipeableTextMobileStepper() {
+  const theme = useTheme();
+  const [activeStep, setActiveStep] = React.useState(0);
+  const maxSteps = images.length;
+
+  const handleNext = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  };
+
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  };
+
+  const handleStepChange = (step) => {
+    setActiveStep(step);
+  };
        
 
   return (
@@ -65,8 +90,8 @@ const App = () => {
     <title>The Street Market | Size Guide </title>
     <ThemeProvider theme={theme}>
      <CssBaseline />
-     <ResponsiveAppBar position="static" color="transparent">
-   </ResponsiveAppBar>
+     <Navbar position="static" color="transparent">
+   </Navbar>
 
    <Typography 
       variant="h3" 
@@ -74,113 +99,98 @@ const App = () => {
       sx={{ 
         fontSize: { xs: '0.9em', sm: '1rem', md: '1rem', lg: '1rem', xl: '1.2rem' }, 
         textAlign: 'center', 
-        marginTop: { xs: '-320px', sm: '100px', md: '-70px', lg: '100px', xl: '-50px' }, // Adjust as needed
-        marginBottom: { xs: '50px', sm: '', md: '30px', lg: '90px' }
+        marginTop: { xs: '-320px', sm: '100px', md: '-70px', lg: '100px', xl: '50px' }, // Adjust as needed
+        marginBottom: { xs: '50px', sm: '', md: '30px', lg: '10px' }
       }}
   >
 SIZE GUIDE
 </Typography>
-<Stack direction="row" spacing={2} sx={{
-  marginTop: {xs: '0px', xl: '120px'},
-  marginLeft: {xs: '20px', lg: '110px'},
-  marginRight: {xs: '20px', lg: '100px'}
-  
-}}>
-  
-        <Item>
-        <Box
-      component="img"
-      sx={{
-        backgroundColor: '#ffffff', boxShadow: 'none', outline: 'none',
-        minHeight: { xs: 350, md: 250, lg: 350, xl: 300 }, // Add this line
-        maxWidth: { xs: 350, md: 250, lg: 350, xl: 300 },// Add this line
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
 
-      }}
-      alt=""
-      src="/images/Hoodie-2.png"
-    />  
-        </Item>
-        <Link to="/Pullover">
-        <Item>
-          
-        <Box
-      component="img"
-      sx={{
-        minHeight: { xs: 350, md: 250, lg: 350, xl: 300 }, // Add this line
-        maxWidth: { xs: 350, md: 250, lg: 350, xl: 300 },// Add this line
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
+<Box sx={{ maxWidth: 700, flexGrow: 1,
+ ml: {xl: '600px'},
+ marginBottom: '100px'
+ }}>
+      <Paper
+        square
+        elevation={0}
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          height: 50,
+          pl: 2,
+          bgcolor: 'background.default',
+        }}
+      >
+        {/* <Typography>{images[activeStep].label}</Typography> */}
+      </Paper>
+      <AutoPlaySwipeableViews
+        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+        index={activeStep}
+        onChangeIndex={handleStepChange}
+        enableMouseEvents
+      >
+        {images.map((step, index) => (
+          <div key={step.label}>
+            {Math.abs(activeStep - index) <= 2 ? (
+              <Box
+                component="img"
+                sx={{
+                  height: 800,
+                  display: 'block',
+                  width: 700,
+                  overflow: 'hidden',
+                }}
+                src={step.imgPath}
+                alt={step.label}
+              />
+            ) : null}
+          </div>
+        ))}
+      </AutoPlaySwipeableViews>
+      <MobileStepper
+        steps={maxSteps}
+        position="static"
+        activeStep={activeStep}
+        nextButton={
+          <Button
+            size="small"
+            onClick={handleNext}
+            disabled={activeStep === maxSteps - 1}
+            sx={{color: 'black'}}
+          >
+            Next
+            {theme.direction === 'rtl' ? (
+              <KeyboardArrowLeft />
+            ) : (
+              <KeyboardArrowRight />
+            )}
+          </Button>
+        }
+        backButton={
+          <Button size="small" onClick={handleBack} disabled={activeStep === 0} sx={{color: 'black'}}>
+            {theme.direction === 'rtl' ? (
+              <KeyboardArrowRight />
+            ) : (
+              <KeyboardArrowLeft />
+            )}
+            Back
+          </Button>
+        }
+        sx={{
+          '& .MuiMobileStepper-dot': {
+            backgroundColor: 'gray',
+          },
+          '& .MuiMobileStepper-dotActive': {
+            backgroundColor: 'black',
+          },
+        }}
+      />
+    </Box>
 
-      }}
-      alt=""
-      src="/images/Pullover-1.png"
-    />
-     
-        </Item>
-        </Link> 
-        <Item>
-        <Box
-      component="img"
-      sx={{
-        minHeight: { xs: 350, md: 250, lg: 350, xl: 300 }, // Add this line
-        maxWidth: { xs: 350, md: 250, lg: 350, xl: 300 },// Add this line
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-
-      }}
-      alt=""
-      src="/images/Skater-Fit.png"
-    />  
-        </Item>
-      </Stack>
-
-      <Stack direction="row" spacing={2} sx={{
-  marginTop: {xs: '0px', xl: '120px'},
-  marginBottom: {xs: '0px', lg: '100px', xl: '120px'},
-  marginLeft: {xs: '20px', lg: '110px'},
-  marginRight: {xs: '20px', lg: '100px'}
-  
-}}>
-      <Item>
-        <Box
-      component="img"
-      sx={{
-        minHeight: { xs: 350, md: 250, lg: 350, xl: 300 }, // Add this line
-        maxWidth: { xs: 350, md: 250, lg: 350, xl: 300 },// Add this line
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-
-      }}
-      alt=""
-      src="/images/Sweat-Pants.png"
-    />  
-        </Item>
-        <Item>
-        <Box
-      component="img"
-      sx={{
-        minHeight: { xs: 350, md: 250, lg: 350, xl: 300 }, // Add this line
-        maxWidth: { xs: 350, md: 250, lg: 350, xl: 300 },// Add this line
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-
-      }}
-      alt=""
-      src="/images/Sweat-Shorts.png"
-    />  
-        </Item>
-</Stack>
    <ResponsiveFooter position="bottom"/>
    </ThemeProvider>
 </>
   )
 }
 
-export default App
+export default SwipeableTextMobileStepper

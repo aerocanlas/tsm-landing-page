@@ -1,6 +1,6 @@
 import React from 'react'
 import { Typography, Grid, Box, Card, CardContent } from '@mui/material'
-import ResponsiveAppBar from './ResponsiveAppBar'
+import Navbar from './Navbar'
 import { ThemeProvider, createTheme, responsiveFontSizes } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Toolbar from '@mui/material/Toolbar';
@@ -26,8 +26,8 @@ const App = () => {
     <title>The Street Market | Teams </title>
        <ThemeProvider theme={theme}>
      <CssBaseline />
-     <ResponsiveAppBar position="static" color="transparent">
-   </ResponsiveAppBar>
+     <Navbar position="static" color="transparent">
+   </Navbar>
    <Typography 
       variant="h3" 
       gutterBottom 

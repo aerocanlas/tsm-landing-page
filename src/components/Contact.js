@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react';
 import { Typography,  Grid, Box, Card, CardContent, Image, CardMedia } from '@mui/material'
 import ResponsiveAppBar from './ResponsiveAppBar'
 import { ThemeProvider, createTheme  } from "@mui/material/styles";
@@ -8,8 +8,10 @@ import { Route, Routes } from 'react-router';
 import FAQs from './faqs';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import Navbar
- from './Navbar';
+import Navbar from './Navbar';
+import emailjs from '@emailjs/browser';
+import "../Styles/StyledContactForm.css";
+
 const Contact = () => {
 
   const theme = createTheme({
@@ -19,6 +21,25 @@ const Contact = () => {
       }
     }
    });
+
+   const form = useRef();
+
+   const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_s85ph3n', 'template_pxn2mkt', form.current,
+        'o3uRYWGizNNxEQUYD',
+      )
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
 
   return (
     <>
@@ -41,7 +62,7 @@ const Contact = () => {
       alt=""
       src="/images/Contact1.png"
     />  
-    <Card sx={{ backgroundColor: '#ffffff', boxShadow: 'none', outline: 'none', width: '500px', height: '600px', display: 'flex',
+    <Card sx={{ backgroundColor: '#ffffff', boxShadow: 'none', outline: 'none', width: '500px', height: '700px', display: 'flex',
         justifyContent: 'center', alignItems: 'center', }}>
             <CardContent>
             <Typography 
@@ -53,32 +74,51 @@ const Contact = () => {
         fontWeight: 'bold', 
         textAlign: 'left',
         fontFamily: 'Arimo',
-        textTransform: 'normal', // Adjust as needed
+        textTransform: 'normal',
+        marginTop: '50px' // Adjust as needed
       }}
   >
  Contact</Typography>
  <Box
-      component="form"
       sx={{
         '& > :not(style)': { m: 2, width: '25ch' },
         display: 'grid',
         justifyContent: 'center',
         alignItems: 'center'
       }}
-      noValidate
-      autoComplete="off"
     >
-      <TextField id="standard-basic" label="First Name" variant="standard" />
-      <TextField id="standard-basic" label="Last Name" variant="standard" />
+      <form ref={form} onSubmit={sendEmail}>
+          <label>Name *</label>
+          <input type="text" name="user_name" required/>
+          <label>Email *</label>
+          <input type="email" name="user_email" required/>
+          <label>Phone Number *</label>
+          <input type="text" name="user_phone" required/>
+          <label>Order Number</label>
+          <input type="text" name="user_order" />
+          <label>Message *</label>
+          <textarea name="message" required/>
+          <input type="submit" value="Send" />
+    </form>
+    
+      {/* <TextField id="standard-basic" label="Name" variant="standard" />
       <TextField id="standard-email-basic" label="Email" variant="standard" />
       <TextField id="standard-basic" label="Phone" variant="standard" />
       <TextField id="standard-basic" label="Order Number (Optional)" variant="standard" />
-      <Button variant="standard"> Submit
-          {/* <Typography variant='body1' sx={{color: '#d3d3d3', '&:hover': {
+      <TextField
+      variant="standard"
+      id="standard-basic"
+        label='Message'
+        multiline
+        rows={2}
+        maxRows={4}
+      /> */}
+      {/* <Button variant="standard"> Submit
+          <Typography variant='body1' sx={{color: '#d3d3d3', '&:hover': {
           color: '#000000', 
           transition: '0.5s ease'
-        }, }}>Submit</Typography> */}
-        </Button>
+        }, }}>Submit</Typography> 
+        </Button> */}
     </Box>
 
 
@@ -106,4 +146,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Contact;

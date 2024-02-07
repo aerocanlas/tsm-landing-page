@@ -70,7 +70,7 @@ const Home = () => {
     <title>The Street Market | Home</title>
        <ThemeProvider theme={theme}>
      <CssBaseline />
-     <Navbar position="static" color="transparent"/>
+     <NavbarRetail position="static" color="transparent"/>
      
    <Box sx={{ p: 3 }}>
         <Grid container spacing={3}>
@@ -78,7 +78,8 @@ const Home = () => {
           <Card sx={{ backgroundColor: 'transparent', boxShadow: 'none', outline: 'none', height: '100vh', display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: '10px', }}>
+        marginTop: '10px',
+        marginBottom: '50px', }}>
             <CardContent>
             <Box
       component="img"
@@ -102,11 +103,13 @@ const Home = () => {
 <Button sx={{marginTop: '900px',
             fontSize: '30px',
             fontWeight: 'bold',
-            color: 'white'
+            color: 'white',
+            textShadow: '2px 2px 4px black',
+
 }} href="/retail/productretail">
   VIEW V2 COLLECTION
 
-<Box ml={2} ><FaLongArrowAltRight size={30}/></Box>
+<Box ml={2} ><FaLongArrowAltRight size={30} color="white" filter="drop-shadow(2px 2px 4px black)"/></Box>
 </Button>
            {/* <Card  sx={{ minWidth: '100%', flexGrow: 1 }}>
            <video
