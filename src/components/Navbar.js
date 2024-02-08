@@ -67,11 +67,11 @@ function Navbar() {
         </ul>
 
         <ul>
-        <NavLink className={activeTab === '/SizeGuide' || activeTab === '/Teams' || activeTab === '/Pullover' || activeTab === '/Home' || activeTab === '/Contact' || activeTab === '/Community' ? 'activeMode' : 'inactiveModeHome'} to='/Home'>Wholesale</NavLink>
+        <NavLink className={activeTab === '/SizeGuide' || activeTab === '/Teams' || activeTab === '/Pullover' || activeTab === '/Home' || activeTab === '/Contact' || activeTab === '/Community' || activeTab === '/StandardRate' ? 'activeMode' : 'inactiveModeHome'} to='/Home'>Wholesale</NavLink>
         </ul>
 
         <ul>
-        <NavLink className={activeTab === '/HomeRetail' || activeTab === '/retail/productretail' ? 'activeMode' : 'inactiveMode'} to='/HomeRetail'>Retail</NavLink>
+        <NavLink className={activeTab === '/HomeRetail' || activeTab === '/retail/productretail' || activeTab === '/retail/BlueHoodieV2' ? 'activeMode' : 'inactiveMode'} to='/HomeRetail'>Retail</NavLink>
         </ul>
             {/* <a href="/Home" className={activeTab === '/Home' ? 'active' : ''} onClick={showNavbar}>Home</a>
             <a className={activeTab === '/Contact' ? 'active' : ''} href="/Contact" onClick={showNavbar}>Contact</a>
@@ -113,7 +113,7 @@ function Navbar() {
         display: {xs: 'none', sm: 'none', lg: 'flex', xl: 'flex'}, 
         justifyContent: 'center', 
         alignItems: 'center',
-        ml: {lg: '-140px', xl: '250px'},
+        ml: {lg: '-400px', xl: '-50px'},
         mr: {lg: '100px', xl: '500px'},
         textDecoration: 'none'
         }}>

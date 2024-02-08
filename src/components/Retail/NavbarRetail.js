@@ -117,7 +117,7 @@ function Navbar() {
         display: {xs: 'none', sm: 'none', lg: 'flex', xl: 'flex'}, 
         justifyContent: 'center', 
         alignItems: 'center',
-        ml: {lg: '-140px', xl: '0px'},
+        ml: {lg: '-400px', xl: '0px'},
         mr: {lg: '100px', xl: '500px'},
         textDecoration: 'none'
         }}>

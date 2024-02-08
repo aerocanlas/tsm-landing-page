@@ -60,6 +60,11 @@ nav ul {
     position: relative;
     left: 1250px;
     z-index: 1000;
+
+    @media screen and (max-width: 1366px) {
+        left: 750px;
+        
+    }
 }
 
 .activeModeRetail{
@@ -75,6 +80,11 @@ nav ul {
     position: relative;
     left: 1250px;
     z-index: 1000;
+
+    @media screen and (max-width: 1366px) {
+        left: 700px;
+        
+    }
 }
 
 .inactiveMode{
@@ -89,6 +99,11 @@ nav ul {
     position: relative;
     left: 1230px;
     z-index: 1000;
+
+    @media screen and (max-width: 1366px) {
+        left: 720px;
+        
+    }
 }
 
 .inactiveModeHome{
@@ -103,6 +118,11 @@ nav ul {
     position: relative;
     left: 1270px;
     z-index: 1000;
+
+    @media screen and (max-width: 1366px) {
+        left: 750px;
+        
+    }
 }
 
 .inactiveModeRetail{
@@ -117,6 +137,11 @@ nav ul {
     position: relative;
     left: 1270px;
     z-index: 1000;
+
+    @media screen and (max-width: 1366px) {
+        left: 730px;
+        
+    }
 }
 
 .retail{

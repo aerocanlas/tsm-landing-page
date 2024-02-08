@@ -93,14 +93,14 @@ const Home = () => {
         top: 0,
         left: 0,
         zIndex: '-100',
-        height: { xs: 233, md: 167, lg: '100%', xl: '150%' },
+        height: { xs: 233, md: 167, lg: '150%', xl: '150%' },
         width: { xs: 350, md: 250, lg: '100%', xl: '100%' },
       }}
       alt="The house from the offer."
       src="/images/RETAIL BANNER TEMPORARY.png"
     /> 
 
-<Button sx={{marginTop: '900px',
+<Button sx={{marginTop: {lg: '750px', xl:'900px'},
             fontSize: '30px',
             fontWeight: 'bold',
             color: 'white',

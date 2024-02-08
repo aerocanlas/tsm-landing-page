@@ -26,7 +26,8 @@ const App = () => {
     <title>The Street Market | Teams </title>
        <ThemeProvider theme={theme}>
      <CssBaseline />
-     <Navbar position="static" color="transparent">
+     <Navbar pos
+     ition="static" color="transparent">
    </Navbar>
    <Typography 
       variant="h3" 
@@ -35,17 +36,18 @@ const App = () => {
         fontSize: { xs: '0.9em', sm: '1rem', md: '1rem', lg: '1rem', xl: '1.2rem' }, 
         textAlign: 'center', 
         textTransform: 'uppercase',
-        marginTop: { xs: '-320px', sm: '100px', md: '-70px', lg: '100px', xl: '-50px' }, // Adjust as needed
-        marginBottom: { xs: '50px', sm: '', md: '30px', lg: '90px' }
+        marginTop: { xs: '-320px', sm: '100px', md: '-70px', lg: '100px', xl: '50px' }, // Adjust as needed
+        marginBottom: { xs: '50px', sm: '', md: '30px', lg: '40px' }
       }}
   >
 Standard Rate
 </Typography>
-<Card sx={{ backgroundColor: '#ffffff', boxShadow: 'none', outline: 'none', height: {xs: '1600px', lg:'1000px'}, display: 'flex',
+
+<Card sx={{ backgroundColor: '#ffffff', boxShadow: 'none', outline: 'none', height: {xs: '500px', lg:'500px', xl: '500px'}, display: 'flex',
         justifyContent: 'left', }}>
             <CardContent>
-            <Card sx={{ backgroundColor: '#f4f4f4', boxShadow: 'none', outline: 'none', width: {xs: '300px', lg: '380px', xl: '1600px'}, height: {xs: '1350px', lg:'500px'}, display: 'flex',
-            marginLeft: '100px',
+            <Card sx={{ backgroundColor: '#f4f4f4', boxShadow: 'none', outline: 'none', width: {xs: '300px', lg: '380px', xl: '500px'}, height: {xs: '500px', lg:'500px', xl: '500px'}, display: 'flex',
+            marginLeft: {lg: '100px', xl: '170px'},
         justifyContent: 'left',
         marginBottom: '100px', }}>
           <CardContent>
@@ -134,7 +136,7 @@ Standard Rate
 
 
 {/* second half */}
- <Box sx={{display: 'inline-flex'}}>
+<Box sx={{display: 'inline-flex'}}>
 <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 20}, mt: 2, ml: 10.5, display: 'flex', width: '150px' }}>
    Pattern Fee (per size)
  </Typography>
@@ -173,7 +175,7 @@ Standard Rate
  <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: 5}, ml: -0.5, display: 'flex', width: '100px' }}>
    3000 - 5000
  </Typography>
-</Box>
+</Box> 
 
  </Grid>
  </Grid></Grid>
@@ -184,11 +186,11 @@ Standard Rate
 
 {/* Sampling Cost Pattern */}
 
-      <Card sx={{ backgroundColor: '#ffffff', boxShadow: 'none', outline: 'none', height: {xs: '1600px', lg:'1000px'}, display: 'flex',
-        justifyContent: 'center', mt: '-1000px' }}>
+      <Card sx={{ backgroundColor: '#ffffff', boxShadow: 'none', outline: 'none', height: {xs: '500px', lg:'500px', xl: '300px'}, display: 'flex',
+        justifyContent: 'center', mt: '-500px' }}>
             <CardContent>
-            <Card sx={{ backgroundColor: '#f4f4f4', boxShadow: 'none', outline: 'none', width: {xs: '300px', lg: '450px', xl: '1600px'}, height: {xs: '1350px', lg: '300px'}, display: 'flex',
-            marginLeft: '150px',
+            <Card sx={{ backgroundColor: '#f4f4f4', boxShadow: 'none', outline: 'none', width: {xs: '300px', lg: '450px', xl: '550px'}, height: {xs: '350px', lg: '300px', xl: '300px'}, display: 'flex',
+            marginLeft: {lg: '150px', xl: '150px'},
         justifyContent: 'center',
         marginBottom: '100px', }}>
           <CardContent>
@@ -239,13 +241,13 @@ Standard Rate
 
 {/* Lead Time */}
 
-<Card sx={{ backgroundColor: '#ffffff', boxShadow: 'none', outline: 'none', height: {xs: '1600px', lg:'1000px'}, display: 'flex',
-        justifyContent: 'center', mt: '-680px' }}>
+<Card sx={{ backgroundColor: '#ffffff', boxShadow: 'none', outline: 'none', height: {xs: '500px', lg:'500px', xl: '300px'}, display: 'flex',
+        justifyContent: 'center', mt: {lg: '-170px', xl: '30px' }}}>
             <CardContent>
-            <Card sx={{ backgroundColor: '#f4f4f4', boxShadow: 'none', outline: 'none', width: {xs: '300px', lg: '450px', xl: '1600px'}, height: {xs: '1350px', lg: '220px'}, display: 'flex',
-            marginLeft: '150px',
+            <Card sx={{ backgroundColor: '#f4f4f4', boxShadow: 'none', outline: 'none', width: {xs: '300px', lg: '450px', xl: '550px'}, height: {xs: '500px', lg: '220px', xl: '300px'}, display: 'flex',
+            marginLeft: {lg: '150px', xl: '150px'},
         justifyContent: 'center',
-        marginBottom: '100px', }}>
+        marginBottom: '200px', }}>
           <CardContent>
 <Typography variant="h1" 
       gutterBottom 
@@ -289,11 +291,11 @@ Standard Rate
 
       {/* Embroidery */}
 
-<Card sx={{ backgroundColor: '#ffffff', boxShadow: 'none', outline: 'none', height: {xs: '1600px', lg:'1000px'}, display: 'flex',
-        justifyContent: 'center', mt: '-1320px' }}>
+<Card sx={{ backgroundColor: '#ffffff', boxShadow: 'none', outline: 'none', height: {xs: '500px', lg:'500px', xl: '300px'}, display: 'flex',
+        justifyContent: 'center', mt: {lg: '-500px', xl: '-630px'} }}>
             <CardContent>
-            <Card sx={{ backgroundColor: '#f4f4f4', boxShadow: 'none', outline: 'none', width: {xs: '300px', lg: '250px', xl: '1600px'}, height: {xs: '1350px', lg: '220px'}, display: 'flex',
-            marginLeft: '905px',
+            <Card sx={{ backgroundColor: '#f4f4f4', boxShadow: 'none', outline: 'none', width: {xs: '300px', lg: '250px', xl: '300px'}, height: {xs: '500px', lg: '220px', xl: '500px'}, display: 'flex',
+            marginLeft: {lg: '905px', xl: '1120px'},
         justifyContent: 'center',
         marginBottom: '100px', }}>
           <CardContent>
@@ -338,11 +340,11 @@ Standard Rate
 
             {/* Silkscreen Print */}
 
-<Card sx={{ backgroundColor: '#ffffff', boxShadow: 'none', outline: 'none', height: {xs: '1600px', lg:'1000px'}, display: 'flex',
-        justifyContent: 'center', mt: '-760px' }}>
+<Card sx={{ backgroundColor: '#ffffff', boxShadow: 'none', outline: 'none', height: {xs: '500px', lg:'500px', xl: '300px'}, display: 'flex',
+        justifyContent: 'center', mt: {lg: '-830px', xl: '30px'}, marginBottom: '150px', }}>
             <CardContent>
-            <Card sx={{ backgroundColor: '#f4f4f4', boxShadow: 'none', outline: 'none', width: {xs: '300px', lg: '250px', xl: '1600px'}, height: {xs: '1350px', lg: '300px'}, display: 'flex',
-            marginLeft: '905px',
+            <Card sx={{ backgroundColor: '#f4f4f4', boxShadow: 'none', outline: 'none', width: {xs: '300px', lg: '250px', xl: '300px'}, height: {xs: '500px', lg: '300px', xl: '500px'}, display: 'flex',
+            marginLeft: {lg: '905px', xl: '1120px'},
         justifyContent: 'center',
         marginBottom: '100px', }}>
           <CardContent>
@@ -386,7 +388,8 @@ Standard Rate
       </CardContent>
       </Card>
       </CardContent></Card>
-   <ResponsiveFooter position="bottom"/>
+
+   <ResponsiveFooter position='bottom' />
    </ThemeProvider>
 </>
   )
