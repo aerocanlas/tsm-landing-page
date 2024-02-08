@@ -10,7 +10,7 @@ import Button from '@mui/material/Button';
 import Fab from '@mui/material/Fab';
 import Stack from '@mui/material/Stack';
 import ReactImageMagnify from 'react-image-magnify';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 
 const App = () => {

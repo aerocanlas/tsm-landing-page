@@ -39,9 +39,9 @@ const ResponsiveFooter= () => {
             <Typography marginTop='70px' variant="subtitle1" color="text.primary" gutterBottom fontWeight='bold' sx={{ml: {xs: '50px'}}}>
               Support
             </Typography>
+            <Link to="/FAQs" color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}> <Typography sx={{display: 'block', fontSize:'14px', ml: {xs: '50px'}}}>FAQ's</Typography></Link>
             <Link to="#" color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}><Typography sx={{display: 'block', fontSize:'14px', ml: {xs: '50px'}}}>Shipping</Typography></Link>
-            <Link to="/SizeGuide" color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}><Typography sx={{display: 'block', fontSize:'14px', ml: {xs: '50px'}}}>Size Guide</Typography></Link>
-            <Link to="/StandardRate" color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}><Typography sx={{display: 'block', fontSize:'14px', marginBottom: '50px', ml: {xs: '50px'}}}>Standard Rate</Typography></Link>
+            <Link to="/SizeGuide" color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}><Typography sx={{display: 'block', fontSize:'14px', marginBottom: '50px', ml: {xs: '50px'}}}>Size Guide</Typography></Link>
             {/* <Link href="#" color="inherit" display="block" sx={{textDecoration: 'none'}}>Shipping</Link>
             <Link href="#" color="inherit" display="block" sx={{textDecoration: 'none'}}>Size Guide</Link> */}
           </Grid>
@@ -49,9 +49,9 @@ const ResponsiveFooter= () => {
             <Typography marginTop='70px' variant="subtitle1" color="text.primary" gutterBottom fontWeight='bold' sx={{ml: {xs: '50px'}}}>
               Company
             </Typography>
-            <Link to="/Pullover" color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}> <Typography sx={{display: 'block', fontSize:'14px', ml: {xs: '50px'}}}>About</Typography></Link>
+            <Link to="/About" color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}> <Typography sx={{display: 'block', fontSize:'14px', ml: {xs: '50px'}}}>About</Typography></Link>
             <Link to="/Teams" color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}><Typography sx={{display: 'block', fontSize:'14px', ml: {xs: '50px'}}}>Teams</Typography></Link>
-            <Link to="/FAQs" color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}><Typography sx={{display: 'block', fontSize:'14px', marginBottom: '50px', ml: {xs: '50px'}}}>FAQ's</Typography></Link>
+            <Link to="/StandardRate" color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}><Typography sx={{display: 'block', fontSize:'14px', marginBottom: '50px', ml: {xs: '50px'}}}>Career</Typography></Link>
           </Grid>
           <Grid item xs={6} sm={3} md={2}>
             <Typography marginTop='70px' variant="subtitle1" color="text.primary" gutterBottom fontWeight='bold' sx={{ml: {xs: '50px'}}}>

@@ -8,6 +8,7 @@ import { Route, Routes } from 'react-router-dom';
 import FAQs from './components/faqs';
 import Home from './components/Home';
 import Contact from './components/Contact';
+import About from './components/About';
 import Teams from './components/Teams';
 import Pullover from './components/Pullover';
 import Community from './components/Community';
@@ -38,6 +39,7 @@ const App = () => {
     <Route path='/Home' element={<Home/>}/>
     <Route path='Contact' element={<Contact />}/>
     <Route path='faqs' element={<FAQs />}/>
+    <Route path='About' element={<About />}/>
     <Route path='Teams' element={<Teams />}/>
     <Route path='Community' element={<Community />}/>
     <Route path='Pullover' element={<Pullover />}/>
@@ -46,6 +48,7 @@ const App = () => {
     <Route path='HomeRetail' element={<HomeRetail />}/>
     <Route path='Retail/ProductRetail' element={<ProductRetail />}/>
     <Route path='Retail/BlueHoodieV2' element={<BlueHoodieV2 />}/>
+
    </Routes>
 </>
   )

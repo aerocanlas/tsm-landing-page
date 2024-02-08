@@ -1,6 +1,6 @@
 import React from 'react'
 import { Typography } from '@mui/material'
-import Navbar from './Navbar'
+import ResponsiveAppBar from './ResponsiveAppBar'
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Grid from '@mui/material/Grid';
@@ -30,8 +30,8 @@ const FAQs = () => {
     <title>The Street Market | FAQ's</title>
        <ThemeProvider theme={theme}>
      <CssBaseline />
-     <Navbar position="static" color="transparent">
-   </Navbar>
+     <ResponsiveAppBar position="static" color="transparent">
+   </ResponsiveAppBar>
    <Typography variant="h3" gutterBottom sx={{ fontFamily: 'Arimo', fontSize: {lg: '1.2rem', xl: '1.1em'}, textDecoration: 'underline', ml: 24.5, mt: 5 }}>
     FREQUENTLY ASKED QUESTIONS
   </Typography>
@@ -53,7 +53,7 @@ Our Frequently Asked Questions (FAQ's) can answer some basic and essential quest
           aria-controls="panel1-content"
           id="panel1-header"
         >
-          <Typography sx={{ fontFamily: 'Arimo', fontSize: {lg: '1rem', xl: '1.1em'}, fontStyle: 'bold', ml: 22.5, mt: 5 }}>GENERAL</Typography>
+          <Typography sx={{ fontFamily: 'Arimo', fontSize: {lg: '1rem', xl: '1.1em'}, fontStyle: 'bold', ml: 22.5, mt: 5, pb: 5  }}>GENERAL</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Grid container>
@@ -123,7 +123,7 @@ Our Frequently Asked Questions (FAQ's) can answer some basic and essential quest
           aria-controls="panel2-content"
           id="panel2-header"
         >
-          <Typography sx={{ fontFamily: 'Arimo', fontSize: {lg: '1rem', xl: '1.1em'}, fontStyle: 'bold', ml: 22.5, mt: 5 }}>LOCATION</Typography>
+          <Typography sx={{ fontFamily: 'Arimo', fontSize: {lg: '1rem', xl: '1.1em'}, fontStyle: 'bold', ml: 22.5, mt: 5, pb: 5  }}>LOCATION</Typography>
         </AccordionSummary>
         <AccordionDetails>
         <Grid container>
@@ -151,7 +151,7 @@ Our Frequently Asked Questions (FAQ's) can answer some basic and essential quest
           aria-controls="panel3-content"
           id="panel3-header"
         >
-          <Typography sx={{ fontFamily: 'Arimo', fontSize: {lg: '1rem', xl: '1.1em'}, fontStyle: 'bold', ml: 22.5, mt: 5 }}>FABRICS</Typography>
+          <Typography sx={{ fontFamily: 'Arimo', fontSize: {lg: '1rem', xl: '1.1em'}, fontStyle: 'bold', ml: 22.5, mt: 5, pb: 5  }}>FABRICS</Typography>
         </AccordionSummary>
         <AccordionDetails>
         <Grid container>
@@ -179,7 +179,7 @@ Our Frequently Asked Questions (FAQ's) can answer some basic and essential quest
           aria-controls="panel4-content"
           id="panel4-header"
         >
-          <Typography sx={{ fontFamily: 'Arimo', fontSize: {lg: '1rem', xl: '1.1em'}, fontStyle: 'bold', ml: 22.5, mt: 5 }}>PAYMENT TERMS</Typography>
+          <Typography sx={{ fontFamily: 'Arimo', fontSize: {lg: '1rem', xl: '1.1em'}, fontStyle: 'bold', ml: 22.5, mt: 5, pb: 5}}>PAYMENT TERMS</Typography>
         </AccordionSummary>
         <AccordionDetails>
         <Grid container>
@@ -231,7 +231,7 @@ Our Frequently Asked Questions (FAQ's) can answer some basic and essential quest
           aria-controls="panel5-content"
           id="panel5-header"
         >
-          <Typography sx={{ fontFamily: 'Arimo', fontSize: {lg: '1rem', xl: '1.1em'}, fontStyle: 'bold', ml: 22.5, mt: 5 }}>CUSTOM MANUFACTURING QUOTES PROCESS</Typography>
+          <Typography sx={{ fontFamily: 'Arimo', fontSize: {lg: '1rem', xl: '1.1em'}, fontStyle: 'bold', ml: 22.5, mt: 5, pb: 5 }}>CUSTOM MANUFACTURING QUOTES PROCESS</Typography>
         </AccordionSummary>
         <AccordionDetails>
         <Grid container>
@@ -272,7 +272,7 @@ Please review your proofs carefully. Look over all the information listed within
           aria-controls="panel6-content"
           id="panel6-header"
         >
-          <Typography sx={{ fontFamily: 'Arimo', fontSize: {lg: '1rem', xl: '1.1em'}, fontStyle: 'bold', ml: 22.5, mt: 5 }}>MANUFACTURING ORDER TIMING</Typography>
+          <Typography sx={{ fontFamily: 'Arimo', fontSize: {lg: '1rem', xl: '1.1em'}, fontStyle: 'bold', ml: 22.5, mt: 5, pb: 5 }}>MANUFACTURING ORDER TIMING</Typography>
         </AccordionSummary>
         <AccordionDetails>
         <Grid container>
@@ -315,7 +315,7 @@ Please review your proofs carefully. Look over all the information listed within
           aria-controls="panel7-content"
           id="panel7-header"
         >
-          <Typography sx={{ fontFamily: 'Arimo', fontSize: {lg: '1rem', xl: '1.1em'}, fontStyle: 'bold', ml: 22.5, mt: 5 }}>OTHER QUESTIONS</Typography>
+          <Typography sx={{ fontFamily: 'Arimo', fontSize: {lg: '1rem', xl: '1.1em'}, fontStyle: 'bold', ml: 22.5, mt: 5, pb: 5 }}>OTHER QUESTIONS</Typography>
         </AccordionSummary>
         <AccordionDetails>
         <Grid container sx={{ mb: 20 }}>
