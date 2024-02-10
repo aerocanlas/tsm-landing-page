@@ -90,7 +90,7 @@ const BlueHoodieV2 = () => {
         justifyContent: 'center',
         alignItems: 'center',
         marginTop: '-75%',
-        marginLeft: {lg: '390px', xl:'550px'},
+        marginLeft: {lg: '390px', xl:'450px'},
         marginBottom: '50%',
         minHeight: { xs: 233, md: 167, lg: 100 },
         minWidth: { xs: 350, md: 250, lg: 100 },
@@ -114,7 +114,7 @@ const BlueHoodieV2 = () => {
 <Box sx={{  display: 'flex',
 
          '& > :not(style)': { m: 0.3 },
-         marginLeft: {lg:'32%', xl: '33%'},
+         marginLeft: {lg:'32%', xl: '30.5%'},
          marginTop: {lg: '-45%'},
          marginBottom: {lg: '50%'} }}>
 <Fab size="small" 
@@ -202,8 +202,8 @@ sx={{
 </Fab>
 </Box>
             <CardContent>
-            <Card sx={{ backgroundColor: '#ffffff', boxShadow: 'none', outline: 'none', width: {xs: '300px', lg: '550px', xl: '1600px'}, height: 'auto', display: 'flex',
-            marginLeft: '730px',
+            <Card sx={{ backgroundColor: '#ffffff', boxShadow: 'none', outline: 'none', width: {xs: '300px', lg: '550px', xl: '750px'}, height: 'auto', display: 'flex',
+            marginLeft: {lg: '730px', xl: '950px'},
         marginTop: '-85%',
         marginBottom: '100px',
         paddingBottom: '40px' }}>
