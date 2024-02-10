@@ -1,12 +1,30 @@
-import React from 'react'
+//productretail.js
+
+import React, { useState } from 'react'
 import Navbar from '../Navbar'
 import ResponsiveFooter from '../ResponsiveFooter'
 import { Box, Typography } from '@mui/material'
 import { Link } from 'react-router-dom';
 import NavbarRetail from '../Retail/NavbarRetail'
 import Fab from '@mui/material/Fab';
+import { ThemeProvider, createTheme, responsiveFontSizes } from "@mui/material/styles";
 
 const ProductRetail = () => {
+  const [isHoveredHoodie, setIsHoveredHoodie] = useState(false);
+  const [isHoveredPullover, setIsHoveredPullover] = useState(false);
+  const [isHoveredShirt, setIsHoveredShirt] = useState(false);
+  const [isHoveredShort, setIsHoveredShort] = useState(false);
+  const [isHoveredPants, setIsHoveredPants] = useState(false);
+
+  let theme = createTheme({
+    palette: {
+      background: {
+        default: "#ffffff"
+      }
+    }
+   });
+   
+   theme = responsiveFontSizes(theme);
 
     function setNewImage() {
         const shirtImage = document.getElementById('ShirtV2');
@@ -21,10 +39,10 @@ const ProductRetail = () => {
           hoodieImage.src = 'images/HoodieV2.png';
         }
       }
-    
-
+      
   return (
     <>
+    
     <Navbar position="static" color="transparent"/>
 
     <Box sx={{height: '1500px', 
@@ -48,25 +66,28 @@ const ProductRetail = () => {
         justifyContent: 'center',
         alignItems: 'center',}}>
 
-      <Box
-      component="img"
-      width="100%"
-      height="auto"
-      sx={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: '10px',
-        maxHeight: { xs: 233, md: 167, lg: '50%' },
-        maxWidth: { xs: 350, md: 250, lg: '25%'},
-        marginLeft: {lg: 5, xl: 0}
-      }}
-      alt="The house from the offer."
-      src="/images/HoodieV2.png"
-    /> 
-
-
-
+<Box
+  component="img"
+  width="100%"
+  height="auto"
+  sx={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: '10px',
+    maxHeight: { xs:  233, md:  167, lg: '50%' },
+    maxWidth: { xs:  350, md:  250, lg: '25%' },
+    marginLeft: { xl:  10 },
+    transition: 'transform  0.3s ease-in-out',
+    '&:hover': {
+      cursor: 'pointer',
+    },
+  }}
+  alt="The house from the offer."
+  src={isHoveredHoodie ? '/images/TSM-Hoodie V2-Navy-Blue.png' : '/images/HoodieV2.png'}
+  onMouseEnter={() => setIsHoveredHoodie(true)}
+  onMouseLeave={() => setIsHoveredHoodie(false)}
+/>
 
 <Box
       component="img"
@@ -79,11 +100,18 @@ const ProductRetail = () => {
         marginTop: '10px',
         maxHeight: { xs: 233, md: 167, lg: '50%' },
         maxWidth: { xs: 350, md: 250, lg: '25%'},
-        marginLeft: {xl: 10}
+        marginLeft: {lg: 5, xl: 10},
+        marginRight: {lg: 3},
+        transition: 'transform  0.3s ease-in-out',
+        '&:hover': {
+          cursor: 'pointer',
+        },
       }}
       alt="The house from the offer."
-      src="/images/PulloverV2.png"
-    /> 
+      src={isHoveredPullover ? '/images/TSM-Pullover-Beige.png' : '/images/PulloverV2.png'}
+      onMouseEnter={() => setIsHoveredPullover(true)}
+      onMouseLeave={() => setIsHoveredPullover(false)}
+    />
 
 <Box
       component="img"
@@ -96,11 +124,17 @@ const ProductRetail = () => {
         marginTop: '10px',
         maxHeight: { xs: 233, md: 167, lg: '50%' },
         maxWidth: { xs: 350, md: 250, lg: '25%'},
-        marginLeft: {xl: 10}
+        marginLeft: {xl: 10},
+        transition: 'transform  0.3s ease-in-out',
+        '&:hover': {
+          cursor: 'pointer',
+        },
       }}
       alt="The house from the offer."
-      src="/images/ShirtV2.png"
-    /> 
+      src={isHoveredShirt ? '/images/TSM-Skater-Fit-Rust.png' : '/images/ShirtV2.png'}
+      onMouseEnter={() => setIsHoveredShirt(true)}
+      onMouseLeave={() => setIsHoveredShirt(false)}
+    />
       </Box>
 <Box  sx={{
         display: 'flex',}}>   
@@ -111,6 +145,7 @@ const ProductRetail = () => {
         fontSize: '1rem', 
         textAlign: 'left',
         textTransform: 'normal',
+        color: '#646464',
         fontFamily: 'Arimo',
         marginTop: {xs: '100px', lg: '20px', xl: '20px'},
         marginBottom: {xs: '50px', lg: '10px', xl: '10px'},
@@ -124,11 +159,12 @@ const ProductRetail = () => {
         textAlign: 'left',
         textTransform: 'normal',
         fontFamily: 'Arimo',
-        marginTop: {xs: '100px', lg: '20px', xl: '5px'},
+        color: '#646464',
+        marginTop: {xs: '100px', lg: '0px', xl: '5px'},
         marginBottom: {xs: '50px', lg: '50px', xl: '50px'},
         marginLeft: {lg: '250px', xl: '220px'}
          // Adjust as needed
-      }}> PHP 999.00</Typography>
+      }}> 999 PHP</Typography>
 
 <Box sx={{marginLeft: {lg: '240px', xl: '210px'}}}>
 <Box sx={{  display: 'flex',
@@ -242,6 +278,7 @@ transform: 'scale(0.8)', // Shrink the button when clicked
         fontSize: '1rem', 
         textAlign: 'left',
         textTransform: 'normal',
+        color: '#646464',
         fontFamily: 'Arimo',
         marginTop: {xs: '100px', lg: '20px', xl: '20px'},
         marginBottom: {xs: '50px', lg: '10px', xl: '10px'},
@@ -254,12 +291,13 @@ transform: 'scale(0.8)', // Shrink the button when clicked
         fontSize: '1rem', 
         textAlign: 'left',
         textTransform: 'normal',
+        color: '#646464',
         fontFamily: 'Arimo',
-        marginTop: {xs: '100px', lg: '20px', xl: '5px'},
+        marginTop: {xs: '100px', lg: '0px', xl: '5px'},
         marginBottom: {xs: '50px', lg: '50px', xl: '50px'},
         marginLeft: {lg: '-120px', xl: '50px'}
          // Adjust as needed
-      }}> PHP 649.00</Typography>
+      }}>649 PHP</Typography>
 <Box sx={{marginLeft: {lg: '-135px', xl: '40px'}}}>
 <Box sx={{  display: 'flex',
 marginTop: '-50px', }}>
@@ -370,6 +408,7 @@ transform: 'scale(0.8)', // Shrink the button when clicked
         fontSize: '1rem', 
         textAlign: 'left',
         textTransform: 'normal',
+        color: '#646464',
         fontFamily: 'Arimo',
         marginTop: {xs: '100px', lg: '20px', xl: '20px'},
         marginBottom: {xs: '50px', lg: '10px', xl: '10px'},
@@ -382,12 +421,13 @@ transform: 'scale(0.8)', // Shrink the button when clicked
         fontSize: '1rem', 
         textAlign: 'left',
         textTransform: 'normal',
+        color: '#646464',
         fontFamily: 'Arimo',
-        marginTop: {xs: '100px', lg: '20px', xl: '5px'},
+        marginTop: {xs: '100px', lg: '0px', xl: '5px'},
         marginBottom: {xs: '50px', lg: '50px', xl: '50px'},
         marginLeft: {lg: '140px', xl: '380px'}
          // Adjust as needed
-      }}> PHP 499.00</Typography>
+      }}> 499 PHP</Typography>
 
 <Box sx={{marginLeft: {lg: '125px', xl: '365px'}}}>
 <Box sx={{  display: 'flex',
@@ -511,11 +551,17 @@ transform: 'scale(0.8)', // Shrink the button when clicked
         marginTop: '80px',
         maxHeight: { xs: 233, md: 167, lg: '50%' },
         maxWidth: { xs: 350, md: 250, lg: '25%'},
-        marginLeft: {lg: 23, xl: 20}
+        marginLeft: {lg: 23, xl: 20},
+        transition: 'transform  0.3s ease-in-out',
+        '&:hover': {
+          cursor: 'pointer',
+        },
       }}
       alt="The house from the offer."
-      src="/images/ShortV2.png"
-    /> 
+      src={isHoveredShort ? '/images/TSM-Shorts-V2-Black.png' : '/images/ShortV2.png'}
+      onMouseEnter={() => setIsHoveredShort(true)}
+      onMouseLeave={() => setIsHoveredShort(false)}
+    />
 
 <Box
       component="img"
@@ -528,11 +574,17 @@ transform: 'scale(0.8)', // Shrink the button when clicked
         marginTop: '80px',
         maxHeight: { xs: 233, md: 167, lg: '50%' },
         maxWidth: { xs: 350, md: 250, lg: '25%'},
-        marginLeft: {xl: 10}
+        marginLeft: {xl: 10},
+        transition: 'transform  0.3s ease-in-out',
+        '&:hover': {
+          cursor: 'pointer',
+        },
       }}
       alt="The house from the offer."
-      src="/images/PantsV2.png"
-    /> 
+      src={isHoveredPants ? '/images/TSM-Sweatpants-V2-Heather-Gray.png' : '/images/PantsV2.png'}
+      onMouseEnter={() => setIsHoveredPants(true)}
+      onMouseLeave={() => setIsHoveredPants(false)}
+    />
 
         </Box>
         <Box  sx={{
@@ -544,8 +596,9 @@ transform: 'scale(0.8)', // Shrink the button when clicked
         fontSize: '1rem', 
         textAlign: 'left',
         textTransform: 'normal',
+        color: '#646464',
         fontFamily: 'Arimo',
-        marginTop: {xs: '100px', lg: '10px', xl: '20px'},
+        marginTop: {xs: '100px', lg: '20px', xl: '20px'},
         marginBottom: {xs: '50px', lg: '10px', xl: '10px'},
         marginLeft: {lg: '210px', xl: '230px'}
          // Adjust as needed
@@ -556,12 +609,13 @@ transform: 'scale(0.8)', // Shrink the button when clicked
         fontSize: '1rem', 
         textAlign: 'left',
         textTransform: 'normal',
+        color: '#646464',
         fontFamily: 'Arimo',
-        marginTop: {xs: '100px', lg: '20px', xl: '5px'},
+        marginTop: {xs: '100px', lg: '0px', xl: '5px'},
         marginBottom: {xs: '50px', lg: '50px', xl: '50px'},
         marginLeft: {lg: '210px', xl: '230px'}
          // Adjust as needed
-      }}> PHP 599.00</Typography>
+      }}> 599 PHP</Typography>
 
 <Box sx={{marginLeft: {lg: '195px', xl: '220px'}}}>
 <Box sx={{  display: 'flex',
@@ -673,6 +727,7 @@ transform: 'scale(0.8)', // Shrink the button when clicked
         fontSize: '1rem', 
         textAlign: 'left',
         textTransform: 'normal',
+        color: '#646464',
         fontFamily: 'Arimo',
         marginTop: {xs: '100px', lg: '10px', xl: '20px'},
         marginBottom: {xs: '50px', lg: '10px', xl: '10px'},
@@ -685,12 +740,13 @@ transform: 'scale(0.8)', // Shrink the button when clicked
         fontSize: '1rem', 
         textAlign: 'left',
         textTransform: 'normal',
+        color: '#646464',
         fontFamily: 'Arimo',
-        marginTop: {xs: '100px', lg: '20px', xl: '5px'},
+        marginTop: {xs: '100px', lg: '0px', xl: '5px'},
         marginBottom: {xs: '50px', lg: '50px', xl: '50px'},
         marginLeft: {lg: '150px', xl: '340px'}
          // Adjust as needed
-      }}> PHP 749.00</Typography>
+      }}> 749 PHP</Typography>
 
 <Box sx={{marginLeft: {lg: '135px', xl: '325px'}}}>
 <Box sx={{  display: 'flex',
