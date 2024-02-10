@@ -16,15 +16,17 @@ const ProductRetail = () => {
   const [isHoveredShort, setIsHoveredShort] = useState(false);
   const [isHoveredPants, setIsHoveredPants] = useState(false);
 
-  let theme = createTheme({
+  const theme = createTheme({
     palette: {
       background: {
-        default: "#ffffff"
+        default: "#f4f4f4"
       }
-    }
+    },
+    Typography: [
+      'Arimo',
+      'sans-serif',
+    ].join(',')
    });
-   
-   theme = responsiveFontSizes(theme);
 
     function setNewImage() {
         const shirtImage = document.getElementById('ShirtV2');

@@ -10,25 +10,26 @@ import FAQs from './faqs';
 
 const App = () => {
 
-    let theme = createTheme({
-        palette: {
-          background: {
-            default: "#ffffff"
-          }
-        }
-       });
-       
-       theme = responsiveFontSizes(theme);
+  const theme = createTheme({
+    palette: {
+      background: {
+        default: "#f4f4f4"
+      }
+    },
+    Typography: [
+      'Arimo',
+      'sans-serif',
+    ].join(',')
+   });
        
 
   return (
     <>
-    <title>The Street Market | Teams </title>
+    <title>The Street Market | Standard Rate </title>
        <ThemeProvider theme={theme}>
      <CssBaseline />
-     <Navbar pos
-     ition="static" color="transparent">
-   </Navbar>
+     <Navbar position="static" color="transparent"/>
+
    <Typography 
       variant="h3" 
       gutterBottom 

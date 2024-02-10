@@ -57,16 +57,17 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
   ];
 
 
-    let theme = createTheme({
-        palette: {
-          background: {
-            default: "#ffffff"
-          }
-        }
-       });
-       
-       theme = responsiveFontSizes(theme);
-
+  const theme = createTheme({
+    palette: {
+      background: {
+        default: "#f4f4f4"
+      }
+    },
+    Typography: [
+      'Arimo',
+      'sans-serif',
+    ].join(',')
+   });
   function SwipeableTextMobileStepper() {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);

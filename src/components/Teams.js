@@ -11,15 +11,17 @@ import Draggable from 'react-draggable';
 
 const App = () => {
 
-    let theme = createTheme({
-        palette: {
-          background: {
-            default: "#ffffff"
-          }
-        }
-       });
-       
-       theme = responsiveFontSizes(theme);
+  const theme = createTheme({
+    palette: {
+      background: {
+        default: "#f4f4f4"
+      }
+    },
+    Typography: [
+      'Arimo',
+      'sans-serif',
+    ].join(',')
+   });
        
 
   return (
