@@ -107,7 +107,7 @@ SIZE GUIDE
 </Typography>
 
 <Box sx={{ maxWidth: 700, flexGrow: 1,
- ml: {xl: '600px'},
+ ml: {lg: '335px', xl: '600px'},
  marginBottom: '100px'
  }}>
       <Paper

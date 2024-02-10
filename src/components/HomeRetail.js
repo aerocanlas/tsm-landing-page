@@ -100,7 +100,7 @@ const Home = () => {
       src="/images/RETAIL BANNER TEMPORARY.png"
     /> 
 
-<Button sx={{marginTop: {lg: '750px', xl:'900px'},
+<Button sx={{marginTop: {lg: '600px', xl:'900px'},
             fontSize: '30px',
             fontWeight: 'bold',
             color: 'white',

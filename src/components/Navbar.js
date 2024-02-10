@@ -67,11 +67,11 @@ function Navbar() {
         </ul>
 
         <ul>
-        <NavLink className={activeTab === '/SizeGuide' || activeTab === '/Teams' || activeTab === '/Pullover' || activeTab === '/Home' || activeTab === '/Contact' || activeTab === '/Community' || activeTab === '/StandardRate' ? 'activeMode' : 'inactiveModeHome'} to='/Home'>Wholesale</NavLink>
+      <NavLink className={activeTab === '/SizeGuide' || activeTab === '/Teams' || activeTab === '/Pullover' || activeTab === '/Home' || activeTab === '/Contact' || activeTab === '/Community' || activeTab === '/StandardRate' || activeTab === '/Faqs' ? 'activeMode' : 'inactiveModeHome'} to='/Home'>Wholesale</NavLink>
         </ul>
 
         <ul>
-        <NavLink className={activeTab === '/HomeRetail' || activeTab === '/retail/productretail' || activeTab === '/retail/BlueHoodieV2' ? 'activeMode' : 'inactiveMode'} to='/HomeRetail'>Retail</NavLink>
+        <NavLink className={activeTab === '/HomeRetail' || activeTab === '/retail/productretail' || activeTab === '/retail/bluehoodiev2' ? 'activeMode' : 'inactiveMode'} to='/HomeRetail'>Retail</NavLink>
         </ul>
             {/* <a href="/Home" className={activeTab === '/Home' ? 'active' : ''} onClick={showNavbar}>Home</a>
             <a className={activeTab === '/Contact' ? 'active' : ''} href="/Contact" onClick={showNavbar}>Contact</a>
