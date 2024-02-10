@@ -32,7 +32,8 @@ const About = () => {
               <Card sx={{ backgroundColor: '#f4f4f4', boxShadow: 'none', outline: 'none', height: '200vh', width: '100% ', display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                marginTop: '-15%' }}>
+                marginTop: {lg: '-15%', xl: '-15%'}
+                 }}>
                 <CardContent>
                 <Box
   sx={{
@@ -55,7 +56,7 @@ const About = () => {
 </Box>
 
                   <Box sx={{ backgroundColor: '#ffffff', boxShadow: 'none', outline: 'none', width: '100%', display: 'flex',
-                      justifyContent: 'center', marginBottom: '-250px', pl: 5, pr: 4
+                      justifyContent: 'center', marginTop: {xl: '-9%'}, marginBottom: {lg: '-250px', xl: '-700px'}, pl: 5, pr: 4
                        }}>
                     <Card sx={{boxShadow: 'none', outline: 'none',}}>
                       <CardContent>
