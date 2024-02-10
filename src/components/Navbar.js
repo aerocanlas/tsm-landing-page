@@ -67,7 +67,7 @@ function Navbar() {
         </ul>
 
         <ul>
-      <NavLink className={activeTab === '/SizeGuide' || activeTab === '/Teams' || activeTab === '/Pullover' || activeTab === '/Home' || activeTab === '/Contact' || activeTab === '/Community' || activeTab === '/StandardRate' || activeTab === '/FAQs' ? 'activeMode' : 'inactiveModeHome'} to='/Home'>Wholesale</NavLink>
+      <NavLink className={activeTab === '/SizeGuide' || activeTab === '/Teams' || activeTab === '/Pullover' || activeTab === '/Home' || activeTab === '/Contact' || activeTab === '/Community' || activeTab === '/StandardRate' || activeTab === '/FAQs' || activeTab === '/About' ? 'activeMode' : 'inactiveModeHome'} to='/Home'>Wholesale</NavLink>
         </ul>
 
         <ul>

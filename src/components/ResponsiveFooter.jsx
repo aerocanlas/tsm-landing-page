@@ -51,7 +51,7 @@ const ResponsiveFooter= () => {
             </Typography>
             <Link to="/About" color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}> <Typography sx={{display: 'block', fontSize:'14px', ml: {xs: '50px'}}}>About</Typography></Link>
             <Link to="/Teams" color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}><Typography sx={{display: 'block', fontSize:'14px', ml: {xs: '50px'}}}>Teams</Typography></Link>
-            <Link to="/StandardRate" color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}><Typography sx={{display: 'block', fontSize:'14px', marginBottom: '50px', ml: {xs: '50px'}}}>Career</Typography></Link>
+            <Link to="/StandardRate" color="inherit" display="block" style={{color: 'black', textDecoration: 'none'}}><Typography sx={{display: 'block', fontSize:'14px', marginBottom: '50px', ml: {xs: '50px'}}}>StandardRate</Typography></Link>
           </Grid>
           <Grid item xs={6} sm={3} md={2}>
             <Typography marginTop='70px' variant="subtitle1" color="text.primary" gutterBottom fontWeight='bold' sx={{ml: {xs: '50px'}}}>

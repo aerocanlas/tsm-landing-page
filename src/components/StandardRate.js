@@ -13,7 +13,7 @@ const App = () => {
   const theme = createTheme({
     palette: {
       background: {
-        default: "#f4f4f4"
+        default: "#ffffff"
       }
     },
     Typography: [
