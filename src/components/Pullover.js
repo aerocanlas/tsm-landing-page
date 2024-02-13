@@ -9,7 +9,7 @@ import FAQs from './faqs';
 import Button from '@mui/material/Button';
 import Fab from '@mui/material/Fab';
 import Stack from '@mui/material/Stack';
-import ReactImageMagnify from 'react-image-magnify';
+import ReactImageMagnify from '@blacklab/react-image-magnify';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 
@@ -95,7 +95,7 @@ const App = () => {
         minHeight: { xs: 233, md: 167, lg: 100 },
         minWidth: { xs: 350, md: 250, lg: 100 },
       }}>
-        <ReactImageMagnify
+        {/* <ReactImageMagnify
  {...{
    smallImage: {
      alt: "Pullover",
@@ -108,7 +108,31 @@ const App = () => {
      height: 1200
    }
  }}
+/> */}
+
+
+
+<ReactImageMagnify
+  imageProps={{
+    alt: 'example small image',
+    height: '50%',
+    src: selectedImage,
+    width: '100%'
+  }}
+  magnifiedImageProps={{
+    height: 600,
+    src: selectedImage,
+    width: 600
+  }}
+  onActivationChanged={function noRefCheck(){}}
+  onDetectedEnvironmentChanged={function noRefCheck(){}}
+  onPositionChanged={function noRefCheck(){}}
+  portalProps={{
+    horizontalOffset: 10,
+    id: 'portal-test-id'
+  }}
 />
+
 </Box>
  {/* <Box
       component="img"

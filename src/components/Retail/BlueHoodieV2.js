@@ -9,7 +9,7 @@ import { Route, Routes } from 'react-router';
 import Button from '@mui/material/Button';
 import Fab from '@mui/material/Fab';
 import Stack from '@mui/material/Stack';
-import ReactImageMagnify from 'react-image-magnify';
+import ReactImageMagnify from '@blacklab/react-image-magnify';
 import { Link } from 'react-router-dom';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';

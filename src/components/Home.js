@@ -112,6 +112,8 @@ const Home = () => {
       alt=""
       src="/images/rotating.gif"
     />  
+
+
            {/* <Card  sx={{ minWidth: '100%', flexGrow: 1 }}>
            <video
             autoPlay
