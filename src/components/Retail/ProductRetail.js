@@ -2,11 +2,9 @@ import React, { useState } from 'react'
 import Navbar from '../Navbar'
 import ResponsiveFooter from '../ResponsiveFooter'
 import { Box, Typography } from '@mui/material'
-import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import NavbarRetail from '../Retail/NavbarRetail'
 import Fab from '@mui/material/Fab';
-import { ThemeProvider, createTheme, responsiveFontSizes } from "@mui/material/styles";
+import { ThemeProvider, createTheme, } from "@mui/material/styles";
 
 const ProductRetail = () => {
   const [isHoveredHoodie, setIsHoveredHoodie] = useState(false);
@@ -29,23 +27,10 @@ const ProductRetail = () => {
     ].join(',')
    });
 
-    function setNewImage() {
-        const shirtImage = document.getElementById('ShirtV2');
-        if (shirtImage) {
-          shirtImage.src = 'images/ShirtV2.png';
-        }
-      }
-      
-      function setOldImage() {
-        const hoodieImage = document.getElementById('HoodieV2');
-        if (hoodieImage) {
-          hoodieImage.src = 'images/HoodieV2.png';
-        }
-      }
       
   return (
     <>
-    
+    <ThemeProvider theme={theme}>
     <Navbar position="static" color="transparent"/>
 
     <Box sx={{height: '1500px', 
@@ -861,6 +846,7 @@ transform: 'scale(0.8)', // Shrink the button when clicked
     </Box>
 
     <ResponsiveFooter position="bottom"/>
+    </ThemeProvider>
     </>
   )
 }

@@ -1,9 +1,6 @@
 import React from 'react'
-import { Typography,  Grid, Box, Card, CardContent, Image, CardMedia } from '@mui/material'
-import ResponsiveAppBar from './components/ResponsiveAppBar'
 import { ThemeProvider, createTheme  } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import ResponsiveFooter from './components/ResponsiveFooter';
 import { Route, Routes } from 'react-router-dom';
 import FAQs from './components/faqs';
 import Home from './components/Home';

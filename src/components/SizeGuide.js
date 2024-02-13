@@ -1,23 +1,16 @@
 import * as React from 'react'
-import { Typography, Grid, Box, Card, CardContent, Image, CardMedia, } from '@mui/material'
+import { Typography, Box,  } from '@mui/material'
 import Navbar from './Navbar'
-import { ThemeProvider, createTheme, responsiveFontSizes, useTheme } from "@mui/material/styles";
+import { ThemeProvider, createTheme, useTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import Toolbar from '@mui/material/Toolbar';
 import ResponsiveFooter from './ResponsiveFooter';
-import { Route, Routes } from 'react-router';
-import FAQs from './faqs';
-import Stack from '@mui/material/Stack';
-import { Link } from 'react-router-dom';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import MobileStepper from '@mui/material/MobileStepper';
 import Button from '@mui/material/Button';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-import SwipeableViews from 'react-swipeable-views-react-18-fix';
+// import SwipeableViews from 'react-swipeable-views-react-18-fix';
 // import { autoPlay } from 'react-swipeable-views-utils';
 
 
@@ -80,9 +73,6 @@ import SwipeableViews from 'react-swipeable-views-react-18-fix';
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
-  const handleStepChange = (step) => {
-    setActiveStep(step);
-  };
        
 
   return (

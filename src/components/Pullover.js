@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
-import { Typography,  Grid, Box, Card, CardContent, Image, CardMedia } from '@mui/material'
-import ResponsiveAppBar from './ResponsiveAppBar'
+import { Typography, Box,} from '@mui/material'
 import { ThemeProvider, createTheme  } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import ResponsiveFooter from './ResponsiveFooter';
-import { Route, Routes } from 'react-router';
-import FAQs from './faqs';
-import Button from '@mui/material/Button';
 import Fab from '@mui/material/Fab';
 import Stack from '@mui/material/Stack';
 import ReactImageMagnify from '@blacklab/react-image-magnify';
@@ -22,7 +18,7 @@ const App = () => {
     setIsClicked((prevState) => {
     const newState = prevState.map((_, i) => i === index);
     setSelectedImage(imageSrc);
-    setMarginLeft(margin);
+    setMarginLeft(marginLeft);
     return newState;
     });
    };
@@ -57,25 +53,25 @@ const App = () => {
           <Stack spacing={2}>
               <img 
                 src="/images/pullover.png" 
-                alt="Image 1" 
+                alt="Pullover 1" 
                 onClick={() => handleClick(0, "/images/pullover.png", '400px')} 
                 style={{ border: isClicked[0] ? '1px solid black' : '', cursor: 'pointer', transition: 'border 0.5s ease-in-out' }}
               />
               <img 
                 src="/images/pullover-2.jpg" 
-                alt="Image 2" 
+                alt="Pullover 2" 
                 onClick={() => handleClick(1, "/images/pullover-2.jpg", '400px')} 
                 style={{ border: isClicked[1] ? '1px solid black' : '', cursor: 'pointer', transition: 'border 0.5s ease-in-out' }}
               />
               <img 
                 src="/images/pullover-3.jpg" 
-                alt="Image 3" 
+                alt="Pullover 3" 
                 onClick={() => handleClick(2, "/images/pullover-3.jpg", '400px')} 
                 style={{ border: isClicked[2] ? '1px solid black' : '', cursor: 'pointer', transition: 'border 0.5s ease-in-out' }}
               />
               <img 
                 src="/images/pullover-4.jpg" 
-                alt="Image 4" 
+                alt="Pullover 4" 
                 onClick={() => handleClick(3, "/images/pullover-4.jpg", '400px')}  
                 style={{ border: isClicked[3] ? '1px solid black' : '', cursor: 'pointer', transition: 'border 0.5s ease-in-out' }}
               />

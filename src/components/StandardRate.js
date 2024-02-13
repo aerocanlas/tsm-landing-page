@@ -1,12 +1,9 @@
 import React from 'react'
 import { Typography, Grid, Box, Card, CardContent } from '@mui/material'
 import Navbar from './Navbar'
-import { ThemeProvider, createTheme, responsiveFontSizes } from "@mui/material/styles";
+import { ThemeProvider, createTheme, } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import Toolbar from '@mui/material/Toolbar';
 import ResponsiveFooter from './ResponsiveFooter';
-import { Route, Routes } from 'react-router';
-import FAQs from './faqs';
 
 const App = () => {
 
@@ -71,7 +68,7 @@ Standard Rate
  <Grid item xs={5}>
    <Grid container direction="column" alignItems="flex-start">
 <Box sx={{display: 'inline-flex'}}>
-<Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 20}, mt: 5, ml: 18, display: 'flex', width: '80px' }}>
+<Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 18}, mt: 5, display: 'flex', width: '80px' }}>
    Neck Tape
  </Typography>
  <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: 5}, mt: 5, display: 'flex', width: '50px' }}>
@@ -79,58 +76,58 @@ Standard Rate
  </Typography>
 </Box>
 <Box sx={{display: 'inline-flex'}}>
-<Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 20}, ml: 10.5, display: 'flex', width: '150px' }}>
+<Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 10.5}, display: 'flex', width: '150px' }}>
    Etiketa (Sublimation)
  </Typography>
- <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: 5}, ml: 3.8, display: 'flex', width: '50px' }}>
+ <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: 3.8}, display: 'flex', width: '50px' }}>
    30
  </Typography>
 </Box>
 <Box sx={{display: 'inline-flex'}}>
-<Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 20}, ml: 12, display: 'flex', width: '150px' }}>
+<Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 12}, display: 'flex', width: '150px' }}>
    Etiketa Attachment
  </Typography>
- <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: 5}, ml: 2.5, display: 'flex', width: '50px' }}>
+ <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: 2.5}, display: 'flex', width: '50px' }}>
    20
  </Typography>
 </Box>
 <Box sx={{display: 'inline-flex'}}>
-<Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 20}, ml: 13.5, display: 'flex', width: '150px' }}>
+<Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 13.5}, display: 'flex', width: '150px' }}>
    Inner Label Print
  </Typography>
- <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: 5}, ml: 1, display: 'flex', width: '50px' }}>
+ <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: 1}, display: 'flex', width: '50px' }}>
    70
  </Typography>
 </Box>
 <Box sx={{display: 'inline-flex'}}>
-<Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 20}, ml: 14.8, display: 'flex', width: '150px' }}>
+<Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 14.8}, display: 'flex', width: '150px' }}>
    Ziplock - Large
  </Typography>
- <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: 5}, ml: -0.3, display: 'flex', width: '50px' }}>
+ <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: -0.3}, display: 'flex', width: '50px' }}>
    45
  </Typography>
 </Box>
 <Box sx={{display: 'inline-flex'}}>
-<Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 20}, ml: 17, display: 'flex', width: '150px' }}>
+<Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 17}, display: 'flex', width: '150px' }}>
    Ziplock - XL
  </Typography>
- <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: 5}, ml: -2.4, display: 'flex', width: '50px' }}>
+ <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: -2.4}, display: 'flex', width: '50px' }}>
    60
  </Typography>
 </Box>
 <Box sx={{display: 'inline-flex'}}>
-<Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 20}, ml: 16, display: 'flex', width: '150px' }}>
+<Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 16}, display: 'flex', width: '150px' }}>
    Ziplock - 2XL
  </Typography>
- <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: 5}, ml: -1.4, display: 'flex', width: '50px' }}>
+ <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: -1.4}, display: 'flex', width: '50px' }}>
    75
  </Typography>
 </Box>
 <Box sx={{display: 'inline-flex'}}>
-<Typography variant="body1" gutterBottom sx={{ justifyContent: 'right', textAlign: 'right', fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 20}, ml: 10.5, display: 'flex', width: '120px' }}>
+<Typography variant="body1" gutterBottom sx={{ justifyContent: 'right', textAlign: 'right', fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 10.5}, display: 'flex', width: '120px' }}>
    Ziplock Logo Print (per color)
  </Typography>
- <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: 5}, ml: 7.8, display: 'flex', width: '50px' }}>
+ <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: 7.8}, display: 'flex', width: '50px' }}>
    50
  </Typography>
  </Box>
@@ -138,42 +135,42 @@ Standard Rate
 
 {/* second half */}
 <Box sx={{display: 'inline-flex'}}>
-<Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 20}, mt: 2, ml: 10.5, display: 'flex', width: '150px' }}>
+<Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 10.5}, mt: 2, display: 'flex', width: '150px' }}>
    Pattern Fee (per size)
  </Typography>
- <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: 5}, ml: 3.8, mt: 2, display: 'flex', width: '50px' }}>
+ <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: 2}, mt: 2, display: 'flex', width: '50px' }}>
    250
  </Typography>
 </Box>
 <Box sx={{display: 'inline-flex'}}>
-<Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 20}, ml: 10, display: 'flex', width: '150px' }}>
+<Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 10}, display: 'flex', width: '150px' }}>
    Screen Fee (per color)
  </Typography>
- <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: 5}, ml: 4.3, display: 'flex', width: '50px' }}>
+ <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: 4.3}, display: 'flex', width: '50px' }}>
    350
  </Typography>
 </Box>
 <Box sx={{display: 'inline-flex'}}>
-<Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 20}, ml: 11.5, display: 'flex', width: '150px' }}>
+<Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 11.5}, display: 'flex', width: '150px' }}>
    Embro Program Fee
  </Typography>
- <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: 5}, ml: 2.8, display: 'flex', width: '50px' }}>
+ <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: 2.8}, display: 'flex', width: '50px' }}>
    1000
  </Typography>
 </Box>
 <Box sx={{display: 'inline-flex'}}>
-<Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 20}, ml: 16, display: 'flex', width: '150px' }}>
+<Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 16}, display: 'flex', width: '150px' }}>
    Sampling Fee
  </Typography>
- <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: 5}, ml: -1.5, display: 'flex', width: '100px' }}>
+ <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: -1.5}, display: 'flex', width: '100px' }}>
    2500 - 5000
  </Typography>
 </Box>
 <Box sx={{display: 'inline-flex'}}>
-<Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 20}, ml: 15, display: 'flex', width: '150px' }}>
+<Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 15}, ml: 15, display: 'flex', width: '150px' }}>
    Rush Fee / VIP
  </Typography>
- <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: 5}, ml: -0.5, display: 'flex', width: '100px' }}>
+ <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: -0.5}, display: 'flex', width: '100px' }}>
    3000 - 5000
  </Typography>
 </Box> 
@@ -214,22 +211,22 @@ Standard Rate
  <Grid item xs={5}>
    <Grid container direction="column" alignItems="flex-start">
 <Box sx={{display: 'inline-flex'}}>
-<Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 20}, mt: 5, ml: 1.5, display: 'flex', width: '250px' }}>
+<Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 1.5}, mt: 5, display: 'flex', width: '250px' }}>
    Product Price —  retail price
  </Typography>
 </Box>
 <Box sx={{display: 'inline-flex'}}>
- <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 20}, mt: 2, ml: 1.5, display: 'flex', width: '350px' }}>
+ <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 1.5}, mt: 2, display: 'flex', width: '350px' }}>
    Sampling Fee — cost may vary based on the difficulty
  </Typography>
  </Box>
  <Box sx={{display: 'inline-flex'}}>
- <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 20}, mt: 2, ml: 1.5, display: 'flex', width: '250px' }}>
+ <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 1.5}, mt: 2, display: 'flex', width: '250px' }}>
    Pattern Fee — add P250 fee per size
  </Typography>
  </Box>
  <Box sx={{display: 'inline-flex'}}>
- <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 20}, mt: 2, ml: 1.5, display: 'flex', width: '250px' }}>
+ <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 1.5}, mt: 2, display: 'flex', width: '250px' }}>
    If with print — add P500 fee per screen
  </Typography>
 </Box>
@@ -269,17 +266,17 @@ Standard Rate
  <Grid item xs={5}>
    <Grid container direction="column" alignItems="flex-start">
 <Box sx={{display: 'inline-flex'}}>
-<Typography variant="body1" gutterBottom sx={{ fontStyle: 'italic', fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 20}, mt: 2, ml: 1, display: 'flex', width: '250px' }}>
+<Typography variant="body1" gutterBottom sx={{ fontStyle: 'italic', fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 1}, mt: 2, display: 'flex', width: '250px' }}>
    Standard
  </Typography>
 </Box>
 <Box sx={{display: 'inline-flex'}}>
- <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 20}, mt: 2, ml: 1, display: 'flex', width: '120px' }}>
+ <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 1}, mt: 2, display: 'flex', width: '120px' }}>
    6 to 12 weeks <br/>(Add 10 days if with print/embro)
  </Typography>
  </Box>
  <Box sx={{display: 'inline-flex'}}>
- <Typography variant="body1" gutterBottom sx={{ fontStyle: 'italic', fontSize: '0.8rem', textDecoration: 'underline', ml: {xs: 40, lg: 20, xl: 20}, mt: -10, ml: 28, display: 'flex', width: '130px' }} align='justify'>
+ <Typography variant="body1" gutterBottom sx={{ fontStyle: 'italic', fontSize: '0.8rem', textDecoration: 'underline', ml: {xs: 40, lg: 20, xl: 28}, mt: -10, display: 'flex', width: '130px' }} align='justify'>
    Ask a line-up slot with our customer service.
  </Typography>
 </Box>

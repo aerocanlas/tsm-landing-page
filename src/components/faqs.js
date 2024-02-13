@@ -4,7 +4,6 @@ import Navbar from './Navbar'
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Grid from '@mui/material/Grid';
-import Toolbar from '@mui/material/Toolbar';
 import ResponsiveFooter from './ResponsiveFooter';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';

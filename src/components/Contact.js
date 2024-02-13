@@ -1,13 +1,8 @@
 import React, { useRef } from 'react';
-import { Typography,  Grid, Box, Card, CardContent, Image, CardMedia } from '@mui/material'
-import ResponsiveAppBar from './ResponsiveAppBar'
+import { Typography, Box, Card, CardContent,} from '@mui/material'
 import { ThemeProvider, createTheme  } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import ResponsiveFooter from './ResponsiveFooter';
-import { Route, Routes } from 'react-router';
-import FAQs from './faqs';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
 import Navbar from './Navbar';
 import emailjs from '@emailjs/browser';
 import "../Styles/StyledContactForm.css";

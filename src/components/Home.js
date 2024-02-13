@@ -1,19 +1,13 @@
 import React from 'react'
-import { Typography,  Grid, Box, Card, CardContent, Image, CardMedia, } from '@mui/material'
-import ResponsiveAppBar from './ResponsiveAppBar'
+import { Typography,  Grid, Box, Card, CardContent, } from '@mui/material'
 import { ThemeProvider, createTheme  } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import ResponsiveFooter from './ResponsiveFooter';
-import { Route, Routes } from 'react-router';
-import FAQs from './faqs';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
 import { Link } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import Fab from '@mui/material/Fab';
-import AddIcon from '@mui/icons-material/Add';
 import Navbar from './Navbar';
 
 const Home = () => {

@@ -1,12 +1,9 @@
 import React from 'react'
 import { Typography, Image } from '@mui/material'
-import ResponsiveAppBar from './ResponsiveAppBar'
-import { ThemeProvider, createTheme, responsiveFontSizes } from "@mui/material/styles";
+import Navbar from './Navbar'
+import { ThemeProvider, createTheme, } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import Toolbar from '@mui/material/Toolbar';
 import ResponsiveFooter from './ResponsiveFooter';
-import { Route, Routes } from 'react-router';
-import FAQs from './faqs';
 import Draggable from 'react-draggable';
 
 const App = () => {
@@ -29,43 +26,42 @@ const App = () => {
     <title>The Street Market | Teams </title>
        <ThemeProvider theme={theme}>
      <CssBaseline />
-     <ResponsiveAppBar position="static" color="transparent">
-   </ResponsiveAppBar>
+     <Navbar position="static" color="transparent"/>
    <Draggable>
-   <img src="/images/8.png" alt="My Image" style={{ marginLeft: '20%', marginTop: '15%',  maxWidth: '18%', height: 'auto', objectFit: 'contain'}}/>
+   <img src="/images/8.png" alt="Polaroid" style={{ marginLeft: '20%', marginTop: '15%',  maxWidth: '18%', height: 'auto', objectFit: 'contain'}}/>
     </Draggable>
    <Draggable>
-   <img src="/images/1.png" alt="My Image" style={{ marginLeft: '-9%', marginBottom: '3%',  maxWidth: '18%', height: 'auto', objectFit: 'contain'}}/>
+   <img src="/images/1.png" alt="Polaroid" style={{ marginLeft: '-9%', marginBottom: '3%',  maxWidth: '18%', height: 'auto', objectFit: 'contain'}}/>
     </Draggable>
     <Draggable>
-   <img src="/images/2.png" alt="My Image" style={{ marginLeft: '-7.3%', marginBottom: '4%',maxWidth: '16%', height: 'auto', objectFit: 'contain'}}/>
+   <img src="/images/2.png" alt="Polaroid" style={{ marginLeft: '-7.3%', marginBottom: '4%',maxWidth: '16%', height: 'auto', objectFit: 'contain'}}/>
     </Draggable>
     <Draggable>
-   <img src="/images/11.png" alt="My Image" style={{ marginLeft: '-8.3%', marginBottom: '2%', maxWidth: '19.5%', height: 'auto', objectFit: 'contain'}}/>
+   <img src="/images/11.png" alt="Polaroid" style={{ marginLeft: '-8.3%', marginBottom: '2%', maxWidth: '19.5%', height: 'auto', objectFit: 'contain'}}/>
     </Draggable>
     <Draggable>
-   <img src="/images/3.png" alt="My Image" style={{ marginLeft: '-9.7%', marginBottom: '2.6%', maxWidth: '18%', height: 'auto', objectFit: 'contain'}}/>
+   <img src="/images/3.png" alt="Polaroid" style={{ marginLeft: '-9.7%', marginBottom: '2.6%', maxWidth: '18%', height: 'auto', objectFit: 'contain'}}/>
     </Draggable>
     <Draggable>
-   <img src="/images/4.png" alt="My Image" style={{ marginLeft: '-5.2%', marginBottom: '1%', maxWidth: '18%', height: 'auto', objectFit: 'contain'}}/>
+   <img src="/images/4.png" alt="Polaroid" style={{ marginLeft: '-5.2%', marginBottom: '1%', maxWidth: '18%', height: 'auto', objectFit: 'contain'}}/>
     </Draggable>
     <Draggable>
-   <img src="/images/7.png" alt="My Image" style={{  marginLeft: '18%', marginTop: '-7.5%', maxWidth: '18%', height: 'auto', objectFit: 'contain',  display: 'block'}}/>
+   <img src="/images/7.png" alt="Polaroid" style={{  marginLeft: '18%', marginTop: '-7.5%', maxWidth: '18%', height: 'auto', objectFit: 'contain',  display: 'block'}}/>
     </Draggable>
     <Draggable>
-   <img src="/images/10.png" alt="My Image" style={{  marginLeft: '28.9%', marginTop: '-17%', maxWidth: '18%', height: 'auto', objectFit: 'contain', display: 'block'}}/>
+   <img src="/images/10.png" alt="Polaroid" style={{  marginLeft: '28.9%', marginTop: '-17%', maxWidth: '18%', height: 'auto', objectFit: 'contain', display: 'block'}}/>
     </Draggable>
     <Draggable>
-   <img src="/images/6.png" alt="My Image" style={{ marginLeft: '38%', marginTop: '-18%', maxWidth: '18%', height: 'auto', objectFit: 'contain', display: 'block'}}/>
+   <img src="/images/6.png" alt="Polaroid" style={{ marginLeft: '38%', marginTop: '-18%', maxWidth: '18%', height: 'auto', objectFit: 'contain', display: 'block'}}/>
     </Draggable>
     <Draggable>
-   <img src="/images/5.png" alt="My Image" style={{  marginLeft: '47.3%', marginTop: '-18.5%', maxWidth: '18%', height: 'auto', objectFit: 'contain', display: 'block'}}/>
+   <img src="/images/5.png" alt="Polaroid" style={{  marginLeft: '47.3%', marginTop: '-18.5%', maxWidth: '18%', height: 'auto', objectFit: 'contain', display: 'block'}}/>
     </Draggable>
     <Draggable>
-   <img src="/images/12.png" alt="My Image" style={{  marginLeft: '56.8%', marginTop: '-17%', maxWidth: '17%', height: 'auto', objectFit: 'contain', display: 'block'}}/>
+   <img src="/images/12.png" alt="Polaroid" style={{  marginLeft: '56.8%', marginTop: '-17%', maxWidth: '17%', height: 'auto', objectFit: 'contain', display: 'block'}}/>
     </Draggable>
     <Draggable>
-   <img src="/images/9.png" alt="My Image" style={{  marginLeft: '65.5%', marginTop: '-18%', maxWidth: '18%', height: 'auto', objectFit: 'contain', display: 'block'}}/>
+   <img src="/images/9.png" alt="Polaroid" style={{  marginLeft: '65.5%', marginTop: '-18%', maxWidth: '18%', height: 'auto', objectFit: 'contain', display: 'block'}}/>
     </Draggable>
 
   <Typography 

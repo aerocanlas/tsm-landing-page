@@ -1,12 +1,6 @@
 import * as React from 'react';
-import { Box, Grid, Typography, Container, IconButton, } from '@mui/material';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
+import { Box, Grid, Typography, Container, } from '@mui/material';
 import { Link } from 'react-router-dom';
-import { BrowserRouter } from 'react-router-dom'
-import { Route, Routes } from 'react-router';
-import { useParams, useNavigate } from 'react-router-dom';
 
 // Replace these with your own social media URLs
 const socialMediaLinks = {
@@ -18,8 +12,6 @@ const socialMediaLinks = {
 
 const ResponsiveFooter= () => {
 
-  const navigate = useNavigate();
-  
   return (
     <Box
       sx={{
