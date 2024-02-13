@@ -18,9 +18,8 @@ import Button from '@mui/material/Button';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views-react-18-fix';
-import { autoPlay } from 'react-swipeable-views-utils';
+// import { autoPlay } from 'react-swipeable-views-utils';
 
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: '#ffffff', 
@@ -124,12 +123,6 @@ SIZE GUIDE
       >
         {/* <Typography>{images[activeStep].label}</Typography> */}
       </Paper>
-      <AutoPlaySwipeableViews
-        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-        index={activeStep}
-        onChangeIndex={handleStepChange}
-        enableMouseEvents
-      >
         {images.map((step, index) => (
           <div key={step.label}>
             {Math.abs(activeStep - index) <= 2 ? (
@@ -147,7 +140,6 @@ SIZE GUIDE
             ) : null}
           </div>
         ))}
-      </AutoPlaySwipeableViews>
       <MobileStepper
         steps={maxSteps}
         position="static"
