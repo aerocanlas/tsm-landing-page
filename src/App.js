@@ -2,18 +2,18 @@ import React from 'react'
 import { ThemeProvider, createTheme  } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { Route, Routes } from 'react-router-dom';
-import FAQs from './components/faqs';
-import Home from './components/Home';
-import Contact from './components/Contact';
-import About from './components/About';
-import Teams from './components/Teams';
-import Pullover from './components/Pullover';
-import Community from './components/Community';
-import StandardRate from './components/StandardRate';
-import SizeGuide from './components/SizeGuide';
-import HomeRetail from './components/HomeRetail';
-import ProductRetail from './components/Retail/ProductRetail';
-import BlueHoodieV2 from './components/Retail/BlueHoodieV2';
+import FAQs from './pages/faqs';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+import About from './pages/About';
+import Teams from './pages/Teams';
+import Pullover from './pages/Pullover';
+import Community from './pages/Community';
+import StandardRate from './pages/StandardRate';
+import SizeGuide from './pages/SizeGuide';
+import HomeRetail from './pages/HomeRetail';
+import ProductRetail from './pages/Retail/ProductRetail';
+import BlueHoodieV2 from './pages/Retail/BlueHoodieV2';
 
 const App = () => {
 
