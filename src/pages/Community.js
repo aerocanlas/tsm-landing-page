@@ -1,8 +1,8 @@
 import React from 'react'
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import ResponsiveFooter from './ResponsiveFooter';
-import Navbar from "./Navbar";
+import ResponsiveFooter from '../components/ResponsiveFooter';
+import Navbar from "../components/Navbar";
 import { Box } from '@mui/material';
 
 const Community = () => {

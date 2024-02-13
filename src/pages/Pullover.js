@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { Typography, Box,} from '@mui/material'
 import { ThemeProvider, createTheme  } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import ResponsiveFooter from './ResponsiveFooter';
+import ResponsiveFooter from '../components/ResponsiveFooter';
 import Fab from '@mui/material/Fab';
 import Stack from '@mui/material/Stack';
 import ReactImageMagnify from '@blacklab/react-image-magnify';
 import { Link } from 'react-router-dom';
-import Navbar from './Navbar';
+import Navbar from '../components/Navbar';
 
 const App = () => {
   const [isClicked, setIsClicked] = useState([false, false, false, false]);

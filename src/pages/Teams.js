@@ -1,9 +1,9 @@
 import React from 'react'
 import { Typography } from '@mui/material'
-import Navbar from './Navbar'
+import Navbar from '../components/Navbar'
 import { ThemeProvider, createTheme, } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import ResponsiveFooter from './ResponsiveFooter';
+import ResponsiveFooter from '../components/ResponsiveFooter';
 import Draggable from 'react-draggable';
 
 const App = () => {

@@ -1,10 +1,10 @@
 import React from 'react'
 import { Typography } from '@mui/material'
-import Navbar from './Navbar'
+import Navbar from '../components/Navbar'
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Grid from '@mui/material/Grid';
-import ResponsiveFooter from './ResponsiveFooter';
+import ResponsiveFooter from '../components/ResponsiveFooter';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';

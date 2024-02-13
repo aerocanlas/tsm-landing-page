@@ -2,13 +2,13 @@ import React from 'react'
 import { Typography,  Grid, Box, Card, CardContent, } from '@mui/material'
 import { ThemeProvider, createTheme  } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import ResponsiveFooter from './ResponsiveFooter';
+import ResponsiveFooter from '../components/ResponsiveFooter';
 import { Link } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import Fab from '@mui/material/Fab';
-import Navbar from './Navbar';
+import Navbar from '../components/Navbar';
 
 const Home = () => {
 

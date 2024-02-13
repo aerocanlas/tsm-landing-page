@@ -2,8 +2,8 @@ import React, { useRef } from 'react';
 import { Typography, Box, Card, CardContent,} from '@mui/material'
 import { ThemeProvider, createTheme  } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import ResponsiveFooter from './ResponsiveFooter';
-import Navbar from './Navbar';
+import ResponsiveFooter from '../components/ResponsiveFooter';
+import Navbar from '../components/Navbar';
 import emailjs from '@emailjs/browser';
 import "../Styles/StyledContactForm.css";
 

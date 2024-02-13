@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { Typography, Box,  } from '@mui/material'
-import Navbar from './Navbar'
+import Navbar from '../components/Navbar'
 import { ThemeProvider, createTheme, } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import ResponsiveFooter from './ResponsiveFooter';
+import ResponsiveFooter from '../components/ResponsiveFooter';
 // import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import MobileStepper from '@mui/material/MobileStepper';

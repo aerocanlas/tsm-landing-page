@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Navbar from '../Navbar'
-import ResponsiveFooter from '../ResponsiveFooter'
+import Navbar from '../../components/Navbar'
+import ResponsiveFooter from '../../components/ResponsiveFooter'
 import { Typography, Box, Card, CardContent,  } from '@mui/material'
 import { ThemeProvider, createTheme  } from "@mui/material/styles";
 import Fab from '@mui/material/Fab';
