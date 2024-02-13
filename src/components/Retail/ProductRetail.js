@@ -1,10 +1,9 @@
-//productretail.js
-
 import React, { useState } from 'react'
 import Navbar from '../Navbar'
 import ResponsiveFooter from '../ResponsiveFooter'
 import { Box, Typography } from '@mui/material'
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import NavbarRetail from '../Retail/NavbarRetail'
 import Fab from '@mui/material/Fab';
 import { ThemeProvider, createTheme, responsiveFontSizes } from "@mui/material/styles";
@@ -15,6 +14,8 @@ const ProductRetail = () => {
   const [isHoveredShirt, setIsHoveredShirt] = useState(false);
   const [isHoveredShort, setIsHoveredShort] = useState(false);
   const [isHoveredPants, setIsHoveredPants] = useState(false);
+
+  const navigate = useNavigate();
 
   const theme = createTheme({
     palette: {
@@ -85,10 +86,11 @@ const ProductRetail = () => {
       cursor: 'pointer',
     },
   }}
-  alt="The house from the offer."
+  alt="TSM Hoodie V2"
   src={isHoveredHoodie ? '/images/TSM-Hoodie V2-Navy-Blue.png' : '/images/HoodieV2.png'}
   onMouseEnter={() => setIsHoveredHoodie(true)}
   onMouseLeave={() => setIsHoveredHoodie(false)}
+  onClick={() => navigate('/retail/bluehoodiev2')}
 />
 
 <Box
@@ -109,7 +111,7 @@ const ProductRetail = () => {
           cursor: 'pointer',
         },
       }}
-      alt="The house from the offer."
+      alt="TSM Pullover V2"
       src={isHoveredPullover ? '/images/TSM-Pullover-Beige.png' : '/images/PulloverV2.png'}
       onMouseEnter={() => setIsHoveredPullover(true)}
       onMouseLeave={() => setIsHoveredPullover(false)}
@@ -132,7 +134,7 @@ const ProductRetail = () => {
           cursor: 'pointer',
         },
       }}
-      alt="The house from the offer."
+      alt="Skater Fit"
       src={isHoveredShirt ? '/images/TSM-Skater-Fit-Rust.png' : '/images/ShirtV2.png'}
       onMouseEnter={() => setIsHoveredShirt(true)}
       onMouseLeave={() => setIsHoveredShirt(false)}
