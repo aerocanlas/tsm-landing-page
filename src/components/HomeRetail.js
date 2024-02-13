@@ -3,46 +3,46 @@ import { Button,  Grid, Box, Card, CardContent, } from '@mui/material'
 import { ThemeProvider, createTheme  } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import ResponsiveFooter from './ResponsiveFooter';
-import { styled } from '@mui/material/styles';
-import Paper from '@mui/material/Paper';
+// import { styled } from '@mui/material/styles';
+// import Paper from '@mui/material/Paper';
 import { FaLongArrowAltRight } from "react-icons/fa";
 import NavbarRetail from './Retail/NavbarRetail'
 
 const Home = () => {
 
-  const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: '#ffffff', 
-    boxShadow: 'none', 
-    outline: 'none',
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  }));
+  // const Item = styled(Paper)(({ theme }) => ({
+  //   backgroundColor: '#ffffff', 
+  //   boxShadow: 'none', 
+  //   outline: 'none',
+  //   ...theme.typography.body2,
+  //   padding: theme.spacing(1),
+  //   textAlign: 'center',
+  //   color: theme.palette.text.secondary,
+  // }));
 
-  const itemData = [
-    {
-      img: '/images/Hoodie.png',
-      title: 'Hoodie',
+  // const itemData = [
+  //   {
+  //     img: '/images/Hoodie.png',
+  //     title: 'Hoodie',
 
-    },
-    {
-      img: '/images/Pullover.png',
-      title: 'Pullover',
-    },
-    {
-      img: '/images/Pants.png',
-      title: 'Pants',
-    },
-    {
-      img: '/images/Shorts.png',
-      title: 'Shorts',
-    },
-    {
-      img: '/images/Tote Bag.png',
-      title: 'Tote Bag',
-    },
-  ];
+  //   },
+  //   {
+  //     img: '/images/Pullover.png',
+  //     title: 'Pullover',
+  //   },
+  //   {
+  //     img: '/images/Pants.png',
+  //     title: 'Pants',
+  //   },
+  //   {
+  //     img: '/images/Shorts.png',
+  //     title: 'Shorts',
+  //   },
+  //   {
+  //     img: '/images/Tote Bag.png',
+  //     title: 'Tote Bag',
+  //   },
+  // ];
 
   const theme = createTheme({
     palette: {

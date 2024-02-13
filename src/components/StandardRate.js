@@ -167,7 +167,7 @@ Standard Rate
  </Typography>
 </Box>
 <Box sx={{display: 'inline-flex'}}>
-<Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 15}, ml: 15, display: 'flex', width: '150px' }}>
+<Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 15}, display: 'flex', width: '150px' }}>
    Rush Fee / VIP
  </Typography>
  <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: -0.5}, display: 'flex', width: '100px' }}>

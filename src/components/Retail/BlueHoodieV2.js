@@ -3,9 +3,6 @@ import Navbar from '../Navbar'
 import ResponsiveFooter from '../ResponsiveFooter'
 import { Typography, Box, Card, CardContent,  } from '@mui/material'
 import { ThemeProvider, createTheme  } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
-import { Route, Routes } from 'react-router';
-import Button from '@mui/material/Button';
 import Fab from '@mui/material/Fab';
 import Stack from '@mui/material/Stack';
 import ReactImageMagnify from '@blacklab/react-image-magnify';
@@ -25,7 +22,7 @@ const BlueHoodieV2 = () => {
     setIsClicked((prevState) => {
     const newState = prevState.map((_, i) => i === index);
     setSelectedImage(imageSrc);
-    setMarginLeft(margin);
+    setMarginLeft(marginLeft);
     return newState;
     });
    };

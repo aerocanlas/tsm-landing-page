@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography, Image } from '@mui/material'
+import { Typography } from '@mui/material'
 import Navbar from './Navbar'
 import { ThemeProvider, createTheme, } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";

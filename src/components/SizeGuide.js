@@ -1,10 +1,10 @@
 import * as React from 'react'
 import { Typography, Box,  } from '@mui/material'
 import Navbar from './Navbar'
-import { ThemeProvider, createTheme, useTheme } from "@mui/material/styles";
+import { ThemeProvider, createTheme, } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import ResponsiveFooter from './ResponsiveFooter';
-import { styled } from '@mui/material/styles';
+// import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import MobileStepper from '@mui/material/MobileStepper';
 import Button from '@mui/material/Button';
@@ -14,15 +14,15 @@ import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 // import { autoPlay } from 'react-swipeable-views-utils';
 
 
-  const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: '#ffffff', 
-    boxShadow: 'none', 
-    outline: 'none',
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  }));
+  // const Item = styled(Paper)(({ theme }) => ({
+  //   backgroundColor: '#ffffff', 
+  //   boxShadow: 'none', 
+  //   outline: 'none',
+  //   ...theme.typography.body2,
+  //   padding: theme.spacing(1),
+  //   textAlign: 'center',
+  //   color: theme.palette.text.secondary,
+  // }));
 
   const images   = [
     {
@@ -60,8 +60,8 @@ import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
       'sans-serif',
     ].join(',')
    });
+
   function SwipeableTextMobileStepper() {
-  const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = images.length;
 

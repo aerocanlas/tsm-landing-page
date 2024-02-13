@@ -22,29 +22,29 @@ const Home = () => {
     color: theme.palette.text.secondary,
   }));
 
-  const itemData = [
-    {
-      img: '/images/Hoodie.png',
-      title: 'Hoodie',
+  // const itemData = [
+  //   {
+  //     img: '/images/Hoodie.png',
+  //     title: 'Hoodie',
 
-    },
-    {
-      img: '/images/Pullover.png',
-      title: 'Pullover',
-    },
-    {
-      img: '/images/Pants.png',
-      title: 'Pants',
-    },
-    {
-      img: '/images/Shorts.png',
-      title: 'Shorts',
-    },
-    {
-      img: '/images/Tote Bag.png',
-      title: 'Tote Bag',
-    },
-  ];
+  //   },
+  //   {
+  //     img: '/images/Pullover.png',
+  //     title: 'Pullover',
+  //   },
+  //   {
+  //     img: '/images/Pants.png',
+  //     title: 'Pants',
+  //   },
+  //   {
+  //     img: '/images/Shorts.png',
+  //     title: 'Shorts',
+  //   },
+  //   {
+  //     img: '/images/Tote Bag.png',
+  //     title: 'Tote Bag',
+  //   },
+  // ];
 
   const theme = createTheme({
     palette: {
