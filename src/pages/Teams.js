@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import Navbar from '../components/Navbar'
 import { ThemeProvider, createTheme, } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -28,7 +28,11 @@ const App = () => {
      <CssBaseline />
      <Navbar position="static" color="transparent">
    </Navbar>
-   <Draggable>
+<Box sx={{
+  marginTop: '-200px',
+  marginBottom: '-250px'
+}}>
+<Draggable>
    <img src="/images/8.png" alt="Polaroid 1" style={{ marginLeft: '20%', marginTop: '15%',  maxWidth: '18%', height: 'auto', objectFit: 'contain'}}/>
     </Draggable>
    <Draggable>
@@ -97,6 +101,7 @@ const App = () => {
       <br/><br/>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   </Typography>
+</Box>
   <ResponsiveFooter position="bottom"/>
    </ThemeProvider>
 </>

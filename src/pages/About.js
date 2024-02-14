@@ -27,7 +27,8 @@ const About = () => {
               <Card sx={{ backgroundColor: '#f4f4f4', boxShadow: 'none', outline: 'none', height: '200vh', width: '100% ', display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                marginTop: {lg: '-15%', xl: '-15%'}
+                marginTop: {lg: '-15%', xl: '-38%'},
+                marginBottom: {lg: '8%', xl: '8%'}
                  }}>
                 <CardContent>
                 <Box

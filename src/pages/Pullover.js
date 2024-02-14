@@ -107,18 +107,19 @@ const App = () => {
 /> */}
 
 
-
+<div sx={{marginLeft: '-500px'}}>
 <ReactImageMagnify
   imageProps={{
-    alt: 'example small image',
-    height: '50%',
+    alt: 'Pullover',
+    height: '40%',
     src: selectedImage,
-    width: '100%'
+    width: '90%',
+    marginTop: '-200px',
   }}
   magnifiedImageProps={{
-    height: 600,
+    height: 1200,
     src: selectedImage,
-    width: 600
+    width: 1000,
   }}
   onActivationChanged={function noRefCheck(){}}
   onDetectedEnvironmentChanged={function noRefCheck(){}}
@@ -128,7 +129,7 @@ const App = () => {
     id: 'portal-test-id'
   }}
 />
-
+</div>
 </Box>
  {/* <Box
       component="img"

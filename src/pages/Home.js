@@ -9,6 +9,7 @@ import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import Fab from '@mui/material/Fab';
 import Navbar from '../components/Navbar';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
 
@@ -21,6 +22,8 @@ const Home = () => {
     textAlign: 'center',
     color: theme.palette.text.secondary,
   }));
+
+  const navigate = useNavigate();
 
   // const itemData = [
   //   {
@@ -104,22 +107,31 @@ const Home = () => {
         transform: {xs: 'scale(1.5)'},
       }}
       alt=""
-      src="/images/1.png"
+      src="/images/rotating.gif"
+      loading="lazy"
     />  
 
 
-           {/* <Card  sx={{ minWidth: '100%', flexGrow: 1 }}>
-           <video
-            autoPlay
-            loop
-            muted
-          >
-            <source
-              src="/images/rotating-vid.mp4"
-              type="video/mp4"
-            />
-          </video>
-      </Card> */}
+{/* <Box
+  sx={{
+    minHeight: { xs:   350, md:   250, lg:   750, xl:   1000 },
+    width: ['100%', '100%', '100%', '100%', '100%'],
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  }}
+>
+  <video
+    autoPlay
+    loop
+    playsInline
+    width="100%"
+    height="auto"
+  >
+<source src="/images/rotating.mov" type="video/mov" />
+  </video>
+</Box> */}
+
               </CardContent>
             </Card>
           </Grid>
@@ -218,7 +230,6 @@ Your brand will undoubtedly dominate the market <br></br>with a high-end and sup
       src="/images/Hoodie.png"
     />  
         </Item>
-        <Link to="/Pullover">
         <Item>
           
         <Box
@@ -229,14 +240,13 @@ Your brand will undoubtedly dominate the market <br></br>with a high-end and sup
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-
+        cursor: 'pointer'
       }}
       alt=""
       src="/images/Pullover.png"
+      onClick={() => navigate('/Pullover')}
     />
-     
         </Item>
-        </Link> 
         <Item>
         <Box
       component="img"

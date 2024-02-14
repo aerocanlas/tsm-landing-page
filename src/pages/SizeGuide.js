@@ -11,19 +11,7 @@ import MobileStepper from '@mui/material/MobileStepper';
 import Button from '@mui/material/Button';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-// import SwipeableViews from 'react-swipeable-views-react-18-fix';
-// import { autoPlay } from 'react-swipeable-views-utils';
-
-
-  // const Item = styled(Paper)(({ theme }) => ({
-  //   backgroundColor: '#ffffff', 
-  //   boxShadow: 'none', 
-  //   outline: 'none',
-  //   ...theme.typography.body2,
-  //   padding: theme.spacing(1),
-  //   textAlign: 'center',
-  //   color: theme.palette.text.secondary,
-  // }));
+import ImageSlider from '../components/ImageSlider';
 
   const images   = [
     {
@@ -48,6 +36,21 @@ import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
       label: 'Sweat Shorts',
     },
   ];
+
+  const slides = [
+    { url: "/images/Hoodie-2.png", title: "Hoodie" },
+    { url: "/images/Pullover-1.png", title: "Pullover" },
+    { url: "/images/Skater-Fit.png", title: "Skater" },
+    { url: "/images/Sweat-Pants.png", title: "Pants" },
+    { url: "/images/Sweat-Shorts.png", title: "Shorts" },
+  ];
+  const containerStyles = {
+    width: "800px",
+    height: "800px",
+    margin: "0 auto",
+    marginBottom: '200px'
+  };
+
 
 
   const theme = createTheme({
@@ -100,7 +103,7 @@ import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 SIZE GUIDE
 </Typography>
 
-<Box sx={{ maxWidth: 700, flexGrow: 1,
+{/* <Box sx={{ maxWidth: 700, flexGrow: 1,
  ml: {lg: '335px', xl: '600px'},
  marginBottom: '100px'
  }}>
@@ -115,7 +118,6 @@ SIZE GUIDE
           bgcolor: 'background.default',
         }}
       >
-        {/* <Typography>{images[activeStep].label}</Typography> */}
       </Paper>
         {images.map((step, index) => (
           <div key={step.label}>
@@ -172,8 +174,11 @@ SIZE GUIDE
           },
         }}
       />
-    </Box>
+    </Box> */}
 
+<div style={containerStyles}>
+        <ImageSlider slides={slides} />
+      </div>
    <ResponsiveFooter position="bottom"/>
    </ThemeProvider>
 </>
