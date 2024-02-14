@@ -12,6 +12,7 @@ const socialMediaLinks = {
 
 const ResponsiveFooter= () => {
 
+  
   return (
     <Box
       sx={{

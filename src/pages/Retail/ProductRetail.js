@@ -4,7 +4,7 @@ import ResponsiveFooter from '../../components/ResponsiveFooter'
 import { Box, Typography } from '@mui/material'
 import { useNavigate } from 'react-router-dom';
 import Fab from '@mui/material/Fab';
-import { ThemeProvider, createTheme, } from "@mui/material/styles";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 const ProductRetail = () => {
   const [isHoveredHoodie, setIsHoveredHoodie] = useState(false);
@@ -26,11 +26,11 @@ const ProductRetail = () => {
       'sans-serif',
     ].join(',')
    });
-
       
   return (
     <>
-    <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
+
     <Navbar position="static" color="transparent"/>
 
     <Box sx={{height: '1500px', 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Typography, Box,} from '@mui/material'
+import { Typography, Box, } from '@mui/material'
 import { ThemeProvider, createTheme  } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import ResponsiveFooter from '../components/ResponsiveFooter';

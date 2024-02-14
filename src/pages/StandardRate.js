@@ -1,7 +1,7 @@
 import React from 'react'
 import { Typography, Grid, Box, Card, CardContent } from '@mui/material'
+import { ThemeProvider, createTheme,  } from "@mui/material/styles";
 import Navbar from '../components/Navbar'
-import { ThemeProvider, createTheme, } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import ResponsiveFooter from '../components/ResponsiveFooter';
 
@@ -138,7 +138,7 @@ Standard Rate
 <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 40, lg: 20, xl: 10.5}, mt: 2, display: 'flex', width: '150px' }}>
    Pattern Fee (per size)
  </Typography>
- <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: 2}, mt: 2, display: 'flex', width: '50px' }}>
+ <Typography variant="body1" gutterBottom sx={{ fontSize: '0.8rem', ml: {xs: 5, lg: 5, xl: 3.8}, mt: 2, display: 'flex', width: '50px' }}>
    250
  </Typography>
 </Box>

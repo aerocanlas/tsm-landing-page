@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Typography, Box, Card, CardContent,} from '@mui/material'
+import { Typography,  Box, Card, CardContent, } from '@mui/material'
 import { ThemeProvider, createTheme  } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import ResponsiveFooter from '../components/ResponsiveFooter';

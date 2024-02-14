@@ -3,8 +3,6 @@ import { Button,  Grid, Box, Card, CardContent, } from '@mui/material'
 import { ThemeProvider, createTheme  } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import ResponsiveFooter from '../components/ResponsiveFooter';
-// import { styled } from '@mui/material/styles';
-// import Paper from '@mui/material/Paper';
 import { FaLongArrowAltRight } from "react-icons/fa";
 import NavbarRetail from './Retail/NavbarRetail'
 

@@ -39,10 +39,9 @@ const BlueHoodieV2 = () => {
       'sans-serif',
     ].join(',')
    });
-
   return (
     <>
-           <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
     <Navbar position="static" color="transparent"/>
 
     <Box 
@@ -55,25 +54,25 @@ const BlueHoodieV2 = () => {
           <Stack spacing={2}>
               <img 
                 src="/images/Blue-Hoodie-V2.png" 
-                alt="Blue Hoodie V2 1" 
+                alt="Hoodie 1" 
                 onClick={() => handleClick(0, "/images/Blue-Hoodie-V2.png", '400px')} 
                 style={{ border: isClicked[0] ? '1px solid black' : '', cursor: 'pointer', transition: 'border 0.5s ease-in-out' }}
               />
               <img 
                 src="/images/Blue-Hoodie-2.jpg" 
-                alt="Blue Hoodie V2 2" 
+                alt="Hoodie 2" 
                 onClick={() => handleClick(1, "/images/Blue-Hoodie-2.jpg", '400px')} 
                 style={{ border: isClicked[1] ? '1px solid black' : '', cursor: 'pointer', transition: 'border 0.5s ease-in-out' }}
               />
               <img 
                 src="/images/Blue-Hoodie-3.jpg" 
-                alt="Blue Hoodie V2 3" 
+                alt="Hoodie 3" 
                 onClick={() => handleClick(2, "/images/Blue-Hoodie-3.jpg", '400px')} 
                 style={{ border: isClicked[2] ? '1px solid black' : '', cursor: 'pointer', transition: 'border 0.5s ease-in-out' }}
               />
               <img 
                 src="/images/Blue-Hoodie-4.jpg" 
-                alt="Blue Hoodie V2 4" 
+                alt="Hoodie 4" 
                 onClick={() => handleClick(3, "/images/Blue-Hoodie-4.jpg", '400px')}  
                 style={{ border: isClicked[3] ? '1px solid black' : '', cursor: 'pointer', transition: 'border 0.5s ease-in-out' }}
               />

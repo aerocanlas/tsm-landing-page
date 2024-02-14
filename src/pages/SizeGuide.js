@@ -1,8 +1,9 @@
 import * as React from 'react'
-import { Typography, Box,  } from '@mui/material'
-import Navbar from '../components/Navbar'
+import { Typography, Box, } from '@mui/material'
 import { ThemeProvider, createTheme, } from "@mui/material/styles";
+import Navbar from '../components/Navbar'
 import CssBaseline from "@mui/material/CssBaseline";
+// import { styled } from '@mui/material/styles';
 import ResponsiveFooter from '../components/ResponsiveFooter';
 // import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
@@ -73,6 +74,9 @@ import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
+  // const handleStepChange = (step) => {
+  //   setActiveStep(step);
+  // };
        
 
   return (
