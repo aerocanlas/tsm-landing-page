@@ -104,7 +104,7 @@ const Home = () => {
         transform: {xs: 'scale(1.5)'},
       }}
       alt=""
-      src="/images/rotating.gif"
+      src="/images/1.png"
     />  
 
 
