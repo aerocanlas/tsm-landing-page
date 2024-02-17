@@ -312,19 +312,21 @@ Your brand will undoubtedly dominate the market <br></br>with a high-end and sup
       src="/images/Hoodie.png"
     />  
         </Item>
-        <Item> 
+        <Item>
         <Box
       component="img"
       sx={{
+        backgroundColor: '#ffffff', boxShadow: 'none', outline: 'none',
         minHeight: { xs: 350, md: 250, lg: 200, xl: 300 }, // Add this line
         maxWidth: { xs: 350, md: 250, lg: 200, xl: 300 },// Add this line
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+
       }}
       alt=""
-      src="/images/Pullover.png"
-    />
+      src="/images/Hoodie.png"
+    />  
         </Item>
         <Item>
         <Box
