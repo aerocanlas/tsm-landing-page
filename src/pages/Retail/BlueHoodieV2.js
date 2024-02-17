@@ -138,7 +138,7 @@ const BlueHoodieV2 = () => {
          '& > :not(style)': { m: 0.3 },
          marginLeft: {lg:'32%', xl: '30.5%'},
          marginTop: {lg: '-45%'},
-         marginBottom: {lg: '50%'} }}>
+         marginBottom: {lg: '10%'} }}>
 <Fab size="small" 
 sx={{
   background: '#000000',
@@ -226,9 +226,9 @@ sx={{
             <CardContent>
             <Card sx={{ backgroundColor: '#ffffff', boxShadow: 'none', outline: 'none', width: {xs: '300px', lg: '550px', xl: '750px'}, height: 'auto', display: 'flex',
             marginLeft: {lg: '730px', xl: '950px'},
-        marginTop: '-85%',
-        marginBottom: '100px',
-        paddingBottom: '40px' }}>
+        marginTop: '-48%',
+        marginBottom: '10%'
+       }}>
           <CardContent>
           <Typography 
     variant="h3" 
