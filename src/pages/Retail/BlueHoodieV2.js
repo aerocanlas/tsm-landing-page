@@ -92,7 +92,7 @@ const BlueHoodieV2 = () => {
         minHeight: { xs: 233, md: 167, lg: 100 },
         minWidth: { xs: 350, md: 250, lg: 100 },
       }}>
-        <ReactImageMagnify
+        {/* <ReactImageMagnify
  {...{
    smallImage: {
      alt: "Pullover",
@@ -105,7 +105,32 @@ const BlueHoodieV2 = () => {
      height: 1200
    }
  }}
+/> */}
+
+<div sx={{marginLeft: '-500px'}}>
+<ReactImageMagnify
+  imageProps={{
+    alt: 'Hoodie',
+    height: '40%',
+    src: selectedImage,
+    width: '90%',
+    marginTop: '-200px',
+  }}
+  magnifiedImageProps={{
+    height: 1200,
+    src: selectedImage,
+    width: 1200,
+  }}
+  onActivationChanged={function noRefCheck(){}}
+  onDetectedEnvironmentChanged={function noRefCheck(){}}
+  onPositionChanged={function noRefCheck(){}}
+  portalProps={{
+    horizontalOffset: 10,
+    id: 'portal-test-id'
+  }}
 />
+</div>
+
 </Box>
 
 <Box sx={{  display: 'flex',
