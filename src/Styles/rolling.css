@@ -10,7 +10,7 @@
   .logos {
     overflow: hidden;
     padding: 150px 0;
-    background: white;
+    background: #f4f4f4;
     white-space: nowrap;
     position: relative;
     
@@ -35,12 +35,12 @@
   
   .logos:before {
     left: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), #f4f4f4);
   }
   
   .logos:after {
     right: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #f4f4f4);
   }
   
   .logos:hover .logos-slide {
@@ -55,4 +55,7 @@
   .logos-slide img {
     height: 700px;
     margin: 0 120px;
+    @media screen and (max-width: 1366px) {
+        height: 600px;
+    };
   }

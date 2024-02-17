@@ -59,8 +59,12 @@ nav ul {
     padding-right: 10px;
     border-radius: 20px;
     position: relative;
-    left: 1250px;
     z-index: 1000;
+
+    @media screen and (max-width: 1920px) {
+        left: 1250px;
+        
+    }
 
     @media screen and (max-width: 1366px) {
         left: 750px;
