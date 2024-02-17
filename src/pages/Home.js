@@ -325,7 +325,7 @@ Your brand will undoubtedly dominate the market <br></br>with a high-end and sup
 
       }}
       alt=""
-      src="/images/Pullover.png"
+      src="/images/pullover.png"
       // onClick={ () => navigate('/pullover')}
     />  
         </Item>
