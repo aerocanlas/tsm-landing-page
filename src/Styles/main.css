@@ -23,6 +23,7 @@ header {
     background-color: none;
     color: black;
     margin-top: 100px;
+    width: 100%;
 }
 
 nav a {

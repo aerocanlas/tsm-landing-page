@@ -10,7 +10,7 @@ import Stack from '@mui/material/Stack';
 import Fab from '@mui/material/Fab';
 import Navbar from '../components/Navbar';
 import { useNavigate } from 'react-router-dom';
-
+import '../Styles/rolling.css'
 const Home = () => {
 
   const Item = styled(Paper)(({ theme }) => ({
@@ -93,7 +93,7 @@ const Home = () => {
       src="/images/Home-Banner-Option-1.png"
     />  */}
 
- <Box
+ {/* <Box
       component="img"
       sx={{
         minHeight: { xs: 350, md: 250, lg: 750, xl: 1000 }, // Add this line
@@ -109,7 +109,89 @@ const Home = () => {
       alt=""
       src="/images/rotating.gif"
       loading="lazy"
-    />  
+    />   */}
+
+      {/* <Box
+  component="img"
+  width="100%"
+  height="auto"
+  sx={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: '10px',
+    maxHeight: { xs:  233, md:  167, lg: '50%' },
+    maxWidth: { xs:  350, md:  250, lg: '25%' },
+    marginLeft: { xl:  10 },
+  }}
+  alt="TSM Hoodie V2"
+  src="./images/roll/1.png"
+/>
+
+<Box
+  component="img"
+  width="100%"
+  height="auto"
+  sx={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: '10px',
+    maxHeight: { xs:  233, md:  167, lg: '50%' },
+    maxWidth: { xs:  350, md:  250, lg: '25%' },
+    marginLeft: { xl:  10 },
+  }}
+  alt="TSM Hoodie V2"
+  src="./images/roll/1.png"
+/>
+
+<Box
+  component="img"
+  width="100%"
+  height="auto"
+  sx={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: '10px',
+    maxHeight: { xs:  233, md:  167, lg: '50%' },
+    maxWidth: { xs:  350, md:  250, lg: '25%' },
+    marginLeft: { xl:  10 },
+  }}
+  alt="TSM Hoodie V2"
+  src="./images/roll/1.png" 
+/>*/}
+
+<div className="logos">
+      <div className="logos-slide">
+    
+         <img src="./images/roll/1.png" />
+        <img src="./images/roll/7.png" />
+        <img src="./images/roll/5.png" /> 
+        <img src="./images/roll/2.png" />
+        <img src="./images/roll/4.png" />
+        <img src="./images/roll/9.png" /> 
+        <img src="./images/roll/8.png" />
+        <img src="./images/roll/3.png" />
+        <img src="./images/roll/6.png" /> 
+      </div>
+
+      <div className="logos-slide">
+    
+      <img src="./images/roll/1.png" />
+        <img src="./images/roll/7.png" />
+        <img src="./images/roll/5.png" /> 
+        <img src="./images/roll/2.png" />
+        <img src="./images/roll/4.png" />
+        <img src="./images/roll/9.png" /> 
+        <img src="./images/roll/8.png" />
+        <img src="./images/roll/3.png" />
+        <img src="./images/roll/6.png" /> 
+      </div>
+      </div>
+
+      
+
 
 
 {/* <Box
