@@ -312,8 +312,7 @@ Your brand will undoubtedly dominate the market <br></br>with a high-end and sup
       src="/images/Hoodie.png"
     />  
         </Item>
-        <Item>
-          
+        <Item> 
         <Box
       component="img"
       sx={{
@@ -322,11 +321,9 @@ Your brand will undoubtedly dominate the market <br></br>with a high-end and sup
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        cursor: 'pointer'
       }}
       alt=""
       src="/images/Pullover.png"
-      onClick={() => navigate('/Pullover')}
     />
         </Item>
         <Item>
