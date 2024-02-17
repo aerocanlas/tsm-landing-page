@@ -54,29 +54,31 @@ const ProductRetail = () => {
         justifyContent: 'center',
         alignItems: 'center',}}>
 
-<Box
-  component="img"
-  width="100%"
-  height="auto"
-  sx={{
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: '10px',
-    maxHeight: { xs:  233, md:  167, lg: '50%' },
-    maxWidth: { xs:  350, md:  250, lg: '25%' },
-    marginLeft: { xl:  10 },
-    transition: 'transform  0.3s ease-in-out',
-    '&:hover': {
-      cursor: 'pointer',
-    },
-  }}
-  alt="TSM Hoodie V2"
-  src={isHoveredHoodie ? '/images/TSM-Hoodie V2-Navy-Blue.png' : '/images/HoodieV2.png'}
-  onMouseEnter={() => setIsHoveredHoodie(true)}
-  onMouseLeave={() => setIsHoveredHoodie(false)}
-  onClick={() => navigate('/retail/bluehoodiev2')}
-/>
+<a href="/retail/bluehoodiev2" style={{ textDecoration: 'none', color: 'inherit' }}>
+  <Box
+    component="img"
+    width="100%"
+    height="auto"
+    sx={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginTop: '10px',
+      maxHeight: { xs:  233, md:  167, lg: '50%' },
+      maxWidth: { xs:  350, md:  250, lg: '25%' },
+      marginLeft: { xl:  10 },
+      transition: 'transform  0.3s ease-in-out',
+      '&:hover': {
+        cursor: 'pointer',
+      },
+    }}
+    alt="TSM Hoodie V2"
+    src={isHoveredHoodie ? '/images/TSM-Hoodie V2-Navy-Blue.png' : '/images/HoodieV2.png'}
+    onMouseEnter={() => setIsHoveredHoodie(true)}
+    onMouseLeave={() => setIsHoveredHoodie(false)}
+  />
+</a>
+
 
 <Box
       component="img"
